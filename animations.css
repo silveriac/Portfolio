@@ -1,0 +1,37 @@
+@keyframes appear {
+    0%  {opacity: 0}
+    100%{opacity: 1}
+}
+@keyframes disappear {
+    0%  {opacity: 1}
+    100%{opacity: 0}
+}
+@keyframes jump {
+    0%   {transform: translateX(0px); opacity: 1;}
+    100% {transform: translateX(-220px); opacity: 1;}
+}
+@keyframes move {
+    0% {
+        transfrom: translateX(0px);
+        opacity: 0
+    }
+    100% {
+        transform: translateX(120px);
+        opacity: 1
+        }
+}
+
+.aparecer{
+    animation: appear 2s 0.5s 1 ease-in-out forwards;
+    opacity: 0;
+}
+
+.enlacesinicio:hover{} 
+.desvanecerderecha1{
+    animation: move 2s 1.5s 1 ease-in-out forwards;}/*duration/delay/final opacity, forwards: it stays in the final configuration*/
+.desvanecerderecha2{
+    animation: move 2s 1.7s 1 ease-in-out forwards;}
+.desvanecerderecha3{
+    animation: move 2s 1.9s 1 ease-in-out forwards;}
+.desvanecerderecha4{
+    animation: move 2s 2.1s 1 ease-in-out forwards;}

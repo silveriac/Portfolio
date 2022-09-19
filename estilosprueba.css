@@ -1,0 +1,68 @@
+.container-fluid {
+  position: relative;
+  background-size: cover;
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+}
+/*intro*/
+
+/*problemas
+.carousel .slide {
+    -webkit-transition: all 1.1s ease-in-out, opacity 1s ease-in;
+    -moz-transition: all 1.1s ease-in-out, opacity 1s ease-in;
+    -ms-transition: all 1.1s ease-in-out, opacity 1s ease-in;
+    -o-transition: all 1.1s ease-in-out, opacity 1s ease-in;
+    transition: all 1.1s ease-in-out, opacity 1s ease-in;
+}
+.carousel .slide  .carousel-inner .item,
+.carousel .slide  .carousel-inner .active.left,
+.carousel .slide  .carousel-inner .active.right {
+    opacity: 0 !important;
+}
+.carousel .slide  .carousel-inner .active,
+.carousel .slide  .carousel-inner .next.left,
+.carousel .slide  .carousel-inner .prev.right {
+    opacity: 1 !important;
+}
+.#pubCarousel.carousel .carousel-control {
+    z-index: 2 !important;
+}
+*/
+* {box-sizing:border-box}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1s;
+  animation-name: fade;
+  animation-duration: 1s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+.mySlides {
+  display: none;
+}
+.slideshow-container {
+
+  position: relative;
+  margin: auto;
+}
+.centered {
+  justify: center;
+  width: auto;
+  height: auto;
+  margin: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
