@@ -1,13 +1,24 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
 
-html {
-  scroll-behavior: smooth;
-}
+/* html {scroll-behavior: smooth;} */
 body {
     font: 20px 'Montserrat', 'sans-serif';
     line-height: 1.8;
-    color: #f5f6f7;
+    background-color: black;
+}
+header{
+  display: flex;
+  justify-content: flex-end;
+}
+header img{
+  height: 32px;
+  width: auto;
+  margin: 5px 15px 7px 5px;
+}
+header img:hover{
+  filter: brightness(100);
+  cursor: pointer;
 }
 main {
   display: flex;
@@ -60,9 +71,3 @@ button{
 .align-right{
   text-align: right;
 }
-
-
-
-/*intro*/
-
-/*problemas*/

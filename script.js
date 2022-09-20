@@ -11,4 +11,13 @@ function galleryTabs(evt, cityName) {
     }
     document.getElementById(cityName).style.display = "flex";
     evt.currentTarget.className += " active";
-  }
+  };
+
+function closeModal(){
+  modal =document.getElementsByClassName("modal");
+  modal[0].style.display = "none";
+};
+function openModal(){
+  modal =document.getElementsByClassName("modal");
+  modal[0].style.display = "flex";
+};

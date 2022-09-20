@@ -10,7 +10,7 @@
     0%   {transform: translateX(0px); opacity: 1;}
     100% {transform: translateX(-220px); opacity: 1;}
 }
-@keyframes move {
+@keyframes move-right {
     0% {
         transfrom: translateX(0px);
         opacity: 0
@@ -20,18 +20,53 @@
         opacity: 1
         }
 }
+@keyframes move-down {
+    0% {
+        transfrom: translateY(0px);
+        opacity: 0
+    }
+    100% {
+        transform: translateY(40px);
+        opacity: 1
+        }
+}
+@keyframes move-up {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-2px);
+        }
+    100%{
+        transform: translateY(0px);
+    }
+}
 
 .aparecer{
     animation: appear 2s 0.5s 1 ease-in-out forwards;
     opacity: 0;
 }
 
-.enlacesinicio:hover{} 
+
 .desvanecerderecha1{
-    animation: move 2s 1.5s 1 ease-in-out forwards;}/*duration/delay/final opacity, forwards: it stays in the final configuration*/
+    animation: move-right 2s 1.5s 1 ease-in-out forwards;}/*duration/delay/final opacity, forwards: it stays in the final configuration*/
 .desvanecerderecha2{
-    animation: move 2s 1.7s 1 ease-in-out forwards;}
+    animation: move-right 2s 1.7s 1 ease-in-out forwards;}
 .desvanecerderecha3{
-    animation: move 2s 1.9s 1 ease-in-out forwards;}
+    animation: move-right 2s 1.9s 1 ease-in-out forwards;}
 .desvanecerderecha4{
-    animation: move 2s 2.1s 1 ease-in-out forwards;}
+    animation: move-right 2s 2.1s 1 ease-in-out forwards;}
+
+.tabs{ /*initial tab configurations*/
+    position: relative;
+    bottom: 50px;
+    opacity: 0;
+}
+.tab1{animation: move-down 1.3s 0.3s 1 ease-in-out forwards;}
+.tab2{animation: move-down 1.3s 0.6s 1 ease-in-out forwards;}
+.tab3{animation: move-down 1.3s 0.9s 1 ease-in-out forwards;}
+.tab4{animation: move-down 1.3s 1.2s 1 ease-in-out forwards;}
+.gallery-img img:hover{
+    animation: move-up 2s 0.1s 1 ease-in-out;
+    animation-iteration-count: infinite;
+}
