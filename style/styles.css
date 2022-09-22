@@ -11,22 +11,13 @@ header{
   display: flex;
   justify-content: flex-end;
 }
-header img{
-  height: 32px;
-  width: auto;
-  margin: 5px 15px 7px 5px;
-}
-header img:hover{
-  filter: brightness(100);
-  cursor: pointer;
-}
 main {
   display: flex;
   justify-content: space-around;
   align-items: center;
   height: 100vh;
   width: auto;
-  background-image:  linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 100, 0)),  url("imagen/intro.jpg");
+  background-image:  linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 100, 0)),  url("../imagen/intro.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 108%;
@@ -56,13 +47,27 @@ button{
   font-family: 'Montserrat', 'sans-serif';
   font-size: 25px;
 }
+.arrow-icon{
+  height: 32px !important;
+  width: auto !important;
+  margin: 5px 15px 7px 15px;
+}
+.arrow-icon:hover{
+  height: 34px !important;
+  margin: 4px 14px 6px 14px;
+  filter: brightness(100);
+  cursor: pointer;
+}
+.rotate-180{
+  transform: rotate(180deg);
+}
 .enlacesinicio{
-  background: linear-gradient(to left, rgba(0, 0, 0, 1), rgba(0, 0, 100, 0));
+  background: linear-gradient(to left, rgba(0, 0, 0, 1), transparent);
   opacity: 0;
   text-align: right;
 }
 .nav li a:hover{
-  background: linear-gradient(to left, white, rgb(10, 10, 10));
+  background: linear-gradient(to left, white, black);
   color: black;
 }
 .padding-right{

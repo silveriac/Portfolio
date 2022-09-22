@@ -1,3 +1,5 @@
+var modal = document.getElementsByClassName("modal")
+var slide = document.getElementsByClassName("slide");
 function galleryTabs(evt, cityName) {
 
     var i, tabcontent, tablinks;
@@ -13,11 +15,39 @@ function galleryTabs(evt, cityName) {
     evt.currentTarget.className += " active";
   };
 
-function closeModal(){
-  modal =document.getElementsByClassName("modal");
-  modal[0].style.display = "none";
+function switchModal(action, number){
+  
+  console.log(slide);
+  console.log(slide.length);
+  switch (action){ //1 is open //2 is close
+    case 1:
+      modal[0].style.display = "flex";
+      slide[number].style.display = "flex";
+      break;
+    case 0:
+      for(var i = 0; i < slide.length; i++){
+        console.log("adsa");
+        slide[i].style.display = "none";
+      }  
+      modal[0].style.display = "none";
+      break;
+    default:
+      console.log("Modal error");
+      modal[0].style.display = "none";
+  }
 };
-function openModal(){
-  modal =document.getElementsByClassName("modal");
-  modal[0].style.display = "flex";
-};
+
+function arrows(current, action){
+  switch(action){
+    case 1: //right
+      slide[current].style.display = "none";
+      slide[current+1].style.display = "flex";
+      break;
+    case 0: //left
+      slide[current].style.display = "none";
+      slide[current-1].style.display = "flex";
+      break;
+    default:
+      slide[current].style.display = "none";
+  }
+}

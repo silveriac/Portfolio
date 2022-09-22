@@ -11,14 +11,16 @@ main p{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
 
 }
 .tab-bar{
     display: flex;
     justify-content: space-around;
     align-items: flex-start;
-    height: 130px;
+    height: 110px;
     width: 100%;
+    margin-bottom: 20px;
     background: linear-gradient(to bottom, black, transparent 80%);
 }
 .tabs{
@@ -31,6 +33,10 @@ main p{
 }
 .tab-bar button.active{
     background: linear-gradient(to bottom, black, transparent 150%);
+    font-size: 26px;
+}
+.tab-bar button:hover{
+    font-size: 26px;
 }
 .tabcontent{
     display: none;
@@ -41,26 +47,26 @@ main p{
 .content-1{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-}
-.gallery img{
-    height: 20vh;
+    justify-content: space-between;
+    width: 90%;
 }
 .gallery-img{
-
+    display: flex;
+    height: 350px;
+    align-items: center;
 }
 .gallery-img img{
     height: 300px;
     width: auto;
-    margin: 15px;
-    padding: 2px;
+    padding: 3px;
     border: 2px solid grey;
 }
 .gallery-img img:hover{
     cursor: pointer;
-    margin: 12px;
-    padding: 2px;
-    border: 5px solid grey;
+    height: 303px;
+    margin: 0px;
+    padding: 0px;
+    border: 2px solid white;
 } 
 /*slider*/
 .modal{
@@ -69,18 +75,40 @@ main p{
     align-items: center;
     width: 100vw;
     height: 100vh;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 100, 0));
+    background: linear-gradient(to bottom, rgb(26, 26, 26), transparent 200%);
 }
 .slide{
+    display: none;
     position: fixed;
-
 }
 .slide-inner{
     display: flex;
-    height: 85vh;
+    flex-direction: column;
+    height: 90vh;
     z-index: 10;
 }
-.slide-inner img{
+.show-img{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     height: 90%;
-    width: auto;
+    width: 80vw;
+}
+.show-img img{
+    height: 100%;
+}
+.slide-inner .icon{
+    filter: invert(50%);
+    width: 16px;
+    height: auto;
+    margin: 16px;
+    align-self: flex-end;
+}
+.slide-inner .icon:hover{
+    filter: invert();
+    cursor: pointer;
+    width: 18px;
+    height: auto;
+    margin: 15px;
+    align-self: flex-end;
 }
