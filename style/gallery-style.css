@@ -127,4 +127,5 @@ main p{
 }
 .switch{
     display: flex;
+    animation: appear 0.2s 0s 1 ease-in-out forwards;
 } 

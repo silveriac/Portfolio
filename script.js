@@ -19,22 +19,23 @@ function galleryTabs(evt, tabName) {
     }
     tablinks = document.getElementsByClassName("tabs");
     for (i = 0; i < tablinks.length; i++) {
-      tablinks[i].className = tablinks[i].className.replace(" active", "");
+      tablinks[i].className = tablinks[i].className.replace("active", "");
     }
     document.getElementById(tabName).style.display = "flex";
-    evt.currentTarget.className += " active";
+    evt.currentTarget.className += "active";
   };
 // next block was shamelessly copied from stackoverflow 
 // https://stackoverflow.com/questions/3369593/how-to-detect-escape-key-press-with-pure-js-or-jquery
 document.onkeydown = function(evt) { 
   evt = evt || window.event;  
   var isEscape = false;
-  if ("key" in evt) {
+  if ("key" in evt){
     isEscape = (evt.key === "Escape" || evt.key === "Esc");
-  } else {
+  }
+  else {
     isEscape = (evt.keyCode === 27);
   }
-  if (isEscape) {
+  if (isEscape){
     modalSlider(0);
   }
 };
@@ -53,10 +54,10 @@ function modalSlider(action, number){
       modal[0].classList.toggle("switch");
       break;
     case 2: //left
-    currentSlide != 0 ? currentSlide = currentSlide - 1 : currentSlide = imgArray.length - 1;
-    console.log(currentSlide);
-    console.log(imgArray[currentSlide]);
-    imageDiv[0].childNodes[3].setAttribute("src", imgArray[currentSlide]);
+      currentSlide != 0 ? currentSlide = currentSlide - 1 : currentSlide = imgArray.length - 1;
+      console.log(currentSlide);
+      console.log(imgArray[currentSlide]);
+      imageDiv[0].childNodes[3].setAttribute("src", imgArray[currentSlide]);
       break;
     case 3: //right
       currentSlide != (imgArray.length - 1) ? currentSlide = currentSlide + 1 : currentSlide = 0;
