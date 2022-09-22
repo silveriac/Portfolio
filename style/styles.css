@@ -9,7 +9,8 @@ body {
 }
 header{
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
+  height: 48px;
 }
 main {
   display: flex;
@@ -26,7 +27,6 @@ main {
 footer{
   display: flex;
   justify-content: flex-end;
-  background-color: #black;
   background-color: black;
 }
 p {font-size: 12px;}
@@ -47,16 +47,22 @@ button{
   font-family: 'Montserrat', 'sans-serif';
   font-size: 25px;
 }
-.arrow-icon{
+.nav-icon{
   height: 32px !important;
   width: auto !important;
   margin: 5px 15px 7px 15px;
 }
-.arrow-icon:hover{
+.nav-icon:hover{
   height: 34px !important;
   margin: 4px 14px 6px 14px;
   filter: brightness(100);
   cursor: pointer;
+}
+.invert{
+  filter: invert(50%);
+}
+.invert:hover{
+  filter: invert(50%);
 }
 .rotate-180{
   transform: rotate(180deg);

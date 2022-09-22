@@ -76,3 +76,5 @@
     animation: move-up 0.5s 0s 1 forwards;
     /* animation-iteration-count: infinite; */
 }
+/* .slide-appear{animation: appear 5s 0s 1 ease-in-out forwards;}
+.slide-disappear{animation: disappear 0.2s 0s 1 ease-in-out forwards;} */

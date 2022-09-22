@@ -89,13 +89,26 @@ main p{
 }
 .show-img{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     height: 90%;
-    width: 80vw;
+    width: 90vw;
 }
 .show-img img{
     height: 100%;
+}
+.show-img div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 120px;
+    border-radius: 10px;
+    background: linear-gradient(to top, transparent 40%, rgb(0, 0, 0) 50%, transparent 60%)
+}
+.show-img div:hover{
+    cursor: pointer;
+    background: linear-gradient(to top, transparent 35%, rgb(156, 156, 156) 50%, transparent 65%)
 }
 .slide-inner .icon{
     filter: invert(50%);
@@ -112,3 +125,6 @@ main p{
     margin: 15px;
     align-self: flex-end;
 }
+.switch{
+    display: flex;
+} 

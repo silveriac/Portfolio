@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <title>Eric Silva - Portfolio</title>
-      <link rel="shortcut icon" href="favicon.ico">
+  <!-- <link rel="shortcut icon" href="favicon.ico"> -->
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -21,7 +21,8 @@
 </head>
 <body>
 <header>
-  <img class="arrow-icon" onclick="history.back()" src="./imagen/arrow.png" alt="back">
+  <a href="./index.html"><img class="nav-icon invert" src="./imagen/home.png" alt="home"></a>
+  <img class="nav-icon" onclick="history.back()" src="./imagen/arrow.png" alt="back">
 </header>
 <main id="gallery-page" class="gallery">
   <div class="tab-bar">
@@ -33,113 +34,39 @@
 
 <div id="Illustration" class="tabcontent content-1">
   <div class="gallery-img">
-    <img src="./imagen/idk.jpg" alt="idk" onclick="switchModal(1, 0)">
+    <img src="./imagen/idk.jpg" alt="idk" onclick="modalSlider(1, 0)">
   </div>
   <div class="gallery-img">
-    <img src="./imagen/spiderverse.jpg" alt="idk" onclick="switchModal(1, 1)">
+    <img src="./imagen/spiderverse.jpg" alt="idk" onclick="modalSlider(1, 1)">
   </div>
   <div class="gallery-img">
-    <img src="./imagen/poketrainer.jpg" alt="idk" onclick="switchModal(1, 2)">
+    <img src="./imagen/poketrainer.jpg" alt="idk" onclick="modalSlider(1, 2)">
   </div>
   <div class="gallery-img">
-    <img src="./imagen/creepy-cat.jpg" alt="idk" onclick="switchModal(1, 3)">
+    <img src="./imagen/creepy-cat.jpg" alt="idk" onclick="modalSlider(1, 3)">
   </div>
   <div class="gallery-img">
-    <img src="./imagen/alien-skull.jpg" alt="idk" onclick="switchModal(1, 4)">
+    <img src="./imagen/alien-skull.jpg" alt="idk" onclick="modalSlider(1, 4)">
   </div>
   <div class="gallery-img">
-    <img src="./imagen/chilling-geralt.png" alt="idk" onclick="switchModal(1, 5)">
+    <img src="./imagen/chilling-geralt.png" alt="idk" onclick="modalSlider(1, 5)">
   </div>
 </div>
 <div  class="modal">
-  <!-- onclick="switchModal(0)" -->
-  <!-- this  div has display:none and will contain the slider -->
   <div class="slide">
-
     <div class="slide-inner">
-      <img class="icon" onclick="switchModal(0)" src="./imagen/close-icon.png" alt="close"></img>
-
-      <div class="show-img">
-        <img class="arrow-icon" onclick="arrows(0, 0)" src="./imagen/arrow.png" alt="back">
+      <img class="icon" onclick="modalSlider(0)" src="./imagen/close-icon.png" alt="close"></img>
+      <div class="show-img" >
+        <div onclick="modalSlider(2)">
+          <img class="nav-icon" src="./imagen/arrow.png" alt="back">
+        </div>
         <img src="./imagen/idk.jpg" alt="idk">
-        <img class="arrow-icon rotate-180" onclick="arrows(0, 1)" src="./imagen/arrow.png" alt="back">
+        <div onclick="modalSlider(3)">
+          <img class="nav-icon rotate-180" src="./imagen/arrow.png" alt="back">
+        </div>
       </div>
     </div>
-
   </div>
-
-  <div class="slide">
-
-    <div class="slide-inner">
-      <img class="icon" onclick="switchModal(0)" src="./imagen/close-icon.png" alt="close"></img>
-
-      <div class="show-img">
-        <img class="arrow-icon" onclick="arrows(1, 0)" src="./imagen/arrow.png" alt="back">
-        <img src="./imagen/spiderverse.jpg" alt="idk">
-        <img class="arrow-icon rotate-180" onclick="arrows(1, 1)" src="./imagen/arrow.png" alt="back">
-      </div>
-    </div>
-
-  </div>
-  <div class="slide">
-
-    <div class="slide-inner">
-      <img class="icon" onclick="switchModal(0)" src="./imagen/close-icon.png" alt="close"></img>
-
-      <div class="show-img">
-        <img class="arrow-icon" onclick="arrows(2, 0)" src="./imagen/arrow.png" alt="back">
-        <img src="./imagen/poketrainer.jpg" alt="idk">
-        <img class="arrow-icon rotate-180" onclick="arrows(2, 1)" src="./imagen/arrow.png" alt="back">
-      </div>
-    </div>
-
-  </div>
-
-  <div class="slide">
-
-    <div class="slide-inner">
-      <img class="icon" onclick="switchModal(0)" src="./imagen/close-icon.png" alt="close"></img>
-
-      <div class="show-img">
-        <img class="arrow-icon" onclick="arrows(3, 0)" src="./imagen/arrow.png" alt="back">
-        <img src="./imagen/creepy-cat.jpg" alt="idk">
-        <img class="arrow-icon rotate-180" onclick="arrows(3, 1)" src="./imagen/arrow.png" alt="back">
-      </div>
-    </div>
-
-  </div>
-
-  <div class="slide">
-
-    <div class="slide-inner">
-      <img class="icon" onclick="switchModal(0)" src="./imagen/close-icon.png" alt="close"></img>
-
-      <div class="show-img">
-        <img class="arrow-icon" onclick="arrows(4, 0)" src="./imagen/arrow.png" alt="back">
-        <img src="./imagen/alien-skull.jpg" alt="idk">
-        <img class="arrow-icon rotate-180" onclick="arrows(4, 1)" src="./imagen/arrow.png" alt="back">
-      </div>
-    </div>
-
-  </div>
-
-  <div class="slide">
-
-    <div class="slide-inner">
-      <img class="icon" onclick="switchModal(0)" src="./imagen/close-icon.png" alt="close"></img>
-
-      <div class="show-img">
-        <img class="arrow-icon" onclick="arrows(5, 0)" src="./imagen/arrow.png" alt="back">
-        <img src="./imagen/chilling-geralt.png" alt="idk">
-        <img class="arrow-icon rotate-180" onclick="arrows(5, 1)" src="./imagen/arrow.png" alt="back">
-      </div>
-    </div>
-
-  </div>
-
-
-  
-
 </div>
 
 
