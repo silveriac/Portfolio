@@ -16,11 +16,13 @@ function galleryTabs(evt, tabName) {
     tabcontent = document.getElementsByClassName("tabcontent");
     for (i = 0; i < tabcontent.length; i++) {
       tabcontent[i].style.display = "none";
-    }
+    };
     tablinks = document.getElementsByClassName("tabs");
     for (i = 0; i < tablinks.length; i++) {
       tablinks[i].className = tablinks[i].className.replace("active", "");
-    }
+      tablinks[i].classList.add("correct");
+      tablinks[i].classList.remove("tab" + (i + 1));
+    };
     document.getElementById(tabName).style.display = "flex";
     evt.currentTarget.className += "active";
   };
