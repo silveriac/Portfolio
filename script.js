@@ -1,3 +1,4 @@
+
 window.onload = function () {
   var imageGal = document.getElementsByClassName("gallery-img");
   imageDiv = document.getElementsByClassName("show-img");
@@ -5,26 +6,32 @@ window.onload = function () {
   imgArray.push(imageGal[i].childNodes[1].getAttribute("src") )
    }
     console.log(imgArray);
+    const buttons = document.getElementsByClassName("tabs");
+    buttons[0].addEventListener("click", (event) => galleryTabs(event, 'Illustration'));
+    buttons[1].addEventListener("click", (event) => galleryTabs(event, 'Animation'));
+    buttons[2].addEventListener("click", (event) => galleryTabs(event, 'Design'));
+    buttons[3].addEventListener("click", (event) => galleryTabs(event, 'Doodly'));
 }
-var imgArray = [];
-var modal = document.getElementsByClassName("modal");
-var slide = document.getElementsByClassName("slide");
-var imageDiv;
-var currentSlide;
-function galleryTabs(evt, tabName) {
+
+let imgArray = [];
+const modal = document.getElementsByClassName("modal");
+let slide = document.getElementsByClassName("slide");
+let imageDiv;
+let currentSlide;
+
+const galleryTabs = (evt, tabName) => {
     var i, tabcontent, tablinks;
     tabcontent = document.getElementsByClassName("tabcontent");
+    tablinks = document.getElementsByClassName("tabs");
     for (i = 0; i < tabcontent.length; i++) {
       tabcontent[i].style.display = "none";
     };
-    tablinks = document.getElementsByClassName("tabs");
     for (i = 0; i < tablinks.length; i++) {
       tablinks[i].className = tablinks[i].className.replace("active", "");
       tablinks[i].classList.add("correct");
-      tablinks[i].classList.remove("tab" + (i + 1));
     };
     document.getElementById(tabName).style.display = "flex";
-    evt.currentTarget.className += "active";
+    evt.currentTarget.className += " active";
   };
 // next block was shamelessly copied from stackoverflow 
 // https://stackoverflow.com/questions/3369593/how-to-detect-escape-key-press-with-pure-js-or-jquery
