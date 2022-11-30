@@ -97,10 +97,8 @@ const modalSlider = (action, number) => {
     case 1: //open
       modal[0].classList.toggle("switch");
       imageDiv[0].childNodes[3].setAttribute("src", imgArray[number].src);
-      slide[0].classList.toggle("switch");
       break;
     case 0: //close
-      slide[0].classList.toggle("switch");
       modal[0].classList.toggle("switch");
       break;
     case 2: //left

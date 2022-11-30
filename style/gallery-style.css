@@ -82,10 +82,6 @@ main p{
     height: 100vh;
     background: linear-gradient(to bottom, rgb(26, 26, 26), transparent 200%);
 }
-.slide{
-    display: none;
-    position: fixed;
-}
 .slide-inner{
     display: flex;
     flex-direction: column;
