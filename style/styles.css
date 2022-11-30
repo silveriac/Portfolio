@@ -18,7 +18,7 @@ main {
   align-items: center;
   height: 100vh;
   width: auto;
-  background-image:  linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 100, 0)),  url("../imagen/intro.jpg");
+  background-image:  linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 100, 0)),  url("../assets/intro.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 108%;

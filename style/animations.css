@@ -47,6 +47,26 @@
         transform: tanstlateY(0px)
     }
 }
+@keyframes slide-left{
+    0% {
+        transfrom: translateX(0px);
+        opacity: 1
+    }
+    100% {
+        transform: translateX(-500px);
+        opacity: 0
+        }
+}
+@keyframes slide-right{
+    0% {
+        transfrom: translateX(0px);
+        opacity: 1
+    }
+    100% {
+        transform: translateX(500px);
+        opacity: 0
+        }
+}
 .aparecer{
     animation: appear 2s 0.3s 1 ease-in-out forwards;
     opacity: 0;
@@ -59,7 +79,6 @@
     animation: move-right 2s 1.6s 1 ease-in-out forwards;}
 .desvanecerderecha4{
     animation: move-right 2s 1.8s 1 ease-in-out forwards;}
-
 .fall1, .fall2, .fall3, .fall4{ /*initial tab configurations*/
     position: relative;
     bottom: 40px;
@@ -79,5 +98,9 @@
     animation: move-up 0.5s 0s 1 forwards;
     /* animation-iteration-count: infinite; */
 }
+.go-left{animation: slide-left 0.5s 0s 1 ease-in-out forwards;}
+.go-right{animation: slide-right 0.3s 0s 1 ease-in-out forwards;}
+
+
 /* .slide-appear{animation: appear 5s 0s 1 ease-in-out forwards;}
 .slide-disappear{animation: disappear 0.2s 0s 1 ease-in-out forwards;} */

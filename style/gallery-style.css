@@ -101,7 +101,7 @@ main p{
 }
 .show-img img{
     height: 100%;
-}
+}/*
 .show-img div{
     display: flex;
     justify-content: center;
@@ -114,7 +114,7 @@ main p{
 .show-img div:hover{
     cursor: pointer;
     background: linear-gradient(to top, transparent 35%, rgb(156, 156, 156) 50%, transparent 65%)
-}
+}*/
 .slide-inner .icon{
     filter: invert(50%);
     width: 16px;
@@ -133,7 +133,10 @@ main p{
 .switch{
     display: flex;
     animation: appear 0.2s 0s 1 ease-in-out forwards;
-} 
+}
+
+
+/*game page*/
 .game-title{
     display: flex;
     justify-content: space-around;
