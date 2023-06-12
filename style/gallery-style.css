@@ -130,7 +130,20 @@ main p{
     display: flex;
     animation: appear 0.2s 0s 1 ease-in-out forwards;
 }
-
+.tabcontent, .tab-bar, .tabs{
+    z-index: 1;
+}
+.doodly-bg{
+    z-index: 0;
+    position: fixed;
+    top: 48px;
+    right: 0px;
+    width: 0%;
+    height: 0%;
+    border-radius: 50%;
+    background-image:  linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 100, 0)),  url("../assets/paper.jpg");
+    opacity: 1;
+}
 
 /*game page*/
 .game-title{

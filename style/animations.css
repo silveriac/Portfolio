@@ -34,7 +34,6 @@
     0% {
         transform: translateY(0px);
     }
-
     100%{
         transform: translateY(-5px);
     }
@@ -95,7 +94,7 @@
     animation: still 0.5s 0s 1 ease-in-out forwards;
 }
 .gallery-img img:hover, .jam-game:hover{
-    animation: move-up 0.5s 0s 1 forwards;
+    animation: move-up .5s 0s 1 forwards;
     /* animation-iteration-count: infinite; */
 }
 .go-left{animation: slide-left 0.5s 0s 1 ease-in-out forwards;}
