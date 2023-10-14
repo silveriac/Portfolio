@@ -9,12 +9,10 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.5.0/flexslider.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  
   <link rel="stylesheet" href="./style/styles.css">
   <link rel="stylesheet" href="./style/gallery-style.css">
   <link rel="stylesheet" href="./style/animations.css">
-  
-  <script src="./script.js"></script>
+  <script src="./gallery-script.js"></script>
   <script src="https://player.twitch.tv/js/embed/v1.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -33,9 +31,7 @@
     <button class="tabs fall4">Doodly</button>
   </div>
 
-<div id="Illustration" class="tabcontent content-1">
-</div>
-<div  class="modal">
+<div class="modal">
   <div class="slide-inner">
     <img class="icon" onclick="modalSlider(0)" src="./assets/close-icon.png" alt="close"></img>
     <div class="show-img" >
@@ -48,24 +44,15 @@
       </div>
     </div>
   </div>
+  <p id="description"></p>
+</div>
+
+<div id="Illustration" class="tabcontent content-1">
 </div>
 
 <div id="Animation" class="tabcontent content-1">
 </div>
-<div  class="modal">
-  <div class="slide-inner">
-    <img class="icon" onclick="modalSlider(0)" src="./assets/close-icon.png" alt="close"></img>
-    <div class="show-img" >
-      <div onclick="modalSlider(2)">
-        <img class="nav-icon" src="./assets/arrow.png" alt="back">
-      </div>
-      <img src="" alt="idk">
-      <div onclick="modalSlider(3)">
-        <img class="nav-icon rotate-180" src="./assets/arrow.png" alt="back">
-      </div>
-    </div>
-  </div>
-</div>
+
 <div id="Design" class="tabcontent">
   <div class="sorry">TAB 3 - DESIGN / Sorry! I haven't added content yet, check back later!</div>
 

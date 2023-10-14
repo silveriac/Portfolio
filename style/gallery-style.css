@@ -57,8 +57,10 @@ main p{
 }
 .gallery-img{
     display: flex;
-    height: 350px;
+    position: relative;
+    height: clamp(350px, 40%, 500px);
     align-items: center;
+    margin: 10px;
 }
 .gallery-img img{
     height: 300px;
@@ -68,16 +70,23 @@ main p{
 }
 .gallery-img img:hover{
     cursor: pointer;
-    height: 303px;
+    transform: scale(1.03);
     margin: 0px;
     padding: 0px;
     border: 2px solid white;
-} 
+}
+.frame1{
+    position: absolute;
+}
+.frame1:hover{
+    display:none;
+}
 /*slider*/
 .modal{
     display: none;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
+    flex-direction: column;
     width: 100vw;
     height: 100vh;
     background: linear-gradient(to bottom, rgb(26, 26, 26), transparent 200%);
@@ -85,14 +94,15 @@ main p{
 .slide-inner{
     display: flex;
     flex-direction: column;
-    height: 90vh;
+    height: 95%;
     z-index: 10;
+    margin-bottom: 0px;
 }
 .show-img{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 90%;
+    max-height: 90%;
     width: 90vw;
 }
 .show-img img{
@@ -128,7 +138,7 @@ main p{
 }
 .switch{
     display: flex;
-    animation: appear 0.2s 0s 1 ease-in-out forwards;
+    animation: appear 0.4s 0s 1 ease-in-out forwards;
 }
 .tabcontent, .tab-bar, .tabs{
     z-index: 1;
@@ -144,7 +154,17 @@ main p{
     background-image:  linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 100, 0)),  url("../assets/paper.jpg");
     opacity: 1;
 }
-
+#description{
+    font-size: 16px;
+    padding: 5px;
+    padding-inline: 35px;
+    border-radius: 5px;
+    background:rgba(0, 0, 0, 0.7);
+    vertical-align: top;
+}
+#description a{
+    text-decoration: underline;
+}
 /*game page*/
 .game-title{
     display: flex;

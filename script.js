@@ -193,3 +193,11 @@ let allCards = [
   }
 ]
 */
+
+
+
+
+
+
+
+var tuVieja = document.getElementById("tuVieja");

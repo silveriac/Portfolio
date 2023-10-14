@@ -70,14 +70,13 @@
     animation: appear 2s 0.3s 1 ease-in-out forwards;
     opacity: 0;
 }
-.desvanecerderecha1{
-    animation: move-right 2s 1.2s 1 ease-in-out forwards;}/*duration/delay/final opacity, forwards: it stays in the final configuration*/
-.desvanecerderecha2{
-    animation: move-right 2s 1.4s 1 ease-in-out forwards;}
-.desvanecerderecha3{
-    animation: move-right 2s 1.6s 1 ease-in-out forwards;}
-.desvanecerderecha4{
-    animation: move-right 2s 1.8s 1 ease-in-out forwards;}
+.desvanecerderecha{
+    animation: move-right 2s 1s 1 ease-in-out forwards /*duration/delay/final opacity, forwards: it stays in the final configuration*/;
+}
+li:nth-child(1) > .desvanecerderecha{animation-delay: 1s;}
+li:nth-child(2) > .desvanecerderecha{animation-delay: 1.2s;}
+li:nth-child(3) > .desvanecerderecha{animation-delay: 1.4s;}
+li:nth-child(4) > .desvanecerderecha{animation-delay: 1.6s;}
 .fall1, .fall2, .fall3, .fall4{ /*initial tab configurations*/
     position: relative;
     bottom: 40px;
