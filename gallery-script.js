@@ -4,7 +4,7 @@ let galleryContent  = {
     {'src': "./assets/gallery/chilling-geralt.png", 'alt': "geralt having a good time", 'description': "<a target='_blank' href='https://www.twitch.tv/dood_ly'>Doodly</a> - Geralt having a good time"},
     {'src': "./assets/gallery/alien-skull.jpg", 'alt': "alien skull", 'description': "<a target='_blank' href='https://www.fiverr.com/silveriac'>Comission Work</a> - Alien Skull"},
     {'src': "./assets/gallery/planet-brain.jpg", 'alt': "planet brain", 'description': "Fotografía de <a href='https://www.instagram.com/antoniobauer31/'>Antonio Bauer</a>"},
-    {'src': "./assets/gallery/poketrainer.jpg", 'alt': "pokemon trainer", 'description': "<a target='_blank' href='https://www.twitch.tv/dood_ly'>Doodly</a> - Me as a Pokemon Trainer - <a href='https://www.youtube.com/watch?v=NBWq45dFhrc' target='_blank'>Process video</a>"},
+    {'src': "./assets/gallery/poketrainer.jpg", 'alt': "pokemon trainer", 'description': "<a target='_blank' href='https://www.twitch.tv/dood_ly'>Doodly</a> - Me as a Pokemon Trainer - <a href='https://www.youtube.com/watch?v=NBWq45dFhrc'  target='_blank'>Process video</a>"},
     {'src': "./assets/gallery/joric-jolva.jpg", 'alt': "silveriac's jojo", 'description': "<a target='_blank' href='https://www.twitch.tv/dood_ly'>Doodly</a> - Me as a JoJo's Bizarre Adventure character - <a href='https://www.youtube.com/watch?v=len_06yFK8s' target='_blank'>Process video</a>"},
     {'src': "./assets/gallery/spiderverse.jpg", 'alt': "into the spider-verse fanart", 'description': "'Spider-Man: Into the Spider Verse' fan art"},
     {'src': "./assets/gallery/hypno-spooky.jpg", 'alt': "Spooky hypno", 'description': "<a target='_blank' href='https://www.twitch.tv/dood_ly'>Doodly</a> - Spooky pokemon: Hypno"},
@@ -45,7 +45,16 @@ let galleryContent  = {
     {'src': "./assets/gallery/gif/mounted-run.gif", 'alt': "bear mounted on dog running", 'description': "<a target='_blank' href='https://www.fiverr.com/silveriac/make-a-short-character-animation'>Comission Work</a> - The heart of the Teddy Bear"},
     {'src': "./assets/gallery/gif/dog-mounted-jump.gif", 'alt': "bear mounted on dog jumping", 'description': "<a target='_blank' href='https://www.fiverr.com/silveriac/make-a-short-character-animation'>Comission Work</a> - The heart of the Teddy Bear"},
     //{'src': "./assets/gallery/gif/mount-pant.gif", 'alt': "bear pushing big snowball"},
-    {'src': "./assets/gallery/gif/pant-mounted.gif", 'alt': "bear mounted on dog panting", 'description': "<a target='_blank' href='https://www.fiverr.com/silveriac/make-a-short-character-animation'>Comission Work</a> - The heart of the Teddy Bear"}
+    {'src': "./assets/gallery/gif/pant-mounted.gif", 'alt': "bear mounted on dog panting", 'description': "<a target='_blank' href='https://www.fiverr.com/silveriac/make-a-short-character-animation'>Comission Work</a> - The heart of the Teddy Bear"},
+    {'src': "./assets/gallery/gif/dog-getup-pant.gif", 'alt': "dog panting", 'description': "<a target='_blank' href='https://www.fiverr.com/silveriac/make-a-short-character-animation'>Comission Work</a> - The heart of the Teddy Bear"},
+    {'src': "./assets/gallery/gif/idle-oso.gif", 'alt': "idle bear", 'description': "<a target='_blank' href='https://v3.globalgamejam.org/2020/games/cotton-revenge-2'>Global Game Jam 2020</a>"},
+    {'src': "./assets/gallery/gif/idle-arma-oso.gif", 'alt': "idle bear with gun", 'description': "<a target='_blank' href='https://v3.globalgamejam.org/2020/games/cotton-revenge-2'>Global Game Jam 2020</a>"},
+    {'src': "./assets/gallery/gif/caminata-oso.gif", 'alt': "bear walking", 'description': "<a target='_blank' href='https://v3.globalgamejam.org/2020/games/cotton-revenge-2'>Global Game Jam 2020</a>"},
+    {'src': "./assets/gallery/gif/caminata-con-arma-oso.gif", 'alt': "idle walking with gun", 'description': "<a target='_blank' href='https://v3.globalgamejam.org/2020/games/cotton-revenge-2'>Global Game Jam 2020</a>"},
+    {'src': "./assets/gallery/gif/disparos-oso.gif", 'alt': "bear shooting", 'description': "<a target='_blank' href='https://v3.globalgamejam.org/2020/games/cotton-revenge-2'>Global Game Jam 2020</a>"},
+    {'src': "./assets/gallery/gif/salto-oso.gif", 'alt': "bear jumping", 'description': "<a target='_blank' href='https://v3.globalgamejam.org/2020/games/cotton-revenge-2'>Global Game Jam 2020</a>"},
+    {'src': "./assets/gallery/gif/salto-con-arma-oso.gif", 'alt': "bear jumping with gun", 'description': "<a target='_blank' href='https://v3.globalgamejam.org/2020/games/cotton-revenge-2'>Global Game Jam 2020</a>"},
+
   ]
 };
 let imgArray = galleryContent.Illustration;
