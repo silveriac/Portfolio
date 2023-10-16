@@ -83,9 +83,12 @@ li:nth-child(4) > .desvanecerderecha{animation-delay: 1.6s;}
     opacity: 0;
 }
 .gallery-img{
+    position: relative;
+    top: -40px;
     opacity: 0;
     animation: move-down 1.3s 0s 1 ease-in-out forwards;
 }
+.gallery-img img [loading="lazy"]{animation: appear .1s .2s 1 ease-in forwards;}
 .fall1{animation: move-down 1.3s 0.3s 1 ease-in-out forwards;}
 .fall2{animation: move-down 1.3s 0.6s 1 ease-in-out forwards;}
 .fall3{animation: move-down 1.3s 0.9s 1 ease-in-out forwards;}

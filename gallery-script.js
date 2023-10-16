@@ -54,9 +54,48 @@ let galleryContent  = {
     {'src': "./assets/gallery/gif/disparos-oso.gif", 'alt': "bear shooting", 'description': "<a target='_blank' href='https://v3.globalgamejam.org/2020/games/cotton-revenge-2'>Global Game Jam 2020</a>"},
     {'src': "./assets/gallery/gif/salto-oso.gif", 'alt': "bear jumping", 'description': "<a target='_blank' href='https://v3.globalgamejam.org/2020/games/cotton-revenge-2'>Global Game Jam 2020</a>"},
     {'src': "./assets/gallery/gif/salto-con-arma-oso.gif", 'alt': "bear jumping with gun", 'description': "<a target='_blank' href='https://v3.globalgamejam.org/2020/games/cotton-revenge-2'>Global Game Jam 2020</a>"},
-
+  ],
+  'Design': [
+    {'src': "./assets/gallery/design/sonder-imagotipo-fondo-gris.png", 'alt': "sonder", 'description': "<a target='_blank' href='https://www.instagram.com/sonder_producciones/'>Sonder</a> - Logo and visual identity rework"},
+    {'src': "./assets/gallery/design/sonder-isologo-fondo-gris.png", 'alt': "sonder", 'description': "<a target='_blank' href='https://www.instagram.com/sonder_producciones/'>Sonder</a> - Logo and visual identity rework"},
+    {'src': "./assets/gallery/design/sonder-isotipo1.png", 'alt': "sonder", 'description': "<a target='_blank' href='https://www.instagram.com/sonder_producciones/'>Sonder</a> - Logo and visual identity rework - color variation"},
+    {'src': "./assets/gallery/design/sonder-logo.png", 'alt': "sonder", 'description': "<a target='_blank' href='https://www.instagram.com/sonder_producciones/'>Sonder</a> - Logo and visual identity rework - color variation"},
+    {'src': "./assets/gallery/design/sonder-brillo-1.jpg", 'alt': "sonder", 'description': "<a target='_blank' href='https://www.instagram.com/sonder_producciones/'>Sonder</a> - Logo and visual identity rework - color variation"},
+    {'src': "./assets/gallery/design/sonder-brillo-2.jpg", 'alt': "sonder", 'description': "<a target='_blank' href='https://www.instagram.com/sonder_producciones/'>Sonder</a> - Logo and visual identity rework - color variation"},
+    {'src': "./assets/gallery/design/sonder-imagotipo-fondo-marron.png", 'alt': "sonder", 'description': "<a target='_blank' href='https://www.instagram.com/sonder_producciones/'>Sonder</a> - Logo and visual identity rework - color variation"},
+    {'src': "./assets/gallery/design/sonder-imagotipo-2.jpg", 'alt': "sonder", 'description': "<a target='_blank' href='https://www.instagram.com/sonder_producciones/'>Sonder</a> - New logo from scratch, client opted to keep the rework version"},
+    {'src': "./assets/gallery/design/Sonder-iso.jpg", 'alt': "sonder", 'description': "<a target='_blank' href='https://www.instagram.com/sonder_producciones/'>Sonder</a> - New logo from scratch, client opted to keep the rework version"},
+    {'src': "./assets/gallery/design/Sonder-imagotipo.jpg", 'alt': "sonder", 'description': "<a target='_blank' href='https://www.instagram.com/sonder_producciones/'>Sonder</a> - New logo from scratch, client opted to keep the rework version"},
+    {'src': "./assets/gallery/design/sonder-logo-final-transparente.png", 'alt': "sonder", 'description': "<a target='_blank' href='https://www.instagram.com/sonder_producciones/'>Sonder</a> - New logo from scratch, client opted to keep the rework version"},
+    {'src': "./assets/gallery/design/sonder-card-1.jpg", 'alt': "sonder", 'description': "<a target='_blank' href='https://www.instagram.com/sonder_producciones/'>Sonder</a> - Sonder contact cards"},
+    {'src': "./assets/gallery/design/sonder-card-2.jpg", 'alt': "sonder", 'description': "<a target='_blank' href='https://www.instagram.com/sonder_producciones/'>Sonder</a> - Sonder contact cards"},
+    {'src': "./assets/gallery/design/sonder-logo-anterior.jpeg", 'alt': "sonder", 'description': "<a target='_blank' href='https://www.instagram.com/sonder_producciones/'>Sonder</a> - Previous design"},
+    {'src': "./assets/gallery/design/sonder-inicial.jpg", 'alt': "sonder", 'description': "<a target='_blank' href='https://www.instagram.com/sonder_producciones/'>Sonder</a> - My notes on previous design"},
+    {'src': "./assets/gallery/design/360tours-1.jpg", 'alt': "360tours", 'description': "<a target='_blank' href='https://www.instagram.com/360tours.uy/'>360tours</a> - Contact cards using established visual identity"},
+    {'src': "./assets/gallery/design/360tours-2.jpg", 'alt': "360tours", 'description': "<a target='_blank' href='https://www.instagram.com/360tours.uy/'>360tours</a> - Contact cards using established visual identity"},
+    {'src': "./assets/gallery/design/sippin2.jpg", 'alt': "sippin with spirits", 'description': "Sippin' with spirits, drinks reviews and ghost stories podcast - Card and mascot variation 1"},
+    {'src': "./assets/gallery/design/sippin1.png", 'alt': "sippin with spirits", 'description': "Sippin' with spirits, drinks reviews and ghost stories podcast - Card and mascot variation 2"},
+    {'src': "./assets/gallery/design/sippin3.jpg", 'alt': "sippin with spirits", 'description': "Sippin' with spirits, drinks reviews and ghost stories podcast - Card and mascot variation 3"},
+    {'src': "./assets/gallery/design/sippin4.jpg", 'alt': "sippin with spirits", 'description': "Sippin' with spirits, drinks reviews and ghost stories podcast - Card and mascot variation 4"},
+    {'src': "./assets/gallery/design/sippin-mascot-beer.png", 'alt': "sippin with spirits", 'description': "Sippin' with spirits, drinks and ghost stories podcast - Mascot variation 1"},
+    {'src': "./assets/gallery/design/sippin-mascot-whiskey.png", 'alt': "sippin with spirits", 'description': "Sippin' with spirits, drinks and ghost stories podcast - Mascot variation 2"},
+    {'src': "./assets/gallery/design/sippin-mascot-wine.png", 'alt': "sippin with spirits", 'description': "Sippin' with spirits, drinks and ghost stories podcast - Mascot variation 3"},
+    {'src': "./assets/gallery/design/sippin-examples.jpg", 'alt': "sippin with spirits", 'description': "Sippin' with spirits, drinks and ghost stories podcast - Process and options"},
+    {'src': "./assets/gallery/design/sippin-mascot-examples.jpg", 'alt': "sippin with spirits", 'description': "Sippin' with spirits, drinks and ghost stories podcast - Process and options for the ghost mascot"},
+    {'src': "./assets/gallery/design/varo1.jpg", 'alt': "varo percu", 'description': "<a target='_blank' href='https://www.instagram.com/varopercu/'>Varo Percu</a> - Percussion with recycled materials"},
+    {'src': "./assets/gallery/design/varo2.jpg", 'alt': "varo percu", 'description': "<a target='_blank' href='https://www.instagram.com/varopercu/'>Varo Percu</a> - Percussion artist"},
+    {'src': "./assets/gallery/design/varo3.jpg", 'alt': "varo percu", 'description': "<a target='_blank' href='https://www.instagram.com/varopercu/'>Varo Percu</a> - Percussion artist"},
+    {'src': "./assets/gallery/design/gm-fitness.jpg", 'alt': "mg fitness", 'description': "MG fitness - Personal Trainer"},
+    {'src': "./assets/gallery/design/gm-fitness2.jpg", 'alt': "mg fitness", 'description': "MG fitness - Personal Trainer"}
+  ],
+  'Doodly': [
+    {'src': "./assets/gallery/gif/lu.gif", 'alt': "lu doodly", 'description': "<a target='_blank' href='https://www.instagram.com/yolumith/'>Lu</a>"},
+    {'src': "./assets/gallery/gif/flo.gif", 'alt': "flo doodly", 'description': "<a target='_blank' href='https://www.instagram.com/floobi3/'>Flo</a>"},
+    {'src': "./assets/gallery/gif/eric.gif", 'alt': "eric doodly", 'description': "<a target='_blank' href='https://www.instagram.com/silveriac_/'>Eric</a>"}
+  
   ]
-};
+  };
+
 let imgArray = galleryContent.Illustration;
 let currentTab = 'Illustration';
 let modal;
@@ -78,13 +117,14 @@ window.onload = function () {
 const fillTab = (tab) => {
   contentArray = galleryContent[tab];
   console.log(tab);
+  const container = document.getElementById(tab);
+  if (container.childElementCount != 0) return;
   contentArray.forEach((image, index) => {
     const div = document.createElement("div");
     div.classList.add("gallery-img");
-    div.setAttribute("style", `animation-delay: ${(index*4)/10}s`);
-    if (tab == "Animation") div.innerHTML += `<img class="frame1" src="${(image.src).replace('gif/','gif/frame1/').replace(/-/g, '_')}" alt="${image.alt}">` //add still frame1 to gifs
+    div.setAttribute("style", `animation-delay: ${(index*2)/10}s`);
+    if (tab == "Animation" || tab == "Doodly") div.innerHTML += `<img class="frame1" src="${(image.src).replace('gif/','gif/frame1/').replace(/-/g, '_')}" alt="${image.alt}">` //add still frame1 to gifs
     div.innerHTML += `<img src="${image.src}" alt="${image.alt}" loading="lazy">`;
-    const container = document.getElementById(tab);
     setTimeout(() =>{container.appendChild(div);}, 250);
     div.addEventListener("click", () => modalSlider(1, index));
   })

@@ -69,6 +69,9 @@ main p{
     border: 2px solid grey;
     transition-duration: .2s;
 }
+.content-2 .gallery-img img{
+    height: 200px;
+}
 .gallery-img img:hover{
     cursor: pointer;
     transform: scale(1.03);
@@ -92,7 +95,7 @@ main p{
     flex-direction: column;
     width: 100vw;
     height: 100vh;
-    background: linear-gradient(to bottom, rgb(26, 26, 26), transparent 200%);
+    background: linear-gradient(to bottom, rgba(0, 0, 0), rgba(115, 50, 177, 0.8), black);
 }
 .slide-inner{
     display: flex;
@@ -105,6 +108,7 @@ main p{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-block: auto;
     max-height: 90%;
     width: 90vw;
 }
@@ -167,6 +171,17 @@ main p{
 }
 #description a{
     text-decoration: underline;
+}
+#twitch-embed{
+    display: inline;
+}
+.doodly{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+iframe{
+    min-height: 650px;
 }
 /*game page*/
 .game-title{
