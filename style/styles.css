@@ -113,6 +113,8 @@ iframe{
 .nav li a:hover{
   background: linear-gradient(to left, white 50%, black);
   color: black;
+  /*box-shadow: 3px 0px 3px rgba(255, 255, 255, 1);*/
+  border-radius: 5px;
   mix-blend-mode: difference;
   transition-duration: .5s;
 }

@@ -67,10 +67,13 @@ main p{
     width: auto;
     padding: 3px;
     border: 2px solid grey;
+    transition-duration: .2s;
 }
 .gallery-img img:hover{
     cursor: pointer;
     transform: scale(1.03);
+    translate: 0px -5px;
+    transition-duration: .2s;
     margin: 0px;
     padding: 0px;
     border: 2px solid white;
