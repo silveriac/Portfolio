@@ -92,7 +92,6 @@ let galleryContent  = {
     {'src': "./assets/gallery/gif/lu.gif", 'alt': "lu doodly", 'description': "<a target='_blank' href='https://www.instagram.com/yolumith/'>Lu</a>"},
     {'src': "./assets/gallery/gif/flo.gif", 'alt': "flo doodly", 'description': "<a target='_blank' href='https://www.instagram.com/floobi3/'>Flo</a>"},
     {'src': "./assets/gallery/gif/eric.gif", 'alt': "eric doodly", 'description': "<a target='_blank' href='https://www.instagram.com/silveriac_/'>Eric</a>"}
-  
   ]
   };
 
@@ -104,10 +103,10 @@ window.onload = function () {
   imageDiv = document.getElementsByClassName("show-img");
     console.log(imgArray);
     const buttons = document.getElementsByClassName("tabs");
-    buttons[0].addEventListener("click", (event) => galleryTabs(event, 'Illustration'));
-    buttons[1].addEventListener("click", (event) => galleryTabs(event, 'Animation'));
-    buttons[2].addEventListener("click", (event) => galleryTabs(event, 'Design'));
-    buttons[3].addEventListener("click", (event) => galleryTabs(event, 'Doodly'));
+    buttons[0].addEventListener("click", (event) => {changeTabs(event, 'Illustration'); fillTab(currentTab);});
+    buttons[1].addEventListener("click", (event) => {changeTabs(event, 'Animation'); fillTab(currentTab);});
+    buttons[2].addEventListener("click", (event) => {changeTabs(event, 'Design'); fillTab(currentTab);});
+    buttons[3].addEventListener("click", (event) => {changeTabs(event, 'Doodly'); fillTab(currentTab);});
     fillTab(currentTab);
     new Twitch.Player("twitch-embed", {
       channel: "dood_ly"
@@ -164,28 +163,6 @@ console.log(modal);
 let slide = document.getElementsByClassName("slide");
 let imageDiv;
 let currentSlide;
-
-const galleryTabs = (evt, tabName) => {
-  var i, tabcontent, tablinks;
-  /*if(tabName == 'Doodly'){
-    expandBackground(1);
-  }else{
-    expandBackground(2);
-  };*/
-  tabcontent = document.getElementsByClassName("tabcontent");
-  tablinks = document.getElementsByClassName("tabs");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  };
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace("active", "");
-    tablinks[i].classList.add("correct");
-  };
-  document.getElementById(tabName).style.display = "flex";
-  evt.currentTarget.className += " active";
-  currentTab = tabName;
-  fillTab(currentTab);
-};
 
 document.onkeydown = function(evt) {
   evt = evt || window.event;
