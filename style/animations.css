@@ -6,13 +6,23 @@
     0%  {opacity: 1}
     100%{opacity: 0}
 }
+@keyframes grow-horizontal{
+    0%{
+        transform: scaleX(0);
+        opacity: 0;
+    }
+    100%{
+        transform: scaleX(1);
+        opacity: 1;
+    }
+}
 @keyframes jump {
     0%   {transform: translateX(0px); opacity: 1;}
     100% {transform: translateX(-220px); opacity: 1;}
 }
 @keyframes move-right {
     0% {
-        transfrom: translateX(0px);
+        transform: translateX(0px);
         opacity: 0
     }
     100% {
@@ -22,7 +32,7 @@
 }
 @keyframes move-down {
     0% {
-        transfrom: translateY(0px);
+        transform: translateY(0px);
         opacity: 0
     }
     100% {
@@ -82,7 +92,7 @@ li:nth-child(4) > .desvanecerderecha{animation-delay: 1.6s;}
     bottom: 40px;
     opacity: 0;
 }
-.gallery-img{
+.gallery-img, .tech-item{
     position: relative;
     top: -40px;
     opacity: 0;
@@ -112,4 +122,8 @@ li:nth-child(4) > .desvanecerderecha{animation-delay: 1.6s;}
 .duration-reset{
     animation-duration: 1s !important;
     animation-delay: .2s !important;
+}
+.progress-bar{
+    animation: grow-horizontal 1.5s 0.3s 1 ease-out forwards;
+    transform-origin: left center;
 }
