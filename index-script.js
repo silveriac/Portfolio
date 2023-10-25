@@ -16,7 +16,27 @@ let indexContent  = {
         {'src': "./assets/logos/xd.png", 'name': "Adobe XD", 'alt': "xd", 'lvl': "medio", "percent": ".4"},
         {'src': "./assets/logos/csp.png", 'name': "ClipStudio Paint", 'alt': "clipstudio paint", 'lvl': "medio", "percent": ".65"},
         {'src': "./assets/logos/figma.png", 'name': "Figma", 'alt': "figma", 'lvl': "básico", "percent": ".3"}
-    ]
+    ],
+    'Experience':[
+        {'title': "Diseñador gráfico y web", 'company': "Sodimac", 'date': "2022 - 2023", "description":
+        `• Diseñé piezas visuales para varias páginas de Sodimac.com.uy y Sodimac.com.ar.<br>
+        • También mantuve, optimicé y actualicé el código de varias de las 'landing pages' de Sodimac.<br>
+        • Trabajé en estrategias de personalización usando Dynamic Yield.<br>
+        • Desarrollé una <a target='_blank' href="https://sodi-labs.com/eric/">aplicación de uso interno</a> para búsqueda de productos.<br>
+        • Implementé cambios para mejorar la eficiencia del flujo de trabajo del equipo.
+        <!-- <p class="exp-description">I designed image pieces for Sodimac's Homepage, as well as mantained, improved and updated code for various of Sodimac's landing pages. I also worked in personalization strategies using Dynamic Yield. Futhermore, I developed an internal use application and made changes to improve the team's workflow.</p> -->
+        `},
+
+        {'title': "Líder de equipos", 'company': "Médicos sin Fronteras", 'date': "2019 - 2021", "description":
+        `• Capté socios y donantes en vía callejera, cumpliendo siempre los objetivos planteados.<br>
+        • Trabajé en campañas de recuperación de socios y fidelidad.<br>
+        • Lideré equipos tanto en vía callejera como en modalidad call center.<br>
+        • Planeé estrategias de equipo y actividades motivacionales<br>`},
+
+        {'title': "<a target='_blank' href='https://www.fiverr.com'>Ilustrador y artista freelance", 'company': "<a target='_blank' href='https://www.fiverr.com'>Fiverr</a>", 'date': "2018 - actualidad", "description":
+        `• Worked on various illustration and animation projects<br>.
+        • Rated five stars`},
+    ],
 };
 let currentTab = 'Education';
 window.onload = () => {
@@ -30,15 +50,9 @@ window.onload = () => {
     const buttons = document.getElementsByClassName("tabs");
     console.log(buttons);
     buttons[0].addEventListener("click", (event) => changeTabs(event, 'Education'));
-    buttons[1].addEventListener("click", (event) => {
-        changeTabs(event, 'Technology');
-        fillTab("Technology");
-    });
-    buttons[2].addEventListener("click", (event) => {
-        changeTabs(event, 'Design');
-        fillTab("Design");
-    });
-    buttons[3].addEventListener("click", (event) => changeTabs(event, 'Experience'));
+    buttons[1].addEventListener("click", (event) => {changeTabs(event, 'Technology'); fillTab("Technology");});
+    buttons[2].addEventListener("click", (event) => {changeTabs(event, 'Design'); fillTab("Design");});
+    buttons[3].addEventListener("click", (event) => {changeTabs(event, 'Experience'); fillTab("Experience");});
     buttons[4].addEventListener("click", (event) => changeTabs(event, 'Proyects'));
 
     localStorage.setItem("visited", "true");
@@ -69,23 +83,70 @@ window.onload = () => {
 const fillTab = (tab) => {
     contentArray = indexContent[tab];
     console.log(tab);
-    const container = document.getElementById(tab);
-    if (container.childElementCount != 0) return;
-    contentArray.forEach((item, index) => {
+    switch(tab){
+        default:
+            const container = document.getElementById(tab);
+            if (container.childElementCount != 0) return;
+            contentArray.forEach((item, index) => {
+                const div = document.createElement("div");
+                div.classList.add("tech-item");
+                div.setAttribute("style", `animation-delay: ${0.1 + ((index*1.5)/10)}s`);
+                div.innerHTML +=
+                    `<div class="tech-logo">
+                        <img src="${item.src}" alt="${item.alt}">
+                    </div>
+                    <div class="tech-name">
+                        <p>${item.name}</p>
+                        <div class="progress-bar" style="width: ${100 * item.percent}%; animation-delay: ${(index*1.5)/10}s"></div>
+                    </div>
+                    <p class="tech-lvl">nivel ${item.lvl}</p>`;
+                setTimeout(() =>{container.appendChild(div);}, 110);
+            });
+            break;
+        case "Experience":
+            const list = document.getElementsByClassName("fill-ul")[0];
+            if (list.childElementCount != 0) return;
+            contentArray.forEach((item, index) => {
+                console.log(item);
+                const li = document.createElement("li");
+                li.classList.add("exp-item");
+                li.setAttribute("style", `animation-delay: ${0.1 + ((index*1.5)/10)}s`);
+                li.innerHTML +=
+                    `<div class="dot"></div>
+                    <div>
+                        <p class="exp-title">${item.title}</p>
+                        <p class="exp-company">${item.company}</p>
+                        <p class="exp-date">${item.date} •
+                            <span onclick="seeMoreExp(${index})">ver más</span>
+                        </p>
+                        <p class="exp-description">
+                            ${item.description}
+                        </p>
+                    </div>`;
+                setTimeout(() =>{list.appendChild(li);}, 110);
+            });
+            break;
+    }
+    /*contentArray.forEach((item, index) => {
       const div = document.createElement("div");
       div.classList.add("tech-item");
-      div.setAttribute("style", `animation-delay: ${0.1 + ((index*2)/10)}s`);
+      div.setAttribute("style", `animation-delay: ${0.1 + ((index*1.5)/10)}s`);
       div.innerHTML +=
         `<div class="tech-logo">
             <img src="${item.src}" alt="${item.alt}">
         </div>
         <div class="tech-name">
             <p>${item.name}</p>
-            <div class="progress-bar" style="width: ${100 * item.percent}%; animation-delay: ${(index*2)/10}s"></div>
-            
+            <div class="progress-bar" style="width: ${100 * item.percent}%; animation-delay: ${(index*1.5)/10}s"></div>
         </div>
         <p class="tech-lvl">nivel ${item.lvl}</p>`;
-      setTimeout(() =>{container.appendChild(div);}, 250);
-    });
+      setTimeout(() =>{container.appendChild(div);}, 110);
+    });*/
     //document.getElementsByClassName("tech-item")[0].scrollIntoView({ behavior: 'smooth', block: 'start' }); scrollear no funciona por el delay, solucionar
 };
+
+const seeMoreExp = (number) => {
+    document.getElementsByClassName('exp-description')[number].classList.toggle('grow');
+    let span = document.querySelectorAll('.exp-date > span')[number];
+    span.innerHTML = span.innerHTML == "ver más" ? "ver menos" : "ver más"
+}

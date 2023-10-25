@@ -92,7 +92,7 @@ li:nth-child(4) > .desvanecerderecha{animation-delay: 1.6s;}
     bottom: 40px;
     opacity: 0;
 }
-.gallery-img, .tech-item{
+.gallery-img, .tech-item, .exp-item{
     position: relative;
     top: -40px;
     opacity: 0;
