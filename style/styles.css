@@ -296,10 +296,10 @@ iframe{
   width: 850px;
   padding: 30px;
   border-radius: 15px;
-  background: linear-gradient(to top, rgba(0, 0, 0, .7), rgb(193, 87, 255, .5));
+  background: linear-gradient(to top, rgba(0, 0, 0, .5), rgba(53, 23, 70, 0.4));
 }
 .exp-item:hover{
-  background: linear-gradient(to top, rgba(0, 0, 0, .8), rgb(0, 0, 0, .7));
+  background: linear-gradient(to top, rgba(0, 0, 0, .7), rgb(0, 0, 0, .6));
 }
 .exp-item{
   display: flex;
@@ -330,7 +330,6 @@ li div:not(.dot){
 }
 .exp-description{
   transition-duration: .2s;
-
 }
 .exp-date span{
   text-decoration: underline;
@@ -345,7 +344,13 @@ li div:not(.dot){
 .exp-item .grow{
   padding-block: 10px !important;
   transition-duration: .6s !important;
+  padding-left: 15px !important;
 }
+
+
+
+
+
 .hide{
   display: none;
 }

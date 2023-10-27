@@ -96,7 +96,8 @@ let galleryContent  = {
   };
 
 let imgArray = galleryContent.Illustration;
-let currentTab = 'Illustration';
+const params = new URLSearchParams(window.location.search)
+let currentTab = params.get("tab") ?  params.get("tab") : "Illustration" ;
 let modal;
 window.onload = function () {
   modal = document.getElementsByClassName("modal")[0];

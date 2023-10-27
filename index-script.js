@@ -34,8 +34,18 @@ let indexContent  = {
         • Planeé estrategias de equipo y actividades motivacionales<br>`},
 
         {'title': "<a target='_blank' href='https://www.fiverr.com'>Ilustrador y artista freelance", 'company': "<a target='_blank' href='https://www.fiverr.com'>Fiverr</a>", 'date': "2018 - actualidad", "description":
-        `• Worked on various illustration and animation projects<br>.
-        • Rated five stars`},
+        `• Worked on various illustration and animation projects.<br>
+        • Rated five stars ⭐⭐⭐⭐⭐.`},
+    ],
+    'Education':[
+        {'title': "Diseño de comunicación visual", 'company': "<a target='_blank' href='https://radiumrocket.com'>FADU</a>", 'date': "2016 - 2018 (no finalizado)", "description": ""},
+        {'title': "Become a Software Proffesional", 'company': "<a target='_blank' href='http://www.fadu.edu.uy'>Radium Rocket</a>", 'date': "2022", "description": ""},
+        {'title': "Analista GeneXus", 'company': "<a target='_blank' href='https://jovenesaprogramar.edu.uy'>Jóvenes a Programar</a>", 'date': "2018", "description": ""},
+    ],
+    'Proyects':[
+        {'title': "<a href='gallery.html?tab=Doodly'>Doodly</a>", 'company': "Stream de arte y diseño en <a target='_blank' href='https://www.twitch.tv/dood_ly'>Twitch</a>", 'date': "2020 - actualidad", "description": ""},
+        {'title': "<a href='games.html#games-page'>Salud, Dinero y Amor</a>", 'company': "Juego de mesa en desarrollo", 'date': "2022 - actualidad", "description": ""},
+        {'title': "Random", 'company': "Programa de TV en canal 6", 'date': "2013", "description": ""},
     ],
 };
 let currentTab = 'Education';
@@ -49,20 +59,20 @@ window.onload = () => {
 
     const buttons = document.getElementsByClassName("tabs");
     console.log(buttons);
-    buttons[0].addEventListener("click", (event) => changeTabs(event, 'Education'));
+    buttons[0].addEventListener("click", (event) => {changeTabs(event, 'Education'); fillTab("Education");});
     buttons[1].addEventListener("click", (event) => {changeTabs(event, 'Technology'); fillTab("Technology");});
     buttons[2].addEventListener("click", (event) => {changeTabs(event, 'Design'); fillTab("Design");});
     buttons[3].addEventListener("click", (event) => {changeTabs(event, 'Experience'); fillTab("Experience");});
-    buttons[4].addEventListener("click", (event) => changeTabs(event, 'Proyects'));
+    buttons[4].addEventListener("click", (event) => {changeTabs(event, 'Proyects'); fillTab("Proyects")});
 
     localStorage.setItem("visited", "true");
-    console.log(localStorage.getItem("visited"))
-    if(localStorage.getItem("visited") === "true"){
-        for (let i = 0; i < document.getElementsByClassName("enlacesinicio").length; i++) {
-            console.log(document.getElementsByClassName("enlacesinicio")[i]);
-            document.getElementsByClassName("enlacesinicio")[i].classList.add("duration-reset");
-        }
-    }
+    console.log(localStorage.getItem("visited"));
+    // if(localStorage.getItem("visited") === "true"){
+    //     for (let i = 0; i < document.getElementsByClassName("enlacesinicio").length; i++) {
+    //         console.log(document.getElementsByClassName("enlacesinicio")[i]);
+    //         document.getElementsByClassName("enlacesinicio")[i].classList.add("duration-reset");
+    //     }
+    // }
     /*document.querySelector("h1").addEventListener("mouseenter", (event) => {
         let text = event.target.textContent;   
         const letters = ["E", "e", "r", "i", "c", " ", "S", "i", "l", "v", "a"];
@@ -104,10 +114,14 @@ const fillTab = (tab) => {
             });
             break;
         case "Experience":
-            const list = document.getElementsByClassName("fill-ul")[0];
+        case "Education":
+        case "Proyects":
+            const list = document.querySelector(`#${tab} .fill-ul`);
+            console.log(list)
             if (list.childElementCount != 0) return;
             contentArray.forEach((item, index) => {
-                console.log(item);
+                const seeMore = tab == "Experience" ? ` • <span onclick="seeMoreExp(${index})">ver más</span>` : "";
+                const description = tab == "Experience" ? `<p class="exp-description">${item.description}</p>` : "";
                 const li = document.createElement("li");
                 li.classList.add("exp-item");
                 li.setAttribute("style", `animation-delay: ${0.1 + ((index*1.5)/10)}s`);
@@ -116,12 +130,10 @@ const fillTab = (tab) => {
                     <div>
                         <p class="exp-title">${item.title}</p>
                         <p class="exp-company">${item.company}</p>
-                        <p class="exp-date">${item.date} •
-                            <span onclick="seeMoreExp(${index})">ver más</span>
+                        <p class="exp-date">${item.date}
+                            ${seeMore}
                         </p>
-                        <p class="exp-description">
-                            ${item.description}
-                        </p>
+                        ${description}
                     </div>`;
                 setTimeout(() =>{list.appendChild(li);}, 110);
             });
@@ -147,6 +159,7 @@ const fillTab = (tab) => {
 
 const seeMoreExp = (number) => {
     document.getElementsByClassName('exp-description')[number].classList.toggle('grow');
+    console.log(document.getElementsByClassName('exp-description')[number])
     let span = document.querySelectorAll('.exp-date > span')[number];
     span.innerHTML = span.innerHTML == "ver más" ? "ver menos" : "ver más"
 }
