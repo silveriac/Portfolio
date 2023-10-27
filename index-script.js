@@ -19,7 +19,7 @@ let indexContent  = {
     ],
     'Experience':[
         {'title': "Diseñador gráfico y web", 'company': "Sodimac", 'date': "2022 - 2023", "description":
-        `• Diseñé piezas visuales para varias páginas de Sodimac.com.uy y Sodimac.com.ar.<br>
+        `• Diseñé piezas visuales para varias páginas de <a target='_blank' href='https://www.sodimac.com.uy/sodimac-uy/'>Sodimac.com.uy</a> y <a target='_blank' href='https://www.sodimac.com.ar/sodimac-ar/'>Sodimac.com.ar</a>.<br>
         • También mantuve, optimicé y actualicé el código de varias de las 'landing pages' de Sodimac.<br>
         • Trabajé en estrategias de personalización usando Dynamic Yield.<br>
         • Desarrollé una <a target='_blank' href="https://sodi-labs.com/eric/">aplicación de uso interno</a> para búsqueda de productos.<br>
@@ -34,8 +34,10 @@ let indexContent  = {
         • Planeé estrategias de equipo y actividades motivacionales<br>`},
 
         {'title': "<a target='_blank' href='https://www.fiverr.com'>Ilustrador y artista freelance", 'company': "<a target='_blank' href='https://www.fiverr.com'>Fiverr</a>", 'date': "2018 - actualidad", "description":
-        `• Worked on various illustration and animation projects.<br>
-        • Rated five stars ⭐⭐⭐⭐⭐.`},
+        `• Trabajé en proyectos varios de ilustración, diseño y animación.<br>
+        • Puntuación de 5 estrellas ⭐⭐⭐⭐⭐.
+        <!--• Worked on various illustration and animation projects.<br>
+        • Rated five stars ⭐⭐⭐⭐⭐.-->`},
     ],
     'Education':[
         {'title': "Diseño de comunicación visual", 'company': "<a target='_blank' href='https://radiumrocket.com'>FADU</a>", 'date': "2016 - 2018 (no finalizado)", "description": ""},
@@ -161,5 +163,5 @@ const seeMoreExp = (number) => {
     document.getElementsByClassName('exp-description')[number].classList.toggle('grow');
     console.log(document.getElementsByClassName('exp-description')[number])
     let span = document.querySelectorAll('.exp-date > span')[number];
-    span.innerHTML = span.innerHTML == "ver más" ? "ver menos" : "ver más"
+    span.innerHTML = span.innerHTML == "ver más" ? "ver menos" : "ver más";
 }
