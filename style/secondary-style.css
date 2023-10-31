@@ -31,9 +31,11 @@ main p{
 .gallery-img{
     display: flex;
     position: relative;
+    flex-direction: column;
     height: clamp(350px, 40%, 500px);
     align-items: center;
     margin: 10px;
+    border-radius: 5px;
 }
 .gallery-img img{
     height: 300px;
@@ -41,15 +43,19 @@ main p{
     padding: 3px;
     border: 2px solid grey;
     transition-duration: .2s;
+    border-radius: 5px;
+
 }
 .content-2 .gallery-img img{
     height: 200px;
 }
 .frame1{
     position: absolute;
+    filter:sepia(20%);
 }
 .frame1:hover{
     display:none;
+
 }
 /*slider*/
 .modal{
@@ -223,7 +229,7 @@ main p{
 }
 .board{
     width: 60%;
-    background: linear-gradient(to bottom, rgba(255, 255, 255, .9), transparent 150%);
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 1), transparent 200%);
     gap: unset;
 }
 .board img{
@@ -269,7 +275,7 @@ main p{
 .iframe a, .steam iframe h1{
     font-size: 120px !important;
 }
-div:has( >.sda){
+.sda-imgs{
     margin-inline: auto;
 }
 .sda:is(img){
@@ -283,6 +289,10 @@ div:has( >.sda){
 }
 .description > span > a{
     font-size: 11px;
+}
+.description > .title{
+    font-size: 17px;
+    font-weight: 600;
 }
 a[download="rock_paper_scissors"]{
     text-decoration: underline;
@@ -303,7 +313,7 @@ a[download="rock_paper_scissors"]{
     z-index: 9;
 } */
 .jam::after{
-    content: "       Jam game!       ";
+    content: "       Jam game!      ";
     font-size: 15px;
     position: absolute;
     background-color: rgb(207, 78, 38);
@@ -323,13 +333,13 @@ a[download="rock_paper_scissors"]{
     animation: grow-horizontal .3s 1.2s 1 ease-in-out forwards; */
 }
 .jam:hover::after{
-    content: " Made in 48 hours! ";
+    content: "Made in 48 hours!";
     font-size: 15px;
     position: absolute;
     background-color: rgb(207, 78, 38);
     padding-top: 2px;
     padding-bottom: 5px;
-    padding-inline: 30px;
+    padding-inline: 32.2px;
     margin-bottom: 10px;
     /* transform: rotate(20deg);
     top: -4%;
@@ -338,6 +348,36 @@ a[download="rock_paper_scissors"]{
     top: 0%;
     left: -7%;
     clip-path: polygon(92% 5%, 92% 25%, 100% 25%, 97% 65%, 100% 105%, 86% 105%, 86% 85%, 14% 85%, 14% 105%, 0 105%, 3% 65%, 0 25%, 0% 25%, 8% 25%, 8% 5%);
-    transition-duration: .3s;
     z-index: 10;
+}
+/*web-dev page*/
+#webDev section{
+    color: white;
+    transition-duration: 1s;
+    padding-block: 0px;
+    margin-right: 0;
+    width: 90%;
+    margin-inline: auto;
+    margin-block: 30px;
+    background: linear-gradient(to bottom, rgba(0,0,0, .5), rgba(193, 87, 255, .6) 100%);
+    border-radius: 40px;
+    padding: 40px;
+}
+#webDev .content-1{
+    justify-content: space-evenly;
+}
+#webDev .gallery-img img{
+    /* height: 200px; */
+}
+#webDev .gallery-img {
+    /* height: clamp(220px, 40%, 300px); */
+
+}
+.gallery-img p{
+    font-size: 12px;
+}
+h5{
+    margin-bottom: 20px;
+    font-size: 30px;
+    text-align: center;
 }

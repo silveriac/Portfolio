@@ -47,7 +47,7 @@ let indexContent  = {
     'Proyects':[
         {'title': "<a href='gallery.html?tab=Doodly'>Doodly</a>", 'company': "Stream de arte y diseño en <a target='_blank' href='https://www.twitch.tv/dood_ly'>Twitch</a>", 'date': "2020 - actualidad", "description": ""},
         {'title': "<a href='games.html#games-page'>Salud, Dinero y Amor</a>", 'company': "Juego de mesa en desarrollo", 'date': "2022 - actualidad", "description": ""},
-        {'title': "Random", 'company': "Programa de TV en canal 6", 'date': "2013", "description": ""},
+        {'title': "<a target='_blank' href='https://youtube.com/clip/Ugkx7iT7OuOkUgt-aKGu-qsT8Lb8CBY5vepS?si=wG3_A3GYTcyAbD8A'>Random</a>", 'company': "Programa de TV en canal 6", 'date': "2013", "description": ""},
     ],
     'Contact':[
         {'src': "./assets/logos/gmail.svg", 'alt': 'instagram', 'title': "<a target='_blank' href='mailto:erixilva42@gmail.com?'>erixilva42@gmail.com</a>"},

@@ -19,7 +19,7 @@ header{
   height: 48px;
   background-color: black;
 }
-header:has(+#games-page)::after{
+header:has(+#gamesPage)::after, header:has(+#webDev)::after{
   content: "";
   position: absolute;
   top:47px;
@@ -50,11 +50,22 @@ main > section:nth-child(1){
 footer{
   display: flex;
   justify-content: flex-end;
+  position: relative;
   background-color: black;
   padding-top: 2px;
+  z-index: 1;
 }
 footer p{
   color: #818181;
+}
+footer::after{
+  content: "";
+  position: absolute;
+  bottom: 26px;
+  width: 100%;
+  height: 20px;
+  background: linear-gradient(to top, black, transparent 100%);
+  z-index: 0;
 }
 p {font-size: 12px;}
 h1{
@@ -391,10 +402,6 @@ li div:not(.dot){
   transition-duration: .6s !important;
   padding-left: 15px !important;
 }
-
-
-
-
 
 .hide{
   display: none;
