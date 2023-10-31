@@ -38,7 +38,7 @@
     100% {
         transform: translateY(40px);
         opacity: 1
-        }
+    }
 }
 @keyframes move-up {
     0% {
@@ -68,7 +68,7 @@
 }
 @keyframes slide-right{
     0% {
-        transfrom: translateX(0px);
+        transform: translateX(0px);
         opacity: 1
     }
     100% {
@@ -97,6 +97,24 @@ li:nth-child(4) > .desvanecerderecha{animation-delay: 1.6s;}
     top: -40px;
     opacity: 0;
     animation: move-down 1.3s 0s 1 ease-in-out forwards;
+}
+.gallery-img img:hover{
+    cursor: pointer;
+    transform: scale(1.03);
+    translate: 0px -5px;
+    transition-duration: .2s;
+    margin: 0px;
+    padding: 0px;
+    border: 2px solid white;
+}
+.game{
+    transition-duration: .2s;
+}
+.game:hover{
+    translate: 0px -5px;
+    transition-duration: .2s;
+    outline: 2px solid white;
+    background: linear-gradient(to top, black, transparent 300%);
 }
 .gallery-img img [loading="lazy"]{animation: appear .1s .2s 1 ease-in forwards;}
 .fall1{animation: move-down 1.3s 0.3s 1 ease-in-out forwards;}
