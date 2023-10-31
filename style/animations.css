@@ -87,7 +87,8 @@ li:nth-child(1) > .desvanecerderecha{animation-delay: 1s;}
 li:nth-child(2) > .desvanecerderecha{animation-delay: 1.2s;}
 li:nth-child(3) > .desvanecerderecha{animation-delay: 1.4s;}
 li:nth-child(4) > .desvanecerderecha{animation-delay: 1.6s;}
-.fall1, .fall2, .fall3, .fall4{ /*initial tab configurations*/
+li:nth-child(5) > .desvanecerderecha{animation-delay: 1.8s;}
+.fall1, .fall2, .fall3, .fall4, .fall5, .fall6, .fall7, .fall8, .fall9, .fall10{ /*initial tab configurations*/
     position: relative;
     bottom: 40px;
     opacity: 0;
@@ -124,6 +125,9 @@ li:nth-child(4) > .desvanecerderecha{animation-delay: 1.6s;}
 .fall5{animation: move-down 1.3s 1.5s 1 ease-in-out forwards;}
 .fall6{animation: move-down 1.3s 1.8s 1 ease-in-out forwards;}
 .fall7{animation: move-down 1.3s 2.1s 1 ease-in-out forwards;}
+.fall8{animation: move-down 1.3s 2.1s 1 ease-in-out forwards;}
+.fall9{animation: move-down 1.3s 2.1s 1 ease-in-out forwards;}
+.fall10{animation: move-down 1.3s 2.1s 1 ease-in-out forwards;}
 /* .gallery-img img{
     animation: still 0.5s 0s 1 ease-in-out forwards;
 }

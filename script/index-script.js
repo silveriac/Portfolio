@@ -49,6 +49,11 @@ let indexContent  = {
         {'title': "<a href='games.html#games-page'>Salud, Dinero y Amor</a>", 'company': "Juego de mesa en desarrollo", 'date': "2022 - actualidad", "description": ""},
         {'title': "Random", 'company': "Programa de TV en canal 6", 'date': "2013", "description": ""},
     ],
+    'Contact':[
+        {'src': "./assets/logos/gmail.svg", 'alt': 'instagram', 'title': "<a target='_blank' href='mailto:erixilva42@gmail.com?'>erixilva42@gmail.com</a>"},
+        {'src': "./assets/logos/linkedin.svg", 'alt': 'instagram', 'title': "<a target='_blank' href='https://www.linkedin.com/in/eric-silva-820683155/'>Eric Silva</a>"},
+        {'src': "./assets/logos/insta.svg", 'alt': 'instagram', 'title': "<a target='_blank' href='https://www.instagram.com/silveriac_/'>@silveriac_</a>"},
+    ],
 };
 let currentTab = 'Education';
 window.onload = () => {
@@ -57,6 +62,10 @@ window.onload = () => {
         setTimeout(() => {
             document.getElementById("aboutMe").scrollIntoView({ behavior: 'smooth', block: 'start' });
         }, 100);
+        let tabs = document.getElementsByClassName("tabs");
+        for (let i = 0; i < tabs.length; i++) {
+            tabs[i].classList.add("fall" + (i+1));
+        };
     });
 
     const buttons = document.getElementsByClassName("tabs");
@@ -66,6 +75,7 @@ window.onload = () => {
     buttons[2].addEventListener("click", (event) => {changeTabs(event, 'Design'); fillTab("Design");});
     buttons[3].addEventListener("click", (event) => {changeTabs(event, 'Experience'); fillTab("Experience");});
     buttons[4].addEventListener("click", (event) => {changeTabs(event, 'Proyects'); fillTab("Proyects")});
+    buttons[5].addEventListener("click", (event) => {changeTabs(event, 'Contact'); fillTab("Contact")});
 
     localStorage.setItem("visited", "true");
     console.log(localStorage.getItem("visited"));
@@ -138,10 +148,29 @@ const fillTab = (tab) => {
                         ${description}
                     </div>`;
                     list.appendChild(li)
-                    //setTimeout(() =>{list.appendChild(li);}, 110);
+                    setTimeout(() =>{list.appendChild(li);}, 110);
             });
             break;
-    }
+        case "Contact":
+            const contactList = document.querySelector(`#${tab} .fill-ul`);
+            if (contactList.childElementCount != 0) return;
+            contentArray.forEach((item, index) => {
+                const li = document.createElement("li");
+                li.classList.add("exp-item");
+                li.setAttribute("style", `animation-delay: ${0.1 + ((index*1.5)/10)}s`);
+                li.innerHTML +=
+                    `<div class="contact-logo">
+                        <object data="${item.src}" type="image/svg+xml"></object>
+                        <!--<img src="${item.src}" alt="${item.alt}">-->
+                    </div>
+                    <div>
+                        <p class="exp-title">${item.title}</p>
+                    </div>`;
+                    contactList.appendChild(li)
+                    setTimeout(() =>{list.appendChild(li);}, 110);
+            });
+            break;
+    };
     /*contentArray.forEach((item, index) => {
       const div = document.createElement("div");
       div.classList.add("tech-item");
