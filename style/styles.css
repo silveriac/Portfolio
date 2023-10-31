@@ -53,6 +53,9 @@ footer{
   background-color: black;
   padding-top: 2px;
 }
+footer p{
+  color: #818181;
+}
 p {font-size: 12px;}
 h1{
   font-size: 70px;
@@ -108,7 +111,7 @@ iframe{
   filter: invert(50%);
 }
 .invert:hover{
-  filter: invert(50%);
+  filter: invert(100%);
 }
 .rotate-180{
   transform: rotate(180deg);
