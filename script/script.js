@@ -19,7 +19,3 @@ const changeTabs = (evt, tabName) => {
   currentTab = tabName;
   console.log("hola");
 };
-
-
-
-

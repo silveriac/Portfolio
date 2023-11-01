@@ -57,7 +57,7 @@ let indexContent  = {
 };
 let currentTab = 'Education';
 window.onload = () => {
-    document.getElementsByClassName("enlacesinicio")[0].addEventListener("click", () =>{
+    document.getElementById("linkAboutMe").addEventListener("click", () =>{
         document.getElementById("aboutMe").classList.toggle("grow");
         setTimeout(() => {
             document.getElementById("aboutMe").scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -67,7 +67,21 @@ window.onload = () => {
             tabs[i].classList.add("fall" + (i+1));
         };
     });
-
+    document.getElementById("linkContact").addEventListener("click", (event) =>{
+        document.getElementById("aboutMe").classList.toggle("grow");
+        setTimeout(() => {
+            document.getElementById("aboutMe").scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 100);
+        let tabs = document.getElementsByClassName("tabs");
+        let j = 6;
+        for (let i = 0; i < tabs.length; i++) {
+            tabs[i].classList.add("fall" + (j));
+            j--;
+            console.log(j);
+        };
+        changeTabs(event, 'Contact');
+        fillTab("Contact");
+    });
     const buttons = document.getElementsByClassName("tabs");
     console.log(buttons);
     buttons[0].addEventListener("click", (event) => {changeTabs(event, 'Education'); fillTab("Education");});
@@ -104,7 +118,6 @@ window.onload = () => {
 };
 const fillTab = (tab) => {
     contentArray = indexContent[tab];
-    console.log(tab);
     switch(tab){
         default:
             const container = document.getElementById(tab);
@@ -166,8 +179,7 @@ const fillTab = (tab) => {
                     <div>
                         <p class="exp-title">${item.title}</p>
                     </div>`;
-                    contactList.appendChild(li)
-                    setTimeout(() =>{list.appendChild(li);}, 110);
+                    setTimeout(() =>{contactList.appendChild(li);}, 110);
             });
             break;
     };

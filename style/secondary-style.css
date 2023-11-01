@@ -373,6 +373,11 @@ a[download="rock_paper_scissors"]{
     /* height: clamp(220px, 40%, 300px); */
 
 }
+#webDev h3,#webDev h4{
+    text-align: center;
+
+}
+
 .gallery-img p{
     font-size: 12px;
 }

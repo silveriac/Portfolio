@@ -105,12 +105,44 @@ iframe{
   width: auto !important;
   transition-duration: .2s;
   margin: 5px 15px 7px 15px;
+  position: relative;
+  z-index: 1;
 }
 .nav-icon:hover{
   scale:calc(1.2);
   transition-duration: .2s;
   filter: brightness(100);
   cursor: pointer;
+}
+a:has(.nav-icon):hover::after{
+  content: "Inicio";
+  font-family: 'Montserrat', 'sans-serif';
+  font-size: 14px;
+  color: white;
+  background-color: black;
+  outline: 2px solid grey;
+  border-radius: 3px;
+  padding: 3px;
+  padding-inline: 7px;
+  position: absolute;
+  top: 7px;
+  left: 70px;
+  z-index: 5;
+}
+span:has(.nav-icon):hover::after{
+  content: "Atrás";
+  font-family: 'Montserrat', 'sans-serif';
+  font-size: 14px;
+  color: white;
+  background-color: black;
+  outline: 2px solid rgb(194, 194, 194);
+  border-radius: 3px;
+  padding: 3px;
+  padding-inline: 7px;
+  position: absolute;
+  top: 7px;
+  right: 55px;
+  z-index: 5;
 }
 .gallery, .games{
   display: flex;
