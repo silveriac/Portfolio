@@ -23,11 +23,11 @@
       </div>
       <div>
         <ul class="nav">
-          <li><a id="linkAboutMe" class="enlacesinicio desvanecerderecha">Sobre mí</a></li>
+          <li><a id="linkAboutMe" class="enlacesinicio desvanecerderecha" href="#">Sobre mí</a></li>
           <li><a id="linkWebDev" class="enlacesinicio desvanecerderecha" href="webdev.html">Diseño Web</a></li>
           <li><a id="linkGallery" class="enlacesinicio desvanecerderecha" href="gallery.html">Galería</a></li>
           <li><a id="linkGames" class="enlacesinicio desvanecerderecha" href="games.html">Juegos</a></li>
-          <li><a id="linkContact" class="enlacesinicio desvanecerderecha">Contacto</a></li>
+          <li><a id="linkContact" class="enlacesinicio desvanecerderecha" href="#">Contacto</a></li>
         </ul>
       </div>
       
@@ -36,7 +36,7 @@
       <div>
         <img class="icon" onclick="document.getElementById('aboutMe').classList.toggle('grow');" src="./assets/close-icon.png" alt="close"></img>
       </div>
-      <div>
+      <article>
         <div class="profile">
           <img src="assets/profile.jpeg" alt="my profile pic">
         </div>
@@ -46,44 +46,50 @@
           <li>Estudié Desarrollo de aplicaciones GeneXus en Jóvenes a programar, y diseño web la FADU (Facultad de Arquitectura, Diseño y Urbanismo, Uruguay)</li>
           <li>Busco mi primera experiencia laboral en desarrollo de software</li>
         </ul>
-      </div>
+      </article>
+      <section>
+        <div class="tab-bar">
+          <button class="tabs">Formación</button>
+          <button class="tabs">Tecnologías</button>
+          <button class="tabs">Diseño</button>
+          <button class="tabs">Experiencia</button>
+          <button class="tabs">Proyectos</button>
+          <button class="tabs ">Contacto</button>
+        </div>
+        <div>
+          <div id="Education" class="tabcontent content-1">
+            <div>
+              <ul class="fill-ul">
+              </ul>
+            </div>
+          </div>
+          <div id="Technology" class="tabcontent content-1">
+          </div>
+          <div id="Design" class="tabcontent content-1">
+          </div>
+          <div id="Experience" class="tabcontent content-1">
+            <div>
+              <ul class="fill-ul">
+              </ul>
+            </div>
+          </div>
+          <div id="Proyects" class="tabcontent content-1">
+            <div>
+              <ul class="fill-ul">
+              </ul>
+            </div>
+          </div>
+          <div id="Contact" class="tabcontent content-1">
+            <div>
+              <ul class="fill-ul">
+              </ul>
+            </div>
+          </div>
   
-      <div class="tab-bar">
-        <button class="tabs">Formación</button>
-        <button class="tabs">Tecnologías</button>
-        <button class="tabs">Diseño</button>
-        <button class="tabs">Experiencia</button>
-        <button class="tabs">Proyectos</button>
-        <button class="tabs ">Contacto</button>
-      </div>
-      <div id="Education" class="tabcontent content-1">
-        <div>
-          <ul class="fill-ul">
-          </ul>
         </div>
-      </div>
-      <div id="Technology" class="tabcontent content-1">
-      </div>
-      <div id="Design" class="tabcontent content-1">
-      </div>
-      <div id="Experience" class="tabcontent content-1">
-        <div>
-          <ul class="fill-ul">
-          </ul>
-        </div>
-      </div>
-      <div id="Proyects" class="tabcontent content-1">
-        <div>
-          <ul class="fill-ul">
-          </ul>
-        </div>
-      </div>
-      <div id="Contact" class="tabcontent content-1">
-        <div>
-          <ul class="fill-ul">
-          </ul>
-        </div>
-      </div>
+      </section>
+      
+
     </section>
   </main>
 

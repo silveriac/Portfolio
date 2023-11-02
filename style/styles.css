@@ -1,6 +1,28 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
-
+:root{
+  font-size: 20px;
+}
+@media screen and (max-width: 1440px) {
+  :root{
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 1080px) {
+  :root{
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 768px) {
+  :root{
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 600px) {
+  :root{
+    font-size: 10px;
+  }
+}
 html {scroll-behavior: smooth;}
 body {
   font: 20px 'Montserrat', 'sans-serif';
@@ -10,7 +32,6 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 100%;
-
 }
 header{
   display: flex;
@@ -19,7 +40,7 @@ header{
   height: 48px;
   background-color: black;
 }
-header:has(+#gamesPage)::after, header:has(+#webDev)::after{
+header:has(+#gamesPage)::after, header:has(+#webDev)::after{ /*this ugly selector adds blur to header and footer*/
   content: "";
   position: absolute;
   top:47px;
@@ -33,10 +54,10 @@ main {
   background-image: url("../assets/silueta-fondo.png");
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-position: 120% 13%;
-  background-size: 60%;
+  background-position: 100% 13%;
+  background-size: 55%;
   color: #ffffff;
-  padding-bottom: calc(30vh - 24px);
+  padding-bottom: calc(10vh - 24px);
 }
 main > section:nth-child(1){
   display: flex;
@@ -58,18 +79,18 @@ footer{
 footer p{
   color: #818181;
 }
-footer::after{
+footer::before{
   content: "";
   position: absolute;
-  bottom: 26px;
-  width: 100%;
+  bottom: 23px;
+  width: 150%;
   height: 20px;
   background: linear-gradient(to top, black, transparent 100%);
   z-index: 0;
 }
 p {font-size: 12px;}
 h1{
-  font-size: 70px;
+  font-size: 3.5rem;
   color: black;
   font-family: 'Ubuntu', sans-serif;
 }
@@ -133,6 +154,7 @@ span:has(.nav-icon):hover::after{
   content: "Atrás";
   font-family: 'Montserrat', 'sans-serif';
   font-size: 14px;
+  cursor: pointer;
   color: white;
   background-color: black;
   outline: 2px solid rgb(194, 194, 194);
@@ -161,13 +183,14 @@ span:has(.nav-icon):hover::after{
 }
 .enlacesinicio{
   /*background: linear-gradient(to left, rgba(0, 0, 0, 1), transparent);*/
+  translate: -100px 0px;
   opacity: 0;
   text-align: right;
 }
 .nav li a{
-  font-size: 20px;
+  font-size: 1rem;
   transition-duration: .3s;
-  width: 190px;
+  width: 9.5rem;
   cursor: pointer;
 }
 .nav li a:hover, .nav li a:focus{
@@ -176,8 +199,6 @@ span:has(.nav-icon):hover::after{
   /*box-shadow: 3px 0px 3px rgba(255, 255, 255, 1);*/
   border-radius: 5px;
  /* mix-blend-mode: difference;*/
-  transition-duration: .3s;
-  translate: 5px 0px;
   outline: none;
   font-weight: 700;
 }
@@ -186,57 +207,6 @@ span:has(.nav-icon):hover::after{
 }
 .align-right{
   text-align: right;
-}
-#aboutMe{
-  display: grid;
-  place-content: center;
-  color: white;
-  transition-duration: 1s;
-  max-height: 0px;
-  overflow: clip;
-  padding-block: 0px;
-  margin-right: 0;
-  width: 90%;
-  margin-inline: auto;
-  background: linear-gradient(to bottom, rgba(0,0,0, .5), rgba(193, 87, 255, .6) 100%);
-  border-radius: 40px;
-  padding-inline: 40px;
-}
-#aboutMe > div{
-  margin-block: auto;
-}
-.profile{
-  display: inline-block;
-  vertical-align: top;
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  aspect-ratio: 1;
-  border: #ffffff 2px solid;
-  overflow: clip;
-  margin-top: 0;
-}
-.profile > img{
-  position: relative;
-  display: inline;
-  top: -20px;
-  width: 100%;
-  -webkit-transform: scaleX(-1);
-  transform: scaleX(-1);
-  object-fit: contain;
-}
-.grow{
-  max-height: 5000px !important;
-  transition-duration: .2s !important;
-  padding: 25px !important;
-  padding-inline: 40px !important;
-  padding-bottom: 50px !important;
-}
-#aboutMe ul{
-  font-size: 14px;
-  margin-left: 25px;
-  width: 80%;
-  display: inline-block;
 }
 .tab-bar{
   display: flex;
@@ -250,24 +220,26 @@ span:has(.nav-icon):hover::after{
   transition-duration: .3s;
 }
 .tabs{
+  font-size: 1.2rem;
   width:100%;
   height: 100%;
   margin: 0;
   border-radius: 10px;
   opacity: 0;
 }
-.tabs:hover{
+.tabs:hover, .tabs:focus{
   background: linear-gradient(to bottom, black, transparent 100%);
+  outline: none;
 }
 .tab-bar button.active{
   background: linear-gradient(to bottom, black, transparent 150%);
-  font-size: 26px;
+  font-size: 1.25rem;
 }
 .tab-bar button:hover{
-  font-size: 26px;
+  font-size: 1.25rem;
   transition-duration: .3s;
 }
-.tab-bar:has(+#Education){
+.tab-bar:has(+#Education){ /*only affects index page*/
   padding-top: 30px;
 }
 .tabcontent{
@@ -276,6 +248,24 @@ span:has(.nav-icon):hover::after{
   width: 100%;
   align-items: center;
   justify-content: center;
+}
+#aboutMe{
+  display: grid;
+  place-content: center;
+  color: white;
+  transition-duration: 1s;
+  max-height: 0px;
+  overflow: clip;
+  padding-block: 0px;
+  margin-right: 0;
+  width: 77.5%;
+  margin-inline: auto;
+  background: linear-gradient(to bottom, rgba(0,0,0, .5), rgba(193, 87, 255, .6) 100%);
+  border-radius: 40px;
+  padding-inline: 40px;
+}
+#aboutMe > div{
+  margin-block: auto;
 }
 #aboutMe .icon{
   filter: invert(50%);
@@ -296,11 +286,43 @@ span:has(.nav-icon):hover::after{
 #aboutMe > div:nth-child(1){
   text-align: right;
 }
+#aboutMe > div:nth-child(2){
+  display: flex;
+}
 #aboutMe .tabs{
   margin: 5px;
 }
+#aboutMe ul{
+  font-size: .8rem;
+  margin-left: 25px;
+  width: 80%;
+  display: inline-block;
+}
 #aboutMe a{
   text-decoration: underline;
+}
+#aboutMe article{
+  margin-inline: auto;
+}
+.profile{
+  display: inline-block;
+  vertical-align: top;
+  width: 8rem;
+  border-radius: 50%;
+  margin-left: 20px;
+  aspect-ratio: 1;
+  border: #ffffff 2px solid;
+  overflow: clip;
+  margin-top: 0;
+}
+.profile > img{
+  position: relative;
+  display: inline;
+  top: -25px;
+  width: 100%;
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  object-fit: contain;
 }
 #Technology, #Design:has(+#Experience){
   display: flex;
@@ -434,7 +456,105 @@ li div:not(.dot){
   transition-duration: .6s !important;
   padding-left: 15px !important;
 }
+@media screen and (max-width: 1440px) {
+  #aboutMe{
+    width: 90%;
+  }
+  #aboutMe .tabs:has(+.tabs){
+    margin: 0;
+    border-right: 2px solid black;
+    border-radius: 8px;
+    border-image: linear-gradient(transparent 10%, rgba(0, 0, 0, 0.5), transparent 90%) 5;
+  }
+  .tabs:hover, .tabs:focus{
+    border: none !important;
+  }
+}
+@media screen and (max-width: 1080px) {
+  main {
+    background-size: 75%;
+    background-position: 130% 13%;
+  }
+  main > section:nth-child(1){
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    max-height: 100vh;
+    min-height: 95vh;
+    /* min-height: 600px; */
+  }
+  footer{
+    width: 100%;
+  }
+  li a{
+    translate: -170px 0px;
+  }
+  #aboutMe .tabs{
+    margin: 0px;
+  }
+  .exp-item{
+    width: 600px;
+  }
+}
+@media screen and (max-width: 768px) {
+  #aboutMe{
+    width: 100%;
+  }
+  main {
+    background-size: 125%;
+    background-position: -10% 13%;
+  }
+  li a{
+    line-height: 1.9;
+  }
+  .tabs{
+    font-size: 1.5rem;
+  }
+  .tabs:hover, .tabs:focus, .tab-bar button.active{
+    font-size: 1.6rem;
+  }
+  div:has(.fill-ul){
+    display: flex;
+    justify-content: center;
+  }
+  .exp-item{
+    margin-inline:auto;
+    width: auto;
+  }
+}
+@media screen and (max-width: 600px) {
+  main {
+    background-size: 155%;
+    background-position: 25% 13%;
+  }
+  #aboutMe section{
+    display: flex;
+  }
+  .tab-bar{
+    display: flex;
+    flex-direction: column;
+  }
+  .tabs{
+    padding-block: 10px;
+    width: 100px;
+  }
+  #aboutMe .tabs:has(+.tabs){
+    margin: 2px;
+    border-right: none;
+    border-bottom: 2px solid black;
+    border-radius: 8px;
+    border-image: linear-gradient(90deg, transparent 10%, rgba(0, 0, 0, 0.5), transparent 90%) 2;
+  }
+}
 
+.grow{
+  max-height: 5000px !important;
+  transition-duration: .2s !important;
+  padding: 25px !important;
+  padding-inline: 40px !important;
+  padding-bottom: 50px !important;
+}
 .hide{
   display: none;
 }

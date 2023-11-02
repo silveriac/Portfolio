@@ -57,10 +57,11 @@ let indexContent  = {
 };
 let currentTab = 'Education';
 window.onload = () => {
+    const aboutMe = document.getElementById("aboutMe")
     document.getElementById("linkAboutMe").addEventListener("click", () =>{
-        document.getElementById("aboutMe").classList.toggle("grow");
+        aboutMe.classList.toggle("grow");
         setTimeout(() => {
-            document.getElementById("aboutMe").scrollIntoView({ behavior: 'smooth', block: 'start' });
+            aboutMe.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }, 100);
         let tabs = document.getElementsByClassName("tabs");
         for (let i = 0; i < tabs.length; i++) {
@@ -68,10 +69,12 @@ window.onload = () => {
         };
     });
     document.getElementById("linkContact").addEventListener("click", (event) =>{
-        document.getElementById("aboutMe").classList.toggle("grow");
-        setTimeout(() => {
-            document.getElementById("aboutMe").scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }, 100);
+        if(!(aboutMe.classList.contains("grow"))){
+            aboutMe.classList.toggle("grow");
+            setTimeout(() => {
+                aboutMe.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }, 100);
+        }
         let tabs = document.getElementsByClassName("tabs");
         let j = 6;
         for (let i = 0; i < tabs.length; i++) {

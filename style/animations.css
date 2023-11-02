@@ -84,6 +84,10 @@
     .desvanecerderecha{
         animation: move-right 2s 1s 1 ease-in-out forwards /*duration/delay/final opacity, forwards: it stays in the final configuration*/;
     }
+    .nav li a:hover, .nav li a:focus{
+        transition-duration: .3s;
+        translate: -92px 0px;
+    }
     li:nth-child(1) > .desvanecerderecha{animation-delay: 1s;}
     li:nth-child(2) > .desvanecerderecha{animation-delay: 1.2s;}
     li:nth-child(3) > .desvanecerderecha{animation-delay: 1.4s;}
@@ -119,16 +123,20 @@
         background: linear-gradient(to top, black, transparent 300%);
     }
     .gallery-img img [loading="lazy"]{animation: appear .1s .2s 1 ease-in forwards;}
-    .fall1{animation: move-down 1.3s 0.3s 1 ease-in-out forwards;}
-    .fall2{animation: move-down 1.3s 0.6s 1 ease-in-out forwards;}
-    .fall3{animation: move-down 1.3s 0.9s 1 ease-in-out forwards;}
-    .fall4{animation: move-down 1.3s 1.2s 1 ease-in-out forwards;}
-    .fall5{animation: move-down 1.3s 1.5s 1 ease-in-out forwards;}
-    .fall6{animation: move-down 1.3s 1.8s 1 ease-in-out forwards;}
-    .fall7{animation: move-down 1.3s 2.1s 1 ease-in-out forwards;}
-    .fall8{animation: move-down 1.3s 2.1s 1 ease-in-out forwards;}
-    .fall9{animation: move-down 1.3s 2.1s 1 ease-in-out forwards;}
-    .fall10{animation: move-down 1.3s 2.1s 1 ease-in-out forwards;}
+    .fall1, .fall2, .fall3, .fall4, .fall5, .fall6, .fall7, .fall8, .fall9, .fall10{
+        animation: move-down 1.3s 0.3s 1 ease-in-out forwards;
+    }
+    .fall1{animation-delay: 0.6s;}
+    .fall2{animation-delay: 0.9s;}
+    .fall3{animation-delay: 1.2s;}
+    .fall4{animation-delay: 1.5s;}
+    .fall5{animation-delay: 1.8s;}
+    .fall6{animation-delay: 2.1s;}
+    .fall7{animation-delay: 2.4s;}
+    .fall8{animation-delay: 2.7s;}
+    .fall9{animation-delay: 3s;}
+    .fall10{animation-delay: 3.3s;}
+
     /* .gallery-img img{
         animation: still 0.5s 0s 1 ease-in-out forwards;
     }
@@ -157,5 +165,12 @@
     .progress-bar{
         animation: grow-horizontal 1.5s 0.3s 1 ease-out forwards;
         transform-origin: left center;
+    }
+    @media screen and (max-width: 1080px) {
+        .li a:hover{
+            translate: -165px 0px;
+        }
+    }
+    @media screen and (max-width: 600px) {
     }
 }
