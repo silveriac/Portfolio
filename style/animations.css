@@ -140,12 +140,12 @@
     .go-right{animation: slide-right 0.3s 0s 1 ease-in-out forwards;}
     a:has(.nav-icon):hover::after{
         opacity: 0;
-        animation: grow-horizontal .2s 0.5s 1 ease-out forwards;
+        animation: grow-horizontal .1s 1s 1 ease-out forwards;
         transform-origin: left center;
     }
     span:has(.nav-icon):hover::after{
         opacity: 0;
-        animation: grow-horizontal .2s 0.5s 1 ease-out forwards;
+        animation: grow-horizontal .1s 1s 1 ease-out forwards;
         transform-origin: right center;
     }
     /* .slide-appear{animation: appear 5s 0s 1 ease-in-out forwards;}

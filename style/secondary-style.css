@@ -84,6 +84,8 @@ main p{
 }
 .show-img img{
     height: 100%;
+    border-radius: 10px;
+
 }/*
 .show-img div{
     display: flex;
