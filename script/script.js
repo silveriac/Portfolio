@@ -1,5 +1,5 @@
 const changeTabs = (evt, tabName) => {
-  var i, tabcontent, tablinks;
+  document.getElementsByClassName("tab-bar")[0].classList.toggle("shrink");
   /*if(tabName == 'Doodly'){
     expandBackground(1);
   }else{
@@ -19,3 +19,6 @@ const changeTabs = (evt, tabName) => {
   currentTab = tabName;
   console.log("hola");
 };
+const sleep = ms => {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}

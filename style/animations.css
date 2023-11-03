@@ -158,13 +158,20 @@
     }
     /* .slide-appear{animation: appear 5s 0s 1 ease-in-out forwards;}
     .slide-disappear{animation: disappear 0.2s 0s 1 ease-in-out forwards;} */
-    .duration-reset{
-        animation-duration: 1s !important;
-        animation-delay: .2s !important;
+    .shrink{
+        transition-duration: .1s;
     }
     .progress-bar{
         animation: grow-horizontal 1.5s 0.3s 1 ease-out forwards;
         transform-origin: left center;
+    }
+    .progress-bar > .tech-lvl{
+        opacity: 0;
+        animation: appear .2s 1.8s 1 ease-in forwards;
+    }
+    .duration-reset{
+        animation-duration: 1s !important;
+        animation-delay: .2s !important;
     }
     @media screen and (max-width: 1080px) {
         .li a:hover{

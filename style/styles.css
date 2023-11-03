@@ -180,6 +180,7 @@ span:has(.nav-icon):hover::after{
 }
 .rotate-180{
   transform: rotate(180deg);
+  transition-duration: .3s;
 }
 .enlacesinicio{
   /*background: linear-gradient(to left, rgba(0, 0, 0, 1), transparent);*/
@@ -242,6 +243,9 @@ span:has(.nav-icon):hover::after{
 .tab-bar:has(+#Education){ /*only affects index page*/
   padding-top: 30px;
 }
+.tab-bar > span{
+  display: none;
+}
 .tabcontent{
   padding-top: 20px;
   display: none;
@@ -286,28 +290,27 @@ span:has(.nav-icon):hover::after{
 #aboutMe > div:nth-child(1){
   text-align: right;
 }
-#aboutMe > div:nth-child(2){
-  display: flex;
-}
 #aboutMe .tabs{
   margin: 5px;
 }
 #aboutMe ul{
   font-size: .8rem;
-  margin-left: 25px;
-  width: 80%;
+  margin-right: 50px;
   display: inline-block;
 }
 #aboutMe a{
   text-decoration: underline;
 }
 #aboutMe article{
+  display: grid;
+  grid-template-columns: 1fr 3fr;
   margin-inline: auto;
+  margin-bottom: 20px;
 }
 .profile{
   display: inline-block;
   vertical-align: top;
-  width: 8rem;
+  width: 9.5rem;
   border-radius: 50%;
   margin-left: 20px;
   aspect-ratio: 1;
@@ -382,6 +385,9 @@ span:has(.nav-icon):hover::after{
   transition-delay: .2s;
   transition-duration: .4s;
 }
+.progress-bar > .tech-lvl{
+  display: none;
+}
 .tech-name{
   display: flex;
   flex-direction: column;
@@ -392,7 +398,7 @@ span:has(.nav-icon):hover::after{
   width: 500px;
 }
 .tech-name > p {
-  font-size: 20px;
+  font-size: 1.2rem;
   padding-bottom: 3px;
 }
 .tech-logo{
@@ -428,15 +434,15 @@ li div:not(.dot){
   width: 95%;
 }
 .exp-title{
-  font-size: 25px;
+  font-size: 1.4rem;
   font-weight: 600;
 }
 .exp-company{
   color: white;
-  font-size: 21px;
+  font-size: 1.3rem;
 }
 .exp-date, .exp-description{
-  font-size: 14px;
+  font-size: 1.05rem;
 }
 .exp-description{
   transition-duration: .2s;
@@ -498,12 +504,15 @@ li div:not(.dot){
   }
 }
 @media screen and (max-width: 768px) {
-  #aboutMe{
-    width: 100%;
-  }
   main {
     background-size: 125%;
     background-position: -10% 13%;
+  }
+  #aboutMe{
+    width: 98%;
+  }
+  #aboutMe .tabs{
+    margin: 5px;
   }
   li a{
     line-height: 1.9;
@@ -528,16 +537,89 @@ li div:not(.dot){
     background-size: 155%;
     background-position: 25% 13%;
   }
-  #aboutMe section{
+  #aboutMe article{
     display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #aboutMe ul{
+    width: 80%;
+  }
+  #aboutMe section{
+    /* grid-template-columns: 1fr 3fr; */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), transparent 80%);
+    border-radius: 10px;
+  }
+  #aboutMe section > div{
+    margin-block: auto;
   }
   .tab-bar{
     display: flex;
     flex-direction: column;
+    width: unset;
+    height: 350px;
+    width: 150px;
+    max-width: 500px;
+    margin-top: 10px;
+    margin-left: 30px;
+    transition-duration: .3s;
+    z-index: 10;
+    overflow: hidden;
+  }
+  .tab-bar button{
+    text-align: left;
+  }
+  .tab-bar button.active{
+    background: transparent;
+  }
+  .tab-bar button:hover{
+    font-size: 1.6rem;
+  }
+  .tab-bar .nav-icon{
+    filter: brightness(10);
+  }
+  .tab-bar .nav-icon:hover{
+    scale:calc(1.1);
+    transition-duration: .2s;
+    filter: brightness(100);
+    cursor: pointer;
   }
   .tabs{
     padding-block: 10px;
     width: 100px;
+  }
+  .shrink{
+    max-width: 0px;
+    border-radius: 10px;
+    margin-left: 10px;
+    transition-duration: .3s;
+    position: absolute;
+  }
+  .shrink button{
+    visibility: hidden;
+  }
+  #aboutMe span{
+    display: block;
+    cursor: pointer;
+  }
+  #aboutMe span::after{
+    content: none;
+  }
+  #aboutMe span img{
+    width: 25px;
+    height: 25px;
+    margin-block: 10px;
+    transition-duration: .3s;
+  }
+  .menu-over{
+    background:  linear-gradient(to left, black 30%, transparent 250%);
+    position: absolute;
+    border-radius: 10px;
+    margin-left: 0px;
+  }
+  .menu-over button{
+    padding-left: 15px;
+
   }
   #aboutMe .tabs:has(+.tabs){
     margin: 2px;
@@ -546,8 +628,81 @@ li div:not(.dot){
     border-radius: 8px;
     border-image: linear-gradient(90deg, transparent 10%, rgba(0, 0, 0, 0.5), transparent 90%) 2;
   }
-}
+  #aboutMe article ul{
+    max-width: 550px;
+    min-width: 230px;
+    width:  unset;
 
+    padding-top: 10px;
+    font-size: 1.2rem;
+    margin-right: 0px;
+  }
+  .tabcontent{
+    padding-top: 0px;
+    padding-inline: 10px;
+  }
+  .tech-item{
+    width: 430px;
+    padding-block: 5px;
+  }
+  .tech-logo img{
+    margin-top: 20px;
+  }
+  .progress-bar{
+    position: relative;
+    height: 15px;
+  }
+  .progress-bar > .tech-lvl{
+    position: absolute;
+    width: auto;
+    text-align: right;
+    padding: 0px;
+    top: -2px;
+    left: 5px;
+    font-size: 1.2rem;
+    display: block;
+    color: white;
+    mix-blend-mode: difference;
+  }
+  .tech-lvl{
+    display: none;
+  }
+  .exp-item{
+    width: 430px;
+    padding: 15px;
+  }
+  .exp-title{
+    font-weight: unset;
+  }
+  .exp-company{
+    color: white;
+  }
+  .exp-description{
+    transition-duration: .2s;
+    
+  }
+  .exp-date{
+    text-decoration: underline;
+    font-size: 1.3rem;
+  }
+  .exp-date span:hover{
+    cursor: pointer;
+  }
+  .exp-description{
+    max-height: 0px;
+    overflow: hidden;
+  }
+  .exp-item .grow{
+    transition-duration: .6s !important;
+    padding: 10px 0px !important;
+  }
+}
+@media screen and (max-width: 400px) {
+  .tech-item, .exp-item{
+    width: 250px;
+    padding-block: 5px;
+  }
+}
 .grow{
   max-height: 5000px !important;
   transition-duration: .2s !important;

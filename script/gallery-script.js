@@ -125,7 +125,7 @@ const fillTab = (tab) => {
     div.setAttribute("style", `animation-delay: ${(index*2)/10}s`);
     if (tab == "Animation" || tab == "Doodly") div.innerHTML += `<img class="frame1" src="${(image.src).replace('gif/','gif/frame1/').replace(/-/g, '_')}" alt="${image.alt}">` //add still frame1 to gifs
     div.innerHTML += `<img src="${image.src}" alt="${image.alt}" loading="lazy">`;
-    setTimeout(() =>{container.appendChild(div);}, 250);
+    setTimeout(() =>{container.appendChild(div);}, 150);
     div.addEventListener("click", () => modalSlider(1, index));
   })
 }

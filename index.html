@@ -44,11 +44,18 @@
           <li>Me apasionan la programación, el diseño y las artes visuales, lo cuál me ha llevado a participar en game jams, streams de arte y otros proyectos artísticos.</li>
           <li>Considero que tengo una gran capacidad para resolver problemas tanto prácticos como de desarrollo, y soy de aprendizaje rápido.</li>
           <li>Estudié Desarrollo de aplicaciones GeneXus en Jóvenes a programar, y diseño web la FADU (Facultad de Arquitectura, Diseño y Urbanismo, Uruguay)</li>
-          <li>Busco mi primera experiencia laboral en desarrollo de software</li>
+          <!-- <li>Busco mi primera experiencia laboral en desarrollo de software</li> -->
         </ul>
       </article>
       <section>
+        <span onclick="if(document.querySelector('.active')){
+        document.getElementsByClassName('tab-bar')[0].classList.toggle('shrink');
+        document.getElementsByClassName('tab-bar')[0].classList.add('menu-over')
+        document.querySelector('#aboutMe span img').classList.toggle('rotate-180')}">
+          <img class="nav-icon rotate-180" src="./assets/arrow.png" alt="back">
+        </span>
         <div class="tab-bar">
+
           <button class="tabs">Formación</button>
           <button class="tabs">Tecnologías</button>
           <button class="tabs">Diseño</button>

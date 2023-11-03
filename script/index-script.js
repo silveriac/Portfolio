@@ -123,8 +123,8 @@ const fillTab = (tab) => {
     contentArray = indexContent[tab];
     switch(tab){
         default:
-            const container = document.getElementById(tab);
-            if (container.childElementCount != 0) return;
+        const container = document.getElementById(tab);
+        if (container.childElementCount != 0) return;
             contentArray.forEach((item, index) => {
                 const div = document.createElement("div");
                 div.classList.add("tech-item");
@@ -135,7 +135,9 @@ const fillTab = (tab) => {
                     </div>
                     <div class="tech-name">
                         <p>${item.name}</p>
-                        <div class="progress-bar" style="width: ${100 * item.percent}%; animation-delay: ${(index*1.5)/10}s"></div>
+                        <div class="progress-bar" style="width: ${100 * item.percent}%; animation-delay: ${(index*1.5)/10}s">
+                            <p class="tech-lvl">nivel&nbsp;${item.lvl}</p>
+                        </div>
                     </div>
                     <p class="tech-lvl">nivel ${item.lvl}</p>`;
                 setTimeout(() =>{container.appendChild(div);}, 110);
@@ -203,7 +205,6 @@ const fillTab = (tab) => {
     });*/
     //document.getElementsByClassName("tech-item")[0].scrollIntoView({ behavior: 'smooth', block: 'start' }); scrollear no funciona por el delay, solucionar
 };
-
 const seeMoreExp = (number) => {
     document.getElementsByClassName('exp-description')[number].classList.toggle('grow');
     console.log(document.getElementsByClassName('exp-description')[number])
