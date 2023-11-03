@@ -667,6 +667,9 @@ li div:not(.dot){
   .tech-lvl{
     display: none;
   }
+  #Contact li{
+    width: 430px;
+  }
   .exp-item{
     width: 430px;
     padding: 15px;
@@ -679,7 +682,6 @@ li div:not(.dot){
   }
   .exp-description{
     transition-duration: .2s;
-    
   }
   .exp-date{
     text-decoration: underline;
@@ -698,7 +700,8 @@ li div:not(.dot){
   }
 }
 @media screen and (max-width: 400px) {
-  .tech-item, .exp-item{
+  .tech-item, .exp-item   #Contact li{
+    width: 430px;
     width: 250px;
     padding-block: 5px;
   }
