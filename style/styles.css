@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Indie+Flower&family=Libre+Baskerville:wght@700&display=swap');
+
 :root{
   font-size: 20px;
 }
@@ -462,6 +464,10 @@ li div:not(.dot){
   transition-duration: .6s !important;
   padding-left: 15px !important;
 }
+#aboutMe section > span{
+  display: none;
+}
+
 @media screen and (max-width: 1440px) {
   #aboutMe{
     width: 90%;
@@ -501,6 +507,10 @@ li div:not(.dot){
   }
   .exp-item{
     width: 600px;
+  }
+  .tech-item{
+    width: 700px;
+
   }
 }
 @media screen and (max-width: 768px) {
@@ -599,7 +609,7 @@ li div:not(.dot){
     visibility: hidden;
   }
   #aboutMe span{
-    display: block;
+    display: block !important;
     cursor: pointer;
   }
   #aboutMe span::after{
@@ -699,7 +709,7 @@ li div:not(.dot){
     padding: 10px 0px !important;
   }
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 480px) {
   .tech-item, .exp-item   #Contact li{
     width: 430px;
     width: 250px;

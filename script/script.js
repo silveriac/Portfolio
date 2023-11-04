@@ -17,7 +17,6 @@ const changeTabs = (evt, tabName) => {
   document.getElementById(tabName).style.display = "flex";
   evt.currentTarget.className += " active";
   currentTab = tabName;
-  console.log("hola");
 };
 const sleep = ms => {
   return new Promise(resolve => setTimeout(resolve, ms));

@@ -93,9 +93,15 @@ window.onload = () => {
     buttons[3].addEventListener("click", (event) => {changeTabs(event, 'Experience'); fillTab("Experience");});
     buttons[4].addEventListener("click", (event) => {changeTabs(event, 'Proyects'); fillTab("Proyects")});
     buttons[5].addEventListener("click", (event) => {changeTabs(event, 'Contact'); fillTab("Contact")});
-
+    document.getElementById("expandList").addEventListener("click", () => {
+        if(document.querySelector('.active')){
+            document.getElementsByClassName('tab-bar')[0].classList.toggle('shrink');
+            document.getElementsByClassName('tab-bar')[0].classList.add('menu-over')
+            document.querySelector('#aboutMe span img').classList.toggle('rotate-180')}
+    })
     localStorage.setItem("visited", "true");
     console.log(localStorage.getItem("visited"));
+
     // if(localStorage.getItem("visited") === "true"){
     //     for (let i = 0; i < document.getElementsByClassName("enlacesinicio").length; i++) {
     //         console.log(document.getElementsByClassName("enlacesinicio")[i]);

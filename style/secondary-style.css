@@ -28,14 +28,67 @@ main p{
     justify-content: space-between;
     width: 90%;
 }
+.content-1:has(.titlediv){
+    justify-content: space-around;
+}
+.titlediv{
+    width: 100%;
+    border-radius: 20px 20px 0px 0px;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 30px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.75), transparent 100%);
+}
+.titlediv h2{
+    font-size: 2rem;
+    padding-bottom: .5rem;
+}
+#Doodly .titlediv h4{
+    width: 60%;
+    margin-inline: auto;
+    font-size: 1.5rem;
+}
+#Doodly .titlediv *{
+    font-family: 'Indie Flower', cursive;
+    /* color: black; */
+}
 .gallery-img{
     display: flex;
     position: relative;
     flex-direction: column;
     height: clamp(350px, 40%, 500px);
     align-items: center;
-    margin: 10px;
+    margin: 10px 10px 20px;
     border-radius: 5px;
+    z-index: 1;
+}
+.gallery-img:hover::after{
+    /* content:"asdsad"; */
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.7);
+    font-size: 13px;
+    width: fit-content;
+    text-align: center;
+    z-index: 1000;
+    padding: 5px 10px;
+    border-radius: 5px;
+    bottom: 0px;
+    opacity: 0;
+    animation: grow-vertical .1s 1.5s 1 ease-out forwards;
+    cursor: pointer;
+    transform-origin: top;
+    translate: 0px 25px;
+}
+#Design .gallery-img:nth-child(1){
+    background-color: red !important;
+}
+div:has(.expand)::before{
+    content: url("../assets/gallery/chilling-geralt.png");
+    width: 200px;
+    height: 200px;
+    position: fixed;
+    z-index: 1000;
+    transform: translateZ(50);
 }
 .gallery-img img{
     height: 300px;
@@ -44,7 +97,6 @@ main p{
     border: 2px solid grey;
     transition-duration: .2s;
     border-radius: 5px;
-
 }
 .content-2 .gallery-img img{
     height: 200px;
@@ -128,11 +180,12 @@ main p{
     position: fixed;
     top: 48px;
     right: 0px;
-    width: 0%;
-    height: 0%;
-    border-radius: 50%;
+    width: 100vw;
+    height: 100vh;
     background-image:  linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 100, 0)),  url("../assets/paper.jpg");
     opacity: 1;
+    background-size: 100%;
+    background-repeat: no-repeat;
 }
 #description{
     font-size: 16px;
@@ -387,4 +440,24 @@ h5{
     margin-bottom: 20px;
     font-size: 30px;
     text-align: center;
+}
+@media screen and (max-width: 900px) {
+    .gallery-img{
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        width: clamp(600px, 40%, 750px);
+        align-items: center;
+        margin: 10px;
+        border-radius: 5px;
+        margin-inline: auto;
+    }
+    .gallery-img img{
+        height: auto;
+        width: clamp(550px, 40%, 700px);
+        padding: 3px;
+        border: 2px solid grey;
+        transition-duration: .2s;
+        border-radius: 5px;
+    }
 }
