@@ -1,0 +1,137 @@
+body.doodly-bg main{
+    background: none;
+    font-family: 'Indie Flower', cursive;
+}
+.doodly-bg .tabs{
+    font-family: 'Indie Flower', cursive;
+    color: black;
+    font-size: 1.7rem;
+}
+.doodly-bg .tabs:hover{
+    font-size: 1.8rem;
+    background: url("../assets/gallery/doodly/highlight.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 55%;
+    background-position: 50% 17%;
+    transition-duration: 0s;
+}
+.doodly-bg .tabs.active{
+    font-size: 1.8rem;
+    background: url("../assets/gallery/doodly/sticky-marker-celeste.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 75%;
+    background-position: 50% 17%;
+}
+.doodly-bg header{
+    background-color: transparent;
+}
+.doodly-bg .nav-icon{
+  filter: brightness(0);
+
+}
+.doodly-bg .invert{
+    filter: none;
+}
+.doodly-bg .tab-bar{
+    background: none;
+    font-weight: 600;
+}
+#Doodly .titlediv{
+    background: url("../assets/gallery/doodly/rayadas-corto.png");
+    background-size: 48%;
+    background-repeat: no-repeat;
+    background-position: 47% 0%;
+    background-attachment: fixed;
+    padding: 90px 18% 300px 18%;
+    margin-bottom: 50px;
+}
+#Doodly .titlediv h4{
+    width: 60%;
+    margin-inline: auto;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+#Doodly .titlediv *{
+    color: black;
+    font-family: 'Indie Flower', cursive;
+    /* color: black; */
+}
+#Doodly .gallery-img img{
+    border: none;
+    transform: none;
+    scale: none;
+}
+#Doodly .gallery-img img:nth-child(1){
+    border: none;
+    transform: none;
+    scale: none;
+    mix-blend-mode: multiply;
+}
+#Doodly .gallery-img{
+    padding: 30px;
+    overflow: visible;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-attachment: fixed;
+}
+#Doodly .gallery-img:hover::after{
+    content: 'Lu';
+    font-size: 2rem;
+    color: black;
+    animation-delay: .5s;
+    width: 250px;
+    height: 75x;
+    background-color: transparent;
+    background-image: url("../assets/gallery/doodly/sticky-marker-amarillo.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: 47% 15%;
+    background-attachment: fixed;
+}
+
+#Doodly .gallery-img:nth-child(3):hover::after{content: 'Lu';}
+#Doodly .gallery-img:nth-child(4):hover::after{content: 'Flo';}
+#Doodly .gallery-img:nth-child(5):hover::after{content: 'Eric';}
+
+#Doodly .gallery-img:nth-child(3){
+    background-size: 120%;
+    padding-top: 45px;
+    transform: rotate(4deg) !important;
+    background-image: url("../assets/gallery/doodly/nota-1.png");
+}
+#Doodly .gallery-img:nth-child(3) img{
+    transform: rotate(-4deg);
+}
+#Doodly .gallery-img:nth-child(4){
+    transform: rotate(-4deg) !important;
+    background-size: 92%;
+    background-image: url("../assets/gallery/doodly/nota-2.png");
+}
+#Doodly .gallery-img:nth-child(4) img{
+    transform: rotate(4deg) !important;
+}
+#Doodly .gallery-img:nth-child(5){
+    background-size: 105%;
+    transform: rotate(2deg) !important;
+    background-image: url("../assets/gallery/doodly/post-it.png");
+}
+#Doodly .gallery-img:nth-child(5) img{
+    transform: rotate(-2deg) !important;
+}
+#Doodly .gallery-img img:nth-child(2){
+    visibility: hidden;
+}
+/* #Doodly .gallery-img img:hover{
+    transform: none;
+    translate: none;
+    visibility: visible;
+} */
+
+#Doodly .gallery-img:hover img:nth-child(1){
+    visibility: hidden;
+}
+#Doodly .gallery-img:hover img:nth-child(2){
+    visibility: visible;
+}

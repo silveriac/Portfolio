@@ -89,44 +89,52 @@ const galleryContent  = {
     {'src': "./assets/gallery/design/gm-fitness2.jpg", 'alt': "MG Fitness", 'description': "MG fitness"}
   ],
   'Doodly': [
-    {'src': "./assets/gallery/gif/lu.gif", 'alt': "lu doodly", "name": "Doodly", 'description': "<a target='_blank' href='https://www.instagram.com/yolumith/'>Lu</a>"},
-    {'src': "./assets/gallery/gif/flo.gif", 'alt': "flo doodly", "name": "Doodly", 'description': "<a target='_blank' href='https://www.instagram.com/floobi3/'>Flo</a>"},
-    {'src': "./assets/gallery/gif/eric.gif", 'alt': "eric doodly", "name": "Doodly", 'description': "<a target='_blank' href='https://www.instagram.com/silveriac_/'>Eric</a>"}
+    {'src': "./assets/gallery/gif/lu.gif", 'alt': "lu doodly", "name": "Doodly", 'description': "https://www.instagram.com/yolumith/"},
+    {'src': "./assets/gallery/gif/flo.gif", 'alt': "flo doodly", "name": "Doodly", 'description': "https://www.instagram.com/floobi3/"},
+    {'src': "./assets/gallery/gif/eric.gif", 'alt': "eric doodly", "name": "Doodly", 'description': "https://www.instagram.com/silveriac_/"}
   ]
 };
 const proyectos = {
   'Sonder': 'Visual Identity rework based on previous design done by another designer',
-  '360tours': 'Contact cards',
+  '360tours': 'Contact cards based on established visual identity',
   "Sippin' with Spirits": 'Banners and mascot for a podcast about drinks and ghost stories',
   "Varo Percu": 'Logo design for a percussionist who makes instruments out of recycled materials',
   "MG Fitness": 'Visual identity design for a personal trainer',
-  "Doodly": `Doodly es un programa semanal de arte y diseño, creado por Eric Silva y producido por Lucía Techera, Florencia Flores y Eric Silva. Todas las semanas tenemos una consigna de dibujo, pasá por el stream los martes a las 21:30 y sumate a dibujar con nosotros!`,
+  "Doodly": `Doodly es un programa semanal de arte y diseño, creado por Eric Silva y producido por Lucía Techera, Florencia Flores y Eric Silva. Todas las semanas tenemos una consigna de dibujo, pasá por el stream en <a target:"_blank" href="https://www.twitch.tv/dood_ly">Twitch</a> todos los martes a las 21:30 ¡y sumate a dibujar con nosotros!`,
 };
-let imgArray = galleryContent.Illustration;
+const paperIn = new Image();
+const paperOut = new Image();
+const date = new Date();
+console.log(date.getDay());
+paperIn.src = '../assets/gallery/doodly/doodly-bg.gif';
+paperOut.src = '../assets/gallery/doodly/doodly-bg-out.gif';
 const params = new URLSearchParams(window.location.search)
 let currentTab = params.get("tab") ?  params.get("tab") : "Illustration" ;
 let modal;
+let calledDoodly = currentTab == "Doodly" ? 1 : 0;
 window.onload = (evt) => {
   modal = document.getElementsByClassName("modal")[0];
   imageDiv = document.getElementsByClassName("show-img");
-  console.log(imgArray);
   const buttons = document.getElementsByClassName("tabs");
   buttons[0].addEventListener("click", (event) => {changeTabs(event, 'Illustration'); fillTab(currentTab);});
   buttons[1].addEventListener("click", (event) => {changeTabs(event, 'Animation'); fillTab(currentTab);});
   buttons[2].addEventListener("click", (event) => {changeTabs(event, 'Design'); fillTab(currentTab);});
-  buttons[3].addEventListener("click", (event) => {changeTabs(event, 'Doodly'); fillTab(currentTab);});
+  buttons[3].addEventListener("click", (event) => {changeTabs(event, 'Doodly'); doodlyBG(currentTab); fillDoodlyTab();});
   changeTabs(evt, currentTab);
-  fillTab(currentTab);
-  /*new Twitch.Player("twitch-embed", {
+  if (currentTab == "Doodly") fillDoodlyTab()
+  else fillTab(currentTab)
+  new Twitch.Player("twitch-embed", {
     channel: "dood_ly"
-  });*/
+  });
+  if (date.getDay() != 2 || date.getHours() < 20) {
+    document.getElementById("twitch-embed").remove()
+  }
 };
 
 const fillTab = (tab) => {
   contentArray = galleryContent[tab];
-  console.log(tab);
+  if(calledDoodly > 0) doodlyBG(currentTab);
   const container = document.getElementById(tab);
-  console.log(`#${tab} gallery-img`);
   if (document.querySelector(`#${tab} .gallery-img`)) return;
   const styleSheet = document.styleSheets[4];
   let proyecto = "";
@@ -140,65 +148,58 @@ const fillTab = (tab) => {
       div.innerHTML += `<h2>${proyecto}</h2><h4>${proyectos[proyecto]}</h4>`;
       container.appendChild(div);
       proyectCounter++;
+    }
     proyecto = image.alt;
-    }else if(image.name != proyecto & tab == "Doodly"){
-      proyecto = image.name;
-      const div = document.createElement("div");
-      div.classList.add("titlediv");
-      div.style.animationDelay = (index * 2.5) /10 + "s";
-      div.innerHTML += `<h2>${proyecto}</h2><h4>${proyectos[proyecto]}</h4>`;
-      container.appendChild(div);
-      proyectCounter++;
-    };
     styleSheet.insertRule(`#${tab} .gallery-img:nth-child(${index + proyectCounter}):hover::after{content:"${image.description.replace(/<[^>]*>/g, '')}"}`);
     const div = document.createElement("div");
     div.classList.add("gallery-img");
     div.setAttribute("style", `animation-delay: ${(index*3)/10}s`);
-    if (tab == "Animation" || tab == "Doodly") div.innerHTML += `<img class="frame1" src="${(image.src).replace('gif/','gif/frame1/').replace(/-/g, '_')}" alt="${image.alt}">` //add still frame1 to gifs
+    if (tab == "Animation") div.innerHTML += `<img class="frame1" src="${(image.src).replace('gif/','gif/frame1/').replace(/-/g, '_')}" alt="${image.alt}">` //add still frame1 to gifs
     div.innerHTML += `<img src="${image.src}" alt="${image.alt}" loading="lazy">`;
     container.appendChild(div);
     div.addEventListener("click", () => modalSlider(1, index));
+  });
+}
+
+const fillDoodlyTab = (tab) =>{
+  contentArray = galleryContent["Doodly"];
+  if(calledDoodly > 0) doodlyBG(currentTab);
+  const container = document.getElementById("Doodly");
+  if (document.querySelector(`#Doodly .gallery-img`)) return;
+  let proyecto = "";
+  contentArray.forEach((image, index) => {
+    if(image.name != proyecto){
+      proyecto = image.name;
+      const div = document.createElement("div");
+      div.classList.add("titlediv");
+      div.style.animationDelay = (index * 2.5) /10 + "s";
+      div.innerHTML += `<!--<h2>${proyecto}</h2>--> <h4>${proyectos[proyecto]}</h4>`;
+      container.appendChild(div);
+    };
+    const div = document.createElement("div");
+    div.classList.add("gallery-img");
+    div.setAttribute("style", `animation-delay: ${(index*3)/10}s`);
+    div.innerHTML +=
+    `<a target="_blank" href="${image.description}">
+      <img class="frame1" src="${(image.src).replace('gif/','gif/frame1/').replace(/-/g, '_')}" alt="${image.alt}">
+      <img src="${image.src}" alt="${image.alt}" loading="lazy">
+    </a>`
+    container.appendChild(div);
   })
 }
-/*
-const doodlyBG = () =>{
-  const doodlyBGDiv = document.getElementById("doodlyBG");
-  for(let i = 0; i < 21; i++){
-    setTimeout(() => {
-      doodlyBGDiv.style.backgroundImage = "Transicion_dudli_0" + (i+1);
-    }, 100);
-  }
-}*/
 
 
-/* const expandBackground = (action) => { //animate doodly tab
-  const doodlyBG = document.getElementById("doodlyBG");
-  switch(action){
-    case 1:
-      let i = 0;
-      const animate = setInterval(() => {
-        i++;
-        doodlyBG.style.width = `${i * 16}px`;
-        doodlyBG.style.height = `${i * 9}px`;
-        console.log(i == 100);
-        if(i > 50){doodlyBG.style.borderRadius = `${100 - i}%`}
-        if(i == 100){clearInterval(animate)}
-      }, 1);
-      animate();
-      break;
-    case 2:
-      i = 100;
-      const deanimate = setInterval(() => {
-        i++;
-        doodlyBG.style.width = `${100 - i * 16}px`;
-        doodlyBG.style.height = `${100 - i * 9}px`;
-        console.log(i == 100);
-        if(i > 50){doodlyBG.style.borderRadius = `${i - 50}%`}
-        if(i == 100){clearInterval(deanimate)}
-      }, 1);
-      deanimate();
+const doodlyBG = (tab) =>{
+  const doodlyBGDiv = document.getElementsByTagName("body")[0];
+  if (tab == "Doodly"){
+    doodlyBGDiv.classList.add("doodly-bg");
+    doodlyBGDiv.classList.remove("doodly-bg-out");
+  } else {
+    doodlyBGDiv.classList.add("doodly-bg-out");
+    doodlyBGDiv.classList.remove("doodly-bg");
   };
-};*/
+  calledDoodly++;
+}
 
 //const modal = document.getElementsByClassName("modal");
 console.log(modal);

@@ -43,15 +43,6 @@ main p{
     font-size: 2rem;
     padding-bottom: .5rem;
 }
-#Doodly .titlediv h4{
-    width: 60%;
-    margin-inline: auto;
-    font-size: 1.5rem;
-}
-#Doodly .titlediv *{
-    font-family: 'Indie Flower', cursive;
-    /* color: black; */
-}
 .gallery-img{
     display: flex;
     position: relative;
@@ -176,16 +167,19 @@ div:has(.expand)::before{
     z-index: 1;
 }
 .doodly-bg{
-    z-index: 0;
-    position: fixed;
-    top: 48px;
-    right: 0px;
-    width: 100vw;
-    height: 100vh;
-    background-image:  linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 100, 0)),  url("../assets/paper.jpg");
-    opacity: 1;
-    background-size: 100%;
+    /* width: 100vw; */
+    /* height: 100vh; */
+    background: url("../assets/gallery/doodly/doodly-bg.gif"), linear-gradient(to top, rgba(0, 0, 0), rgb(193, 87, 255), black);
+    /* background-image: url("../assets/gallery/doodly/doodly-bg.webp"); */
     background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100%;
+}
+.doodly-bg-out{
+    background: url("../assets/gallery/doodly/doodly-bg-out.gif"), linear-gradient(to top, rgba(0, 0, 0), rgb(193, 87, 255), black);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100%;
 }
 #description{
     font-size: 16px;
