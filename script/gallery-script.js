@@ -105,7 +105,7 @@ const proyectos = {
 const paperIn = new Image();
 const paperOut = new Image();
 const date = new Date();
-console.log(date.getDay());
+console.log(date.getHours());
 paperIn.src = '../assets/gallery/doodly/doodly-bg.gif';
 paperOut.src = '../assets/gallery/doodly/doodly-bg-out.gif';
 const params = new URLSearchParams(window.location.search)
@@ -123,11 +123,10 @@ window.onload = (evt) => {
   changeTabs(evt, currentTab);
   if (currentTab == "Doodly") fillDoodlyTab()
   else fillTab(currentTab)
-  new Twitch.Player("twitch-embed", {
-    channel: "dood_ly"
-  });
-  if (date.getDay() != 2 || date.getHours() < 20) {
-    document.getElementById("twitch-embed").remove()
+  if (date.getDay() == 2 && date.getHours() > 20) {
+    new Twitch.Player("twitch-embed", {
+      channel: "dood_ly"
+    });
   }
 };
 

@@ -2,6 +2,18 @@ body.doodly-bg main{
     background: none;
     font-family: 'Indie Flower', cursive;
 }
+.doodly-bg{
+    background: url("../assets/gallery/doodly/doodly-bg.gif"), linear-gradient(to top, rgba(0, 0, 0), rgb(193, 87, 255), black);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.doodly-bg-out{
+    background: url("../assets/gallery/doodly/doodly-bg-out.gif"), linear-gradient(to top, rgba(0, 0, 0), rgb(193, 87, 255), black);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100%;
+}
 .doodly-bg .tabs{
     font-family: 'Indie Flower', cursive;
     color: black;
@@ -45,7 +57,7 @@ body.doodly-bg main{
     background-position: 47% 0%;
     background-attachment: fixed;
     padding: 90px 18% 300px 18%;
-    margin-bottom: 50px;
+    margin-top: 30px;
 }
 #Doodly .titlediv h4{
     width: 60%;
@@ -91,33 +103,33 @@ body.doodly-bg main{
     background-attachment: fixed;
 }
 
-#Doodly .gallery-img:nth-child(3):hover::after{content: 'Lu';}
-#Doodly .gallery-img:nth-child(4):hover::after{content: 'Flo';}
-#Doodly .gallery-img:nth-child(5):hover::after{content: 'Eric';}
+#Doodly .gallery-img:nth-child(4):hover::after{content: 'Lu';}
+#Doodly .gallery-img:nth-child(5):hover::after{content: 'Flo';}
+#Doodly .gallery-img:nth-child(6):hover::after{content: 'Eric';}
 
-#Doodly .gallery-img:nth-child(3){
+#Doodly .gallery-img:nth-child(4){
     background-size: 120%;
     padding-top: 45px;
     transform: rotate(4deg) !important;
     background-image: url("../assets/gallery/doodly/nota-1.png");
 }
-#Doodly .gallery-img:nth-child(3) img{
+#Doodly .gallery-img:nth-child(4) img{
     transform: rotate(-4deg);
 }
-#Doodly .gallery-img:nth-child(4){
+#Doodly .gallery-img:nth-child(5){
     transform: rotate(-4deg) !important;
     background-size: 92%;
     background-image: url("../assets/gallery/doodly/nota-2.png");
 }
-#Doodly .gallery-img:nth-child(4) img{
+#Doodly .gallery-img:nth-child(5) img{
     transform: rotate(4deg) !important;
 }
-#Doodly .gallery-img:nth-child(5){
+#Doodly .gallery-img:nth-child(6){
     background-size: 105%;
     transform: rotate(2deg) !important;
     background-image: url("../assets/gallery/doodly/post-it.png");
 }
-#Doodly .gallery-img:nth-child(5) img{
+#Doodly .gallery-img:nth-child(6) img{
     transform: rotate(-2deg) !important;
 }
 #Doodly .gallery-img img:nth-child(2){

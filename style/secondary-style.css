@@ -166,21 +166,6 @@ div:has(.expand)::before{
 .tabcontent, .tab-bar, .tabs{
     z-index: 1;
 }
-.doodly-bg{
-    /* width: 100vw; */
-    /* height: 100vh; */
-    background: url("../assets/gallery/doodly/doodly-bg.gif"), linear-gradient(to top, rgba(0, 0, 0), rgb(193, 87, 255), black);
-    /* background-image: url("../assets/gallery/doodly/doodly-bg.webp"); */
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: 100%;
-}
-.doodly-bg-out{
-    background: url("../assets/gallery/doodly/doodly-bg-out.gif"), linear-gradient(to top, rgba(0, 0, 0), rgb(193, 87, 255), black);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: 100%;
-}
 #description{
     font-size: 16px;
     padding: 5px;
