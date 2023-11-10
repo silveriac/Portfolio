@@ -1,10 +1,8 @@
+const date = new Date();
 const paperIn = new Image();
 const paperOut = new Image();
-const date = new Date();
-console.log(date.getHours());
 paperIn.src = '../assets/gallery/doodly/doodly-bg.gif';
 paperOut.src = '../assets/gallery/doodly/doodly-bg-out.gif';
-const params = new URLSearchParams(window.location.search)
 let currentTab = params.get("tab") ?  params.get("tab") : "Illustration" ;
 let modal;
 let calledDoodly = currentTab == "Doodly" ? 1 : 0;
@@ -56,7 +54,7 @@ const fillTab = (tab) => {
   });
 }
 
-const fillDoodlyTab = (tab) =>{
+const fillDoodlyTab = () =>{
   contentArray = galleryContent["Doodly"];
   if(calledDoodly > 0) doodlyBG(currentTab);
   const container = document.getElementById("Doodly");
@@ -86,13 +84,27 @@ const fillDoodlyTab = (tab) =>{
 
 const doodlyBG = (tab) =>{
   const doodlyBGDiv = document.getElementsByTagName("body")[0];
-  if (tab == "Doodly"){
+  if (tab === "Doodly") {
+    paperIn.onload = function() {
+      doodlyBGDiv.classList.add("doodly-bg");
+      doodlyBGDiv.classList.remove("doodly-bg-out");
+    };
+    // Check if the image is already complete, if not, the load event listener will handle it
+  if (paperIn.complete) {
     doodlyBGDiv.classList.add("doodly-bg");
     doodlyBGDiv.classList.remove("doodly-bg-out");
+  }
   } else {
+    paperOut.onload = function() {
+      doodlyBGDiv.classList.add("doodly-bg-out");
+      doodlyBGDiv.classList.remove("doodly-bg");
+    };
+    // Check if the image is already complete, if not, the load event listener will handle it
+  if (paperOut.complete) {
     doodlyBGDiv.classList.add("doodly-bg-out");
     doodlyBGDiv.classList.remove("doodly-bg");
-  };
+  }
+  }
   calledDoodly++;
 }
 

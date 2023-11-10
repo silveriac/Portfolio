@@ -107,7 +107,18 @@
         position: relative;
         bottom: 40px;
         opacity: 0;
+        animation: move-down 1.3s 0.3s 1 ease-in-out forwards;
     }
+    .fall1{animation-delay: 0.6s;}
+    .fall2{animation-delay: 0.9s;}
+    .fall3{animation-delay: 1.2s;}
+    .fall4{animation-delay: 1.5s;}
+    .fall5{animation-delay: 1.8s;}
+    .fall6{animation-delay: 2.1s;}
+    .fall7{animation-delay: 2.4s;}
+    .fall8{animation-delay: 2.7s;}
+    .fall9{animation-delay: 3s;}
+    .fall10{animation-delay: 3.3s;}
     .gallery-img, .titlediv, .tech-item, .exp-item{
         position: relative;
         top: -40px;
@@ -133,19 +144,6 @@
         background: linear-gradient(to top, black, transparent 300%);
     }
     .gallery-img img [loading="lazy"]{animation: appear .1s .2s 1 ease-in forwards;}
-    .fall1, .fall2, .fall3, .fall4, .fall5, .fall6, .fall7, .fall8, .fall9, .fall10{
-        animation: move-down 1.3s 0.3s 1 ease-in-out forwards;
-    }
-    .fall1{animation-delay: 0.6s;}
-    .fall2{animation-delay: 0.9s;}
-    .fall3{animation-delay: 1.2s;}
-    .fall4{animation-delay: 1.5s;}
-    .fall5{animation-delay: 1.8s;}
-    .fall6{animation-delay: 2.1s;}
-    .fall7{animation-delay: 2.4s;}
-    .fall8{animation-delay: 2.7s;}
-    .fall9{animation-delay: 3s;}
-    .fall10{animation-delay: 3.3s;}
 
     /* .gallery-img img{
         animation: still 0.5s 0s 1 ease-in-out forwards;
@@ -189,5 +187,17 @@
         }
     }
     @media screen and (max-width: 600px) {
+    }
+}
+@media (prefers-reduced-motion: reduce){
+    .aparecer{
+        opacity:1;
+    }
+    .desvanecerderecha{
+        translate: 30px 0px;
+        opacity: 1;
+    }
+    .fall1, .fall2, .fall3, .fall4, .fall5, .fall6, .fall7, .fall8, .fall9, .fall10{
+        opacity: 1;
     }
 }

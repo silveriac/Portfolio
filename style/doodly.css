@@ -13,6 +13,7 @@ body.doodly-bg main{
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100%;
+    background-size: cover;
 }
 .doodly-bg .tabs{
     font-family: 'Indie Flower', cursive;
@@ -63,7 +64,8 @@ body.doodly-bg main{
     width: 60%;
     margin-inline: auto;
     font-size: 1.5rem;
-    font-weight: 500;
+    line-height: 1.3;
+    font-weight: 600;
 }
 #Doodly .titlediv *{
     color: black;
