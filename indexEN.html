@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Eric Silva - Portfolio</title>
+      <link rel="shortcut icon" href="favicon.ico">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./style/reset.css">
+  <link rel="stylesheet" href="./style/styles.css">
+  <link rel="stylesheet" href="./style/animations.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <script src="./script/dataEN.js"></script>
+  <script src="./script/script.js"></script>
+  <script src="./script/index-script.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body id="EN">
+  <main>
+    <section>
+      <div>
+        <h1 class="aparecer">Eric Silva</h1>
+        
+      </div>
+      <div>
+        <ul class="nav">
+          <li><a id="linkAboutMe" class="enlacesinicio desvanecerderecha" href="#">About me</a></li>
+          <li><a id="linkWebDev" class="enlacesinicio desvanecerderecha" href="./html/webdev.html">Web Design</a></li>
+          <li><a id="linkGallery" class="enlacesinicio desvanecerderecha" href="./html/gallery.html">Gallery</a></li>
+          <li><a id="linkGames" class="enlacesinicio desvanecerderecha" href="./html/games.html">Games</a></li>
+          <li><a id="linkContact" class="enlacesinicio desvanecerderecha" href="#">Contact</a></li>
+        </ul>
+      </div>
+      
+    </section>
+    <section id="aboutMe">
+      <div>
+        <img class="icon" onclick="document.getElementById('aboutMe').classList.toggle('grow');" src="./assets/close-icon.png" alt="close"></img>
+      </div>
+      <article>
+        <div class="profile">
+          <img src="assets/profile.jpeg" alt="my profile pic">
+        </div>
+        <ul>
+            <li>I'm passionate about programming, design, and visual arts, which has led me to participate in game jams, art streams, and other artistic projects.</li>
+            <li>I am a quick learner, and I believe I have a great ability to solve practical and development problems.</li>
+            <li>I studied Application Development with GeneXus at Jóvenes a programar and web design at FADU (Faculty of Architecture, Design, and Urbanism, Uruguay).</li>
+          <!-- <li>Busco mi primera experiencia laboral en desarrollo de software</li> -->
+        </ul>
+      </article>
+      <section>
+        <span id="expandList">
+          <img class="nav-icon rotate-180" src="./assets/arrow.png" alt="back">
+        </span>
+        <div class="tab-bar">
+
+          <button class="tabs">Education</button>
+          <button class="tabs">Technology</button>
+          <button class="tabs">Design</button>
+          <button class="tabs">Experience</button>
+          <button class="tabs">Proyects</button>
+          <button class="tabs ">Contact</button>
+        </div>
+        <div>
+          <div id="Education" class="tabcontent content-1">
+            <div>
+              <ul class="fill-ul">
+              </ul>
+            </div>
+          </div>
+          <div id="Technology" class="tabcontent content-1">
+          </div>
+          <div id="Design" class="tabcontent content-1">
+          </div>
+          <div id="Experience" class="tabcontent content-1">
+            <div>
+              <ul class="fill-ul">
+              </ul>
+            </div>
+          </div>
+          <div id="Proyects" class="tabcontent content-1">
+            <div>
+              <ul class="fill-ul">
+              </ul>
+            </div>
+          </div>
+          <div id="Contact" class="tabcontent content-1">
+            <div>
+              <ul class="fill-ul">
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </section>
+  </main>
+
+  <footer class="padding-right">
+    <p>Made by <a href="https://www.linkedin.com/in/eric-silva-820683155/">Eric Silva</a></p>
+  </footer>
+</body>
+</html>
