@@ -81,7 +81,6 @@ const fillDoodlyTab = () =>{
   })
 }
 
-
 const doodlyBG = (tab) =>{
   const doodlyBGDiv = document.getElementsByTagName("body")[0];
   if (tab === "Doodly") {
@@ -114,7 +113,38 @@ let slide = document.getElementsByClassName("slide");
 let imageDiv;
 let currentSlide;
 
-document.onkeydown = function(evt) {
+const modalSlider = (action, number) => {
+  if (typeof number == 'number'){
+    currentSlide = number;
+  };
+  let description = document.getElementById("description");
+  let imgArray = galleryContent[currentTab]
+  switch(action){
+    case 1: //open
+      modal.classList.toggle("switch");
+      imageDiv[0].childNodes[3].setAttribute("src", imgArray[number].src);
+      description.innerHTML = imgArray[number].description;
+      break;
+    case 0: //close
+      modal.classList.toggle("switch");
+      break;
+    case 2: //left
+      currentSlide != 0 ? currentSlide = currentSlide - 1 : currentSlide = imgArray.length - 1;
+      imageDiv[0].childNodes[3].setAttribute("src", imgArray[currentSlide].src);
+      description.innerHTML = imgArray[currentSlide].description;
+      break;
+    case 3: //right
+      currentSlide != (imgArray.length - 1) ? currentSlide = currentSlide + 1 : currentSlide = 0;
+      imageDiv[0].childNodes[3].setAttribute("src", imgArray[currentSlide].src);
+      description.innerHTML = imgArray[currentSlide].description;
+      break;
+    default:
+      console.log("Modal error");
+      modal.classList.toggle("switch");
+  };
+};
+
+document.onkeydown = (evt) => {
   evt = evt || window.event;
   let isEscape = false;
   let isLeft = false;
@@ -147,57 +177,3 @@ document.onkeydown = function(evt) {
     modalSlider(3);
   }
 };
-
-const modalSlider = (action, number) => {
-  if (typeof number == 'number'){
-    currentSlide = number;
-  };
-  let description = document.getElementById("description");
-  let imgArray = galleryContent[currentTab]
-  switch(action){
-    case 1: //open
-      modal.classList.toggle("switch");
-      imageDiv[0].childNodes[3].setAttribute("src", imgArray[number].src);
-      description.innerHTML = imgArray[number].description;
-      break;
-    case 0: //close
-      modal.classList.toggle("switch");
-      break;
-    case 2: //left
-      currentSlide != 0 ? currentSlide = currentSlide - 1 : currentSlide = imgArray.length - 1;
-      imageDiv[0].childNodes[3].setAttribute("src", imgArray[currentSlide].src);
-      description.innerHTML = imgArray[currentSlide].description;
-      break;
-    case 3: //right
-      currentSlide != (imgArray.length - 1) ? currentSlide = currentSlide + 1 : currentSlide = 0;
-      imageDiv[0].childNodes[3].setAttribute("src", imgArray[currentSlide].src);
-      description.innerHTML = imgArray[currentSlide].description;
-      break;
-    default:
-      console.log("Modal error");
-      modal.classList.toggle("switch");
-  };
-};
-
-
-
-/*
-let allCards = [
-  {
-   'id': "1",
-   'nombre': "Hacer ejercicio",
-   'tipo': 'accion',
-   'efecto': (jugador) => {
-      jugador.salud += 2;
-   }
-  },
-  {
-    'id': "15",
-    'nombre': "Consumismo",
-    'tipo': 'accion',
-    'efecto': (jugador) => {
-      jugador.mercado.forEach( () => {draw(jugador)})
-   }
-  }
-]
-*/
