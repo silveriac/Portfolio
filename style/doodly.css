@@ -51,6 +51,14 @@ body.doodly-bg main{
     background: none;
     font-weight: 600;
 }
+.doodly{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.doodly iframe{
+    min-height: 650px;
+}
 #Doodly .titlediv{
     background: url("../assets/gallery/doodly/rayadas-corto.png");
     background-size: 48%;

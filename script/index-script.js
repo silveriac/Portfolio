@@ -1,7 +1,8 @@
 
 let currentTab = 'Education';
 window.onload = () => {
-    const aboutMe = document.getElementById("aboutMe")
+    const buttons = document.getElementsByClassName("tabs");
+    const aboutMe = document.getElementById("aboutMe");
     document.getElementById("linkAboutMe").addEventListener("click", () =>{
         aboutMe.classList.toggle("grow");
         setTimeout(() => {
@@ -27,9 +28,9 @@ window.onload = () => {
             console.log(j);
         };
         changeTabs(event, 'Contact');
+        buttons[5].classList.add("active");
         fillTab("Contact");
     });
-    const buttons = document.getElementsByClassName("tabs");
     console.log(buttons);
     buttons[0].addEventListener("click", (event) => {changeTabs(event, 'Education'); fillTab("Education");});
     buttons[1].addEventListener("click", (event) => {changeTabs(event, 'Technology'); fillTab("Technology");});
@@ -41,7 +42,8 @@ window.onload = () => {
         if(document.querySelector('.active')){
             document.getElementsByClassName('tab-bar')[0].classList.toggle('shrink');
             document.getElementsByClassName('tab-bar')[0].classList.add('menu-over')
-            document.querySelector('#aboutMe span img').classList.toggle('rotate-180')}
+            document.querySelector('#aboutMe span img').classList.toggle('rotate-180')
+        };
     })
     localStorage.setItem("visited", "true");
     console.log(localStorage.getItem("visited"));

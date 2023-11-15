@@ -28,21 +28,21 @@
   </header>
   <main id="gallery-page" class="gallery">
     <div class="tab-bar">
-      <button class="tabs fall1">Illustration</button>
-      <button class="tabs fall2">Animation</button>
-      <button class="tabs fall3">Design</button>
-      <button class="tabs fall4">Doodly</button>
+      <button data-tab="Illustration" class="tabs fall1">Illustration</button>
+      <button data-tab="Animation" class="tabs fall2">Animation</button>
+      <button data-tab="Design" class="tabs fall3">Design</button>
+      <button data-tab="Doodly" class="tabs fall4">Doodly</button>
     </div>
 
   <div class="modal">
     <div class="slide-inner">
       <img class="icon" onclick="modalSlider(0)" src="../assets/close-icon.png" alt="close"></img>
       <div class="show-img" >
-        <div onclick="modalSlider(2)">
+        <div onclick="modalSlider(2)" class="left">
           <img class="nav-icon" src="../assets/arrow.png" alt="back">
         </div>
         <img src="" alt="idk">
-        <div onclick="modalSlider(3)">
+        <div onclick="modalSlider(3)" class="right">
           <img class="nav-icon rotate-180" src="../assets/arrow.png" alt="back">
         </div>
       </div>

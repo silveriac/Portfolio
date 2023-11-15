@@ -1,3 +1,4 @@
+console.log("content ES");
 let indexContent  = {
     'Technology':[
         {'src': "../assets/logos/html.png", 'name': "HTML", 'alt': "html", 'lvl': "avanzado", "percent": ".84"},
@@ -101,6 +102,7 @@ const galleryContent  = {
       //{'src': "../assets/gallery/gif/mount-pant.gif", 'alt': "bear pushing big snowball"},
       {'src': "../assets/gallery/gif/pant-mounted.gif", 'alt': "bear mounted on dog panting", 'description': "<a target='_blank' href='https://www.fiverr.com/silveriac/make-a-short-character-animation'>Encargo</a> - The heart of the Teddy Bear"},
       {'src': "../assets/gallery/gif/dog-getup-pant.gif", 'alt': "dog panting", 'description': "<a target='_blank' href='https://www.fiverr.com/silveriac/make-a-short-character-animation'>Encargo</a> - The heart of the Teddy Bear"},
+      {'src': "../assets/gallery/gif/clownplete.gif", 'alt': "clown attack", 'description': "<a target='_blank' href='https://www.twitch.tv/dood_ly'>Doodly</a> - Personaje en pixel art"},
       {'src': "../assets/gallery/gif/idle-oso.gif", 'alt': "idle bear", 'description': "<a target='_blank' href='https://v3.globalgamejam.org/2020/games/cotton-revenge-2'>Global Game Jam 2020</a>"},
       {'src': "../assets/gallery/gif/idle-arma-oso.gif", 'alt': "idle bear with gun", 'description': "<a target='_blank' href='https://v3.globalgamejam.org/2020/games/cotton-revenge-2'>Global Game Jam 2020</a>"},
       {'src': "../assets/gallery/gif/caminata-oso.gif", 'alt': "bear walking", 'description': "<a target='_blank' href='https://v3.globalgamejam.org/2020/games/cotton-revenge-2'>Global Game Jam 2020</a>"},

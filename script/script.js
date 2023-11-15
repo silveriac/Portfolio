@@ -1,5 +1,7 @@
 const params = new URLSearchParams(window.location.search);
-
+// switch(params.get("")){
+//   case
+// }
 const changeTabs = (evt, tabName) => {
   document.getElementsByClassName("tab-bar")[0].classList.toggle("shrink");
   tabcontent = document.getElementsByClassName("tabcontent");

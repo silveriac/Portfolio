@@ -15,8 +15,10 @@ window.onload = (evt) => {
   buttons[2].addEventListener("click", (event) => {changeTabs(event, 'Design'); fillTab(currentTab);});
   buttons[3].addEventListener("click", (event) => {changeTabs(event, 'Doodly'); doodlyBG(currentTab); fillDoodlyTab();});
   changeTabs(evt, currentTab);
-  if (currentTab == "Doodly") fillDoodlyTab()
-  else fillTab(currentTab)
+  document.querySelector(`[data-tab="${currentTab}"]`).classList.add("active");
+  if (currentTab == "Doodly") fillDoodlyTab();
+  else fillTab(currentTab);
+  if (params.get("img")) modalSlider(1, +params.get("img"));
   if (date.getDay() == 2 && date.getHours() > 20) {
     new Twitch.Player("twitch-embed", {
       channel: "dood_ly"
@@ -108,8 +110,6 @@ const doodlyBG = (tab) =>{
 }
 
 //const modal = document.getElementsByClassName("modal");
-console.log(modal);
-let slide = document.getElementsByClassName("slide");
 let imageDiv;
 let currentSlide;
 
@@ -118,7 +118,9 @@ const modalSlider = (action, number) => {
     currentSlide = number;
   };
   let description = document.getElementById("description");
-  let imgArray = galleryContent[currentTab]
+  let imgArray = galleryContent[currentTab];
+  let left = document.querySelector(".left");
+  let right = document.querySelector(".right");
   switch(action){
     case 1: //open
       modal.classList.toggle("switch");
@@ -132,16 +134,39 @@ const modalSlider = (action, number) => {
       currentSlide != 0 ? currentSlide = currentSlide - 1 : currentSlide = imgArray.length - 1;
       imageDiv[0].childNodes[3].setAttribute("src", imgArray[currentSlide].src);
       description.innerHTML = imgArray[currentSlide].description;
+      left.classList.add("take-over");
       break;
     case 3: //right
       currentSlide != (imgArray.length - 1) ? currentSlide = currentSlide + 1 : currentSlide = 0;
       imageDiv[0].childNodes[3].setAttribute("src", imgArray[currentSlide].src);
       description.innerHTML = imgArray[currentSlide].description;
+      right.classList.add("take-over");
       break;
     default:
       console.log("Modal error");
       modal.classList.toggle("switch");
   };
+
+
+  left.style.animation = 'none';
+  right.style.animation = 'none';
+  left.offsetHeight;
+  right.offsetHeight;
+  left.style.animation = null;
+  right.style.animation = null;
+  let previousSlide = currentSlide == 0 ? imgArray.length - 1 : currentSlide -1;
+  let nextSlide = currentSlide == imgArray.length - 1 ? 0 : currentSlide +1;
+  setTimeout(()=>{
+    left.classList.remove("take-over");
+    right.classList.remove("take-over");
+    left.innerHTML = `<img class="preview" src="${imgArray[previousSlide].src}" alt="${imgArray[previousSlide].description}">`;
+    right.innerHTML = `<img class="preview" src="${imgArray[nextSlide].src}" alt="${imgArray[nextSlide].description}">`;
+    if (currentTab == "Animation") {//add still frame1 to gifs
+      left.innerHTML += `<img class="frame1" src="${(imgArray[previousSlide].src).replace('gif/','gif/frame1/').replace(/-/g, '_')}" alt="${imgArray[previousSlide].description}">`;
+      right.innerHTML += `<img class="frame1" src="${(imgArray[nextSlide].src).replace('gif/','gif/frame1/').replace(/-/g, '_')}" alt="${imgArray[nextSlide].description}">`;
+    };
+  }, 200)
+
 };
 
 document.onkeydown = (evt) => {

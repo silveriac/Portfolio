@@ -5,7 +5,7 @@
 :root{
   font-size: 20px;
   --main-bg-color: rgb(193, 87, 255);
-  --main-bg-color-opacity: rgba(193, 87, 255, .85);
+  --main-bg-color-opacity: rgba(193, 87, 255, .95);
 }
 @media screen and (max-width: 1440px) {
   :root{
@@ -44,7 +44,7 @@ header{
   height: 48px;
   background-color: black;
 }
-header:has(+#gamesPage)::after, header:has(+#webDev)::after{ /*this ugly selector adds blur to header and footer*/
+header:has(+#gamesPage)::after, header:has(+#webDev)::after{ /*this ugly af selector adds blur to header and footer*/
   content: "";
   position: absolute;
   top:47px;
@@ -157,6 +157,9 @@ a:has(.nav-icon):hover::after{
   left: 70px;
   z-index: 5;
 }
+#EN a:has(.nav-icon):hover::after{
+  content: "Home";
+}
 span:has(.nav-icon):hover::after{
   content: "Atrás";
   font-family: 'Montserrat', 'sans-serif';
@@ -172,6 +175,9 @@ span:has(.nav-icon):hover::after{
   top: 7px;
   right: 55px;
   z-index: 5;
+}
+#EN span:has(.nav-icon):hover::after{
+  content: "Back";
 }
 .gallery, .games{
   display: flex;
@@ -727,6 +733,11 @@ li div:not(.dot){
   padding: 25px !important;
   padding-inline: 40px !important;
   padding-bottom: 50px !important;
+}
+.grow .icon{
+  rotate: 0deg !important;
+  transition-duration: .3s;
+
 }
 .hide{
   display: none;
