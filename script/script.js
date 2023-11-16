@@ -57,4 +57,3 @@ const sleep = ms => {
 const addArea = element => {
   if(area) element.setAttribute("href", `${element.href}?area=${area}`);
 }
-
