@@ -80,6 +80,9 @@ body.doodly-bg main{
     font-family: 'Indie Flower', cursive;
     /* color: black; */
 }
+#Doodly .frame1{
+    left: unset;
+}
 #Doodly .gallery-img img{
     border: none;
     transform: none;
