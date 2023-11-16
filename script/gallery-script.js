@@ -13,6 +13,8 @@ let calledDoodly = currentTab == "Doodly" ? 1 : 0;
 window.onload = (evt) => {
   if(document.querySelector('a[href="../indexEN.html"]')) addArea(document.querySelector('a[href="../indexEN.html"]'))
   else addArea(document.querySelector('a[href="../index.html"]'));
+  addArea(document.querySelectorAll("footer ul a")[0]);
+  addArea(document.querySelectorAll("footer ul a")[1]);
   modal = document.getElementsByClassName("modal")[0];
   imageDiv = document.getElementsByClassName("show-img");
   const buttons = document.getElementsByClassName("tabs");

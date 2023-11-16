@@ -2,6 +2,8 @@
 let currentTab = 'Education';
 let EN;
 window.onload = () => {
+    addArea(document.querySelectorAll("footer ul a")[0]);
+    addArea(document.querySelectorAll("footer ul a")[1]);
     const buttons = document.getElementsByClassName("tabs");
     const aboutMe = document.getElementById("aboutMe");
     document.getElementById("linkAboutMe").addEventListener("click", () =>{
