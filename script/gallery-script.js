@@ -5,6 +5,8 @@ paperIn.src = '../assets/gallery/doodly/doodly-bg.gif';
 paperOut.src = '../assets/gallery/doodly/doodly-bg-out.gif';
 let currentTab = params.get("area") ?  params.get("area") : "Illustration" ;
 console.log(params.get("area"));
+console.log(params.toString());
+
 currentTab = currentTab == "Dev" || currentTab == "web" || currentTab == "GameDev" ? "Animation" : currentTab;
 let modal;
 let calledDoodly = currentTab == "Doodly" ? 1 : 0;
@@ -14,10 +16,10 @@ window.onload = (evt) => {
   modal = document.getElementsByClassName("modal")[0];
   imageDiv = document.getElementsByClassName("show-img");
   const buttons = document.getElementsByClassName("tabs");
-  buttons[0].addEventListener("click", (event) => {changeTabs(event, 'Illustration'); fillTab(currentTab);});
-  buttons[1].addEventListener("click", (event) => {changeTabs(event, 'Animation'); fillTab(currentTab);});
-  buttons[2].addEventListener("click", (event) => {changeTabs(event, 'Design'); fillTab(currentTab);});
-  buttons[3].addEventListener("click", (event) => {changeTabs(event, 'Doodly'); doodlyBG(currentTab); fillDoodlyTab();});
+  buttons[0].addEventListener("click", (event) => {changeTabs(event, 'Illustration'); fillTab(currentTab); addQueryToURL("area", currentTab);});
+  buttons[1].addEventListener("click", (event) => {changeTabs(event, 'Animation'); fillTab(currentTab); addQueryToURL("area", currentTab);});
+  buttons[2].addEventListener("click", (event) => {changeTabs(event, 'Design'); fillTab(currentTab); addQueryToURL("area", currentTab);});
+  buttons[3].addEventListener("click", (event) => {changeTabs(event, 'Doodly'); fillDoodlyTab(); addQueryToURL("area", currentTab);});
   changeTabs(evt, currentTab);
   document.querySelector(`[data-tab="${currentTab}"]`).classList.add("active");
   if (currentTab == "Doodly") fillDoodlyTab();
@@ -62,7 +64,7 @@ const fillTab = (tab) => {
 
 const fillDoodlyTab = () =>{
   contentArray = galleryContent["Doodly"];
-  if(calledDoodly > 0) doodlyBG(currentTab);
+  doodlyBG(currentTab);
   const container = document.getElementById("Doodly");
   if (document.querySelector(`#Doodly .gallery-img`)) return;
   let proyecto = "";
@@ -85,6 +87,19 @@ const fillDoodlyTab = () =>{
     </a>`
     container.appendChild(div);
   })
+}
+
+const addQueryToURL = (key, value) =>{
+  //console.log(value);
+  let currentURL = window.location.href.replace(/\?.*$/, "");
+  let newURL;
+  if(params.get(key)) params.delete(key);
+  params.set(key, value);
+  if(!modalState) params.delete("img");
+  //else newURL = currentURL + `${currentURL.indexOf('?') !== -1 ? "&" : "?"}${key}=${value}`
+  history.pushState(null, key == "area"? value : null,  currentURL + "?" + params.toString());
+  //`${window.location.href}${window.location.href.indexOf('?') !== -1 ? "&" : "?"}`
+  //console.log(newURL);
 }
 
 const doodlyBG = (tab) =>{
@@ -116,11 +131,12 @@ const doodlyBG = (tab) =>{
 //const modal = document.getElementsByClassName("modal");
 let imageDiv;
 let currentSlide;
-
+let modalState = false;
 const modalSlider = (action, number) => {
   if (typeof number == 'number'){
     currentSlide = number;
   };
+  modalState = true;
   let description = document.getElementById("description");
   let imgArray = galleryContent[currentTab];
   let left = document.querySelector(".left");
@@ -133,6 +149,7 @@ const modalSlider = (action, number) => {
       break;
     case 0: //close
       modal.classList.toggle("switch");
+      modalState = false;
       break;
     case 2: //left
       currentSlide != 0 ? currentSlide = currentSlide - 1 : currentSlide = imgArray.length - 1;
@@ -151,6 +168,7 @@ const modalSlider = (action, number) => {
       modal.classList.toggle("switch");
   };
 
+  addQueryToURL("img", currentSlide);
 
   left.style.animation = 'none';
   right.style.animation = 'none';
