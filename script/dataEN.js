@@ -19,7 +19,7 @@ let indexContent  = {
         {'src': "../assets/logos/figma.png", 'name': "Figma", 'alt': "figma", 'lvl': "basic", "percent": ".3"}
     ],
     'Experience':[
-        {'title': "Diseñador gráfico y web", 'company': "Sodimac", 'date': "2022 - 2023", "description":
+        {'title': "Graphic and web designer", 'company': "Sodimac", 'date': "2022 - 2023", "description":
         `• I designe image pieces for <a target='_blank' href='https://www.sodimac.com.uy/sodimac-uy/'>Sodimac.com.uy</a> y <a target='_blank' href='https://www.sodimac.com.ar/sodimac-ar/'>Sodimac.com.ar</a>.<br>
         • I mantained, optimiced and updated the code for various of Sodimac's landing pages<br>
         • I worked in personalization strategies using Dynamic Yield.<br>
@@ -27,19 +27,19 @@ let indexContent  = {
         • I implemented changes to improve the team's workflow efficiency.
         `},
 
-        {'title': "Líder de equipos", 'company': "Médicos sin Fronteras", 'date': "2019 - 2021", "description":
+        {'title': "Team Leader", 'company': "Doctors wihtout borders", 'date': "2019 - 2021", "description":
         `• I recruited donors in public areas, always meeting the set objectives.<br>
         • I worked on donor recovery and loyalty campaigns<br>
         • I led teams both in street-level operations and in a call center setting.<br>
         • I planed team strategies and motivational activities<br>`},
 
-        {'title': "<a target='_blank' href='https://www.fiverr.com'>Ilustrador y artista freelance", 'company': "<a target='_blank' href='https://www.fiverr.com'>Fiverr</a>", 'date': "2018 - actualidad", "description":
+        {'title': "<a target='_blank' href='https://www.fiverr.com'>Freelance illustrator, artist and animator", 'company': "<a target='_blank' href='https://www.fiverr.com'>Fiverr</a>", 'date': "2018 - actualidad", "description":
         `• I worked on various illustration and animation projects.<br>
         • 5 star rating ⭐⭐⭐⭐⭐.`},
     ],
     'Education':[
         {'title': "Visual Communication Design", 'company': "<a target='_blank' href='https://radiumrocket.com'>FADU</a>", 'date': "2016 - 2018 (no finalizado)", "description": ""},
-        {'title': "Become a Software Proffesional", 'company': "<a target='_blank' href='http://www.fadu.edu.uy'>Radium Rocket</a>", 'date': "2022", "description": ""},
+        {'title': "Become a Software Professional", 'company': "<a target='_blank' href='http://www.fadu.edu.uy'>Radium Rocket</a>", 'date': "2022", "description": ""},
         {'title': "GeneXus Analyst", 'company': "<a target='_blank' href='https://jovenesaprogramar.edu.uy'>Jóvenes a Programar</a>", 'date': "2018", "description": ""},
     ],
     'Proyects':[
@@ -155,5 +155,5 @@ const galleryContent  = {
     "Sippin' with Spirits": 'Banners and mascot for a podcast about drinks and ghost stories',
     "Varo Percu": 'Logo design for a percussionist who makes instruments out of recycled materials',
     "MG Fitness": 'Visual identity design for a personal trainer',
-    "Doodly": `Doodly is a weekly art and design stream, created by Eric Silva and produced by Lucía Techera, Florencia Flores and Eric Silva. We have a different challenge each week, visit out stream on <a target:"_blank" href="https://www.twitch.tv/dood_ly">Twitch</a> every tuesday at 9.30 pm (GMT-3) and join us for drawing!`
+    "Doodly": `Doodly is a weekly art and design stream, created by Eric Silva and produced by Lucía Techera, Florencia Flores and Eric Silva. We have a different challenge each week, visit our stream on <a target:"_blank" href="https://www.twitch.tv/dood_ly">Twitch</a> every tuesday at 9.30 pm (GMT-3) and join us for drawing!`
   };

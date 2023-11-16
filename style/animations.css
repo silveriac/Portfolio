@@ -164,12 +164,12 @@
     }
     .left{
         translate: -120px 0px;
-        animation: move-right .3s 0s 1 ease-out forwards;
+        animation: move-right .3s .2s 1 ease-out forwards;
         opacity: 0;
     }
     .right{
         translate: 120px 0px;
-        animation: move-left .3s 0s 1 ease-out forwards;
+        animation: move-left .3s .2s 1 ease-out forwards;
         opacity: 0;
     }
     .left.take-over img:not(.frame1){

@@ -3,13 +3,13 @@ body.doodly-bg main{
     font-family: 'Indie Flower', cursive;
 }
 .doodly-bg{
-    background: url("../assets/gallery/doodly/doodly-bg.gif"), linear-gradient(to top, rgba(0, 0, 0), rgb(193, 87, 255), black);
+    background: url("../assets/gallery/doodly/doodly-bg.gif"), linear-gradient(to top, rgba(0, 0, 0),var(--main-bg-color), black);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
 }
 .doodly-bg-out{
-    background: url("../assets/gallery/doodly/doodly-bg-out.gif"), linear-gradient(to top, rgba(0, 0, 0), rgb(193, 87, 255), black);
+    background: url("../assets/gallery/doodly/doodly-bg-out.gif"), linear-gradient(to top, rgba(0, 0, 0), var(--main-bg-color), black);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100%;

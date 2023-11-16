@@ -3,10 +3,14 @@ const paperIn = new Image();
 const paperOut = new Image();
 paperIn.src = '../assets/gallery/doodly/doodly-bg.gif';
 paperOut.src = '../assets/gallery/doodly/doodly-bg-out.gif';
-let currentTab = params.get("tab") ?  params.get("tab") : "Illustration" ;
+let currentTab = params.get("area") ?  params.get("area") : "Illustration" ;
+console.log(params.get("area"));
+currentTab = currentTab == "Dev" || currentTab == "web" || currentTab == "GameDev" ? "Animation" : currentTab;
 let modal;
 let calledDoodly = currentTab == "Doodly" ? 1 : 0;
 window.onload = (evt) => {
+  if(document.querySelector('a[href="../indexEN.html"]')) addArea(document.querySelector('a[href="../indexEN.html"]'))
+  else addArea(document.querySelector('a[href="../index.html"]'));
   modal = document.getElementsByClassName("modal")[0];
   imageDiv = document.getElementsByClassName("show-img");
   const buttons = document.getElementsByClassName("tabs");

@@ -1,5 +1,6 @@
 
 let currentTab = 'Education';
+let EN;
 window.onload = () => {
     const buttons = document.getElementsByClassName("tabs");
     const aboutMe = document.getElementById("aboutMe");
@@ -47,30 +48,34 @@ window.onload = () => {
     })
     localStorage.setItem("visited", "true");
     console.log(localStorage.getItem("visited"));
-
-    // if(localStorage.getItem("visited") === "true"){
-    //     for (let i = 0; i < document.getElementsByClassName("enlacesinicio").length; i++) {
-    //         console.log(document.getElementsByClassName("enlacesinicio")[i]);
-    //         document.getElementsByClassName("enlacesinicio")[i].classList.add("duration-reset");
-    //     }
-    // }
-    /*document.querySelector("h1").addEventListener("mouseenter", (event) => {
-        let text = event.target.textContent;   
-        const letters = ["E", "e", "r", "i", "c", " ", "S", "i", "l", "v", "a"];
-        const interval = setInterval(() => {
-            for (let i = 0; i < text.length; i++) {
-                text = text.substring(0, i) + letters[Math.floor(Math.random() * 11)] + text.substring(i + 1);
-                event.target.innerHTML = text;
-                console.log(event.target.innerHTML);
-            }
-
-        }, 300);
-        setTimeout(()=>{
-            event.target.innerHTML = "Silveriac ";
-            clearInterval(interval);
-        }, 3000)
-    })*/
+    const enlacesInicio = document.querySelectorAll(".nav > li");
+    console.log(enlacesInicio);
+    for (let i = 1; i < (enlacesInicio.length - 1); i++) {
+        addArea(enlacesInicio[i].childNodes[0]);
+    }
+    switch(area){
+        default:
+          break;
+        case "Web":
+            enlacesInicio[2].remove();
+            break;
+        case "Illustration":
+        case "Animation":
+            enlacesInicio[1].remove();
+            buttons[1].remove();
+            break;
+        case "Design":
+            break;
+        case "Dev":
+            enlacesInicio[2].remove();
+        break;
+        case "GameDev":
+            enlacesInicio[1].remove();
+        break;
+    }
+    EN = document.getElementById("EN") ? true : false;
 };
+
 const fillTab = (tab) => {
     contentArray = indexContent[tab];
     switch(tab){
@@ -88,10 +93,10 @@ const fillTab = (tab) => {
                     <div class="tech-name">
                         <p>${item.name}</p>
                         <div class="progress-bar" style="width: ${100 * item.percent}%; animation-delay: ${(index*1.5)/10}s">
-                            <p class="tech-lvl">nivel&nbsp;${item.lvl}</p>
+                            <p class="tech-lvl">${EN? "level:" : "nivel"}&nbsp;${item.lvl}</p>
                         </div>
                     </div>
-                    <p class="tech-lvl">nivel ${item.lvl}</p>`;
+                    <p class="tech-lvl">${EN? "level:" : "nivel"}&nbsp;${item.lvl}</p>`;
                 setTimeout(() =>{container.appendChild(div);}, 110);
             });
             break;
