@@ -20,10 +20,10 @@ let indexContent  = {
     ],
     'Experience':[
         {'title': "Graphic and web designer", 'company': "Sodimac", 'date': "2022 - 2023", "description":
-        `• I designe image pieces for <a target='_blank' href='https://www.sodimac.com.uy/sodimac-uy/'>Sodimac.com.uy</a> y <a target='_blank' href='https://www.sodimac.com.ar/sodimac-ar/'>Sodimac.com.ar</a>.<br>
-        • I mantained, optimiced and updated the code for various of Sodimac's landing pages<br>
+        `• I designed image pieces for <a target='_blank' href='https://www.sodimac.com.uy/sodimac-uy/'>Sodimac.com.uy</a> y <a target='_blank' href='https://www.sodimac.com.ar/sodimac-ar/'>Sodimac.com.ar</a>.<br>
+        • I mantained, optimized and updated the code for various of Sodimac's landing pages<br>
         • I worked in personalization strategies using Dynamic Yield.<br>
-        • I developed an <a target='_blank' href="https://sodi-labs.com/eric/">interna use app</a> used for searching products by Id.<br>
+        • I developed an <a target='_blank' href="https://sodi-labs.com/eric/">internal use app</a> used for searching products by Id.<br>
         • I implemented changes to improve the team's workflow efficiency.
         `},
 

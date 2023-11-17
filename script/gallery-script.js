@@ -152,13 +152,13 @@ const modalSlider = (action, number) => {
       currentSlide != 0 ? currentSlide = currentSlide - 1 : currentSlide = imgArray.length - 1;
       imageDiv[0].childNodes[3].setAttribute("src", imgArray[currentSlide].src);
       description.innerHTML = imgArray[currentSlide].description;
-      left.classList.add("take-over");
+      //left.classList.add("take-over");
       break;
     case 3: //right
       currentSlide != (imgArray.length - 1) ? currentSlide = currentSlide + 1 : currentSlide = 0;
       imageDiv[0].childNodes[3].setAttribute("src", imgArray[currentSlide].src);
       description.innerHTML = imgArray[currentSlide].description;
-      right.classList.add("take-over");
+      //right.classList.add("take-over");
       break;
     default:
       console.log("Modal error");
