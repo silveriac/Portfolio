@@ -1,22 +1,22 @@
 console.log("content EN");
 let indexContent  = {
     'Technology':[
-        {'src': "../assets/logos/html.png", 'name': "HTML", 'alt': "html", 'lvl': "advanced", "percent": ".84"},
-        {'src': "../assets/logos/css.png", 'name': "Css", 'alt': "css", 'lvl': "advanced", "percent": ".78"},
-        {'src': "../assets/logos/js.png", 'name': "JavaScript", 'alt': "javascript", 'lvl': "medium", "percent": ".60"},
-        {'src': "../assets/logos/node.png", 'name': "Node.js", 'alt': "node", 'lvl': "medium", "percent": ".33"},
-        {'src': "../assets/logos/python.png", 'name': "Python", 'alt': "c", 'lvl': "basic", "percent": ".10"},
-        {'src': "../assets/logos/c.png", 'name': "C", 'alt': "c", 'lvl': "basic", "percent": ".10"},
-        {'src': "../assets/logos/csharp.png", 'name': "C#", 'alt': "c#", 'lvl': "basic", "percent": ".07"},
-        {'src': "../assets/logos/unity.png", 'name': "Unity", 'alt': "unity", 'lvl': "basic", "percent": ".05"}
+        {'src': "./assets/logos/html.png", 'name': "HTML", 'alt': "html", 'lvl': "advanced", "percent": ".84"},
+        {'src': "./assets/logos/css.png", 'name': "Css", 'alt': "css", 'lvl': "advanced", "percent": ".78"},
+        {'src': "./assets/logos/js.png", 'name': "JavaScript", 'alt': "javascript", 'lvl': "medium", "percent": ".60"},
+        {'src': "./assets/logos/node.png", 'name': "Node.js", 'alt': "node", 'lvl': "medium", "percent": ".33"},
+        {'src': "./assets/logos/python.png", 'name': "Python", 'alt': "c", 'lvl': "basic", "percent": ".10"},
+        {'src': "./assets/logos/c.png", 'name': "C", 'alt': "c", 'lvl': "basic", "percent": ".10"},
+        {'src': "./assets/logos/csharp.png", 'name': "C#", 'alt': "c#", 'lvl': "basic", "percent": ".07"},
+        {'src': "./assets/logos/unity.png", 'name': "Unity", 'alt': "unity", 'lvl': "basic", "percent": ".05"}
     ],
     'Design':[
-        {'src': "../assets/logos/ps.png", 'name': "Adobe Photoshop", 'alt': "photoshop", 'lvl': "advanced", "percent": ".92"},
-        {'src': "../assets/logos/ai.png", 'name': "Adobe Illustrator", 'alt': "illustrator", 'lvl': "advanced", "percent": ".78"},
-        {'src': "../assets/logos/pr.png", 'name': "Adobe Premiere", 'alt': "premiere", 'lvl': "medium", "percent": ".45"},
-        {'src': "../assets/logos/xd.png", 'name': "Adobe XD", 'alt': "xd", 'lvl': "medium", "percent": ".4"},
-        {'src': "../assets/logos/csp.png", 'name': "ClipStudio Paint", 'alt': "clipstudio paint", 'lvl': "medium", "percent": ".65"},
-        {'src': "../assets/logos/figma.png", 'name': "Figma", 'alt': "figma", 'lvl': "basic", "percent": ".3"}
+        {'src': "./assets/logos/ps.png", 'name': "Adobe Photoshop", 'alt': "photoshop", 'lvl': "advanced", "percent": ".92"},
+        {'src': "./assets/logos/ai.png", 'name': "Adobe Illustrator", 'alt': "illustrator", 'lvl': "advanced", "percent": ".78"},
+        {'src': "./assets/logos/pr.png", 'name': "Adobe Premiere", 'alt': "premiere", 'lvl': "medium", "percent": ".45"},
+        {'src': "./assets/logos/xd.png", 'name': "Adobe XD", 'alt': "xd", 'lvl': "medium", "percent": ".4"},
+        {'src': "./assets/logos/csp.png", 'name': "ClipStudio Paint", 'alt': "clipstudio paint", 'lvl': "medium", "percent": ".65"},
+        {'src': "./assets/logos/figma.png", 'name': "Figma", 'alt': "figma", 'lvl': "basic", "percent": ".3"}
     ],
     'Experience':[
         {'title': "Graphic and web designer", 'company': "Sodimac", 'date': "2022 - 2023", "description":
@@ -48,9 +48,9 @@ let indexContent  = {
         {'title': "<a target='_blank' href='https://youtube.com/clip/Ugkx7iT7OuOkUgt-aKGu-qsT8Lb8CBY5vepS?si=wG3_A3GYTcyAbD8A'>Random</a>", 'company': "Local news TV program", 'date': "2013", "description": ""},
     ],
     'Contact':[
-        {'src': "../assets/logos/gmail.svg", 'alt': 'instagram', 'title': "<a target='_blank' href='mailto:erixilva42@gmail.com?'>erixilva42@gmail.com</a>"},
-        {'src': "../assets/logos/linkedin.svg", 'alt': 'instagram', 'title': "<a target='_blank' href='https://www.linkedin.com/in/eric-silva-820683155/'>Eric Silva</a>"},
-        {'src': "../assets/logos/insta.svg", 'alt': 'instagram', 'title': "<a target='_blank' href='https://www.instagram.com/silveriac_/'>@silveriac_</a>"},
+        {'src': "./assets/logos/gmail.svg", 'alt': 'instagram', 'title': "<a target='_blank' href='mailto:erixilva42@gmail.com?'>erixilva42@gmail.com</a>"},
+        {'src': "./assets/logos/linkedin.svg", 'alt': 'instagram', 'title': "<a target='_blank' href='https://www.linkedin.com/in/eric-silva-820683155/'>Eric Silva</a>"},
+        {'src': "./assets/logos/insta.svg", 'alt': 'instagram', 'title': "<a target='_blank' href='https://www.instagram.com/silveriac_/'>@silveriac_</a>"},
     ],
 };
 const galleryContent  = {

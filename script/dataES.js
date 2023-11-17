@@ -1,22 +1,22 @@
 console.log("content ES");
 let indexContent  = {
     'Technology':[
-        {'src': "../assets/logos/html.png", 'name': "HTML", 'alt': "html", 'lvl': "avanzado", "percent": ".84"},
-        {'src': "../assets/logos/css.png", 'name': "Css", 'alt': "css", 'lvl': "avanzado", "percent": ".78"},
-        {'src': "../assets/logos/js.png", 'name': "JavaScript", 'alt': "javascript", 'lvl': "medio", "percent": ".60"},
-        {'src': "../assets/logos/node.png", 'name': "Node.js", 'alt': "node", 'lvl': "medio", "percent": ".33"},
-        {'src': "../assets/logos/python.png", 'name': "Python", 'alt': "c", 'lvl': "básico", "percent": ".10"},
-        {'src': "../assets/logos/c.png", 'name': "C", 'alt': "c", 'lvl': "básico", "percent": ".10"},
-        {'src': "../assets/logos/csharp.png", 'name': "C#", 'alt': "c#", 'lvl': "básico", "percent": ".07"},
-        {'src': "../assets/logos/unity.png", 'name': "Unity", 'alt': "unity", 'lvl': "básico", "percent": ".05"}
+        {'src': "./assets/logos/html.png", 'name': "HTML", 'alt': "html", 'lvl': "avanzado", "percent": ".84"},
+        {'src': "./assets/logos/css.png", 'name': "Css", 'alt': "css", 'lvl': "avanzado", "percent": ".78"},
+        {'src': "./assets/logos/js.png", 'name': "JavaScript", 'alt': "javascript", 'lvl': "medio", "percent": ".60"},
+        {'src': "./assets/logos/node.png", 'name': "Node.js", 'alt': "node", 'lvl': "medio", "percent": ".33"},
+        {'src': "./assets/logos/python.png", 'name': "Python", 'alt': "c", 'lvl': "básico", "percent": ".10"},
+        {'src': "./assets/logos/c.png", 'name': "C", 'alt': "c", 'lvl': "básico", "percent": ".10"},
+        {'src': "./assets/logos/csharp.png", 'name': "C#", 'alt': "c#", 'lvl': "básico", "percent": ".07"},
+        {'src': "./assets/logos/unity.png", 'name': "Unity", 'alt': "unity", 'lvl': "básico", "percent": ".05"}
     ],
     'Design':[
-        {'src': "../assets/logos/ps.png", 'name': "Adobe Photoshop", 'alt': "photoshop", 'lvl': "avanzado", "percent": ".92"},
-        {'src': "../assets/logos/ai.png", 'name': "Adobe Illustrator", 'alt': "illustrator", 'lvl': "avanzado", "percent": ".78"},
-        {'src': "../assets/logos/pr.png", 'name': "Adobe Premiere", 'alt': "premiere", 'lvl': "medio", "percent": ".45"},
-        {'src': "../assets/logos/xd.png", 'name': "Adobe XD", 'alt': "xd", 'lvl': "medio", "percent": ".4"},
-        {'src': "../assets/logos/csp.png", 'name': "ClipStudio Paint", 'alt': "clipstudio paint", 'lvl': "medio", "percent": ".65"},
-        {'src': "../assets/logos/figma.png", 'name': "Figma", 'alt': "figma", 'lvl': "básico", "percent": ".3"}
+        {'src': "./assets/logos/ps.png", 'name': "Adobe Photoshop", 'alt': "photoshop", 'lvl': "avanzado", "percent": ".92"},
+        {'src': "./assets/logos/ai.png", 'name': "Adobe Illustrator", 'alt': "illustrator", 'lvl': "avanzado", "percent": ".78"},
+        {'src': "./assets/logos/pr.png", 'name': "Adobe Premiere", 'alt': "premiere", 'lvl': "medio", "percent": ".45"},
+        {'src': "./assets/logos/xd.png", 'name': "Adobe XD", 'alt': "xd", 'lvl': "medio", "percent": ".4"},
+        {'src': "./assets/logos/csp.png", 'name': "ClipStudio Paint", 'alt': "clipstudio paint", 'lvl': "medio", "percent": ".65"},
+        {'src': "./assets/logos/figma.png", 'name': "Figma", 'alt': "figma", 'lvl': "básico", "percent": ".3"}
     ],
     'Experience':[
         {'title': "Diseñador gráfico y web", 'company': "Sodimac", 'date': "2022 - 2023", "description":
