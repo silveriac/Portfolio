@@ -73,7 +73,7 @@ const galleryContent  = {
       {'src': "../assets/gallery/eldritch-momo.png", 'alt': "eldritch momo", 'description': "<a target='_blank' href='https://www.twitch.tv/dood_ly'>Doodly</a> - Una versión éldrica de Momo de Avatar: El último maestro aire"},
       {'src': "../assets/gallery/spike.jpg", 'alt': "spike", 'description': "Una pieza de Inktober 2017 pintada digitalmente"},
       {'src': "../assets/gallery/gangster-skull.jpg", 'alt': "gagnster skull", 'description': "Calabera mafiosa, un boceto de un cuaderno pequeño pintado digitalmente"},
-      {'src': "../assets/gallery/gitana.jpg", 'alt': "gitana", 'description': "<a target='_blank' href='https://www.twitch.tv/dood_ly'>Doodly</a> - Gitana"},
+      {'src': "../assets/gallery/gitana.jpg", 'alt': "gitana", 'description': "<a target='_blank' href='https://www.twitch.tv/dood_ly'>Doodly</a> - Estoterismo <a target='_blank' href='https://youtu.be/Jb9v7m4EdnU'>Video proceso</a>"},
       {'src': "../assets/gallery/hama.jpg", 'alt': "hama", 'description': "<a target='_blank' href='https://www.twitch.tv/dood_ly'>Doodly</a> - Hama de Avatar: El último maestro aire"},
       {'src': "../assets/gallery/herosona.jpg", 'alt': "me as a my hero academia character", 'description': "<a target='_blank' href='https://www.twitch.tv/dood_ly'>Doodly</a> - Yo como personaje de 'My Hero Academia'"},
       {'src': "../assets/gallery/me-blu.jpg", 'alt': "me with blue background", 'description': "-"},

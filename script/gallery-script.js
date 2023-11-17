@@ -92,16 +92,11 @@ const fillDoodlyTab = () =>{
 }
 
 const addQueryToURL = (key, value) =>{
-  //console.log(value);
   let currentURL = window.location.href.replace(/\?.*$/, "");
-  let newURL;
   if(params.get(key)) params.delete(key);
   params.set(key, value);
   if(!modalState) params.delete("img");
-  //else newURL = currentURL + `${currentURL.indexOf('?') !== -1 ? "&" : "?"}${key}=${value}`
   history.pushState(null, key == "area"? value : null,  currentURL + "?" + params.toString());
-  //`${window.location.href}${window.location.href.indexOf('?') !== -1 ? "&" : "?"}`
-  //console.log(newURL);
 }
 
 const doodlyBG = (tab) =>{
