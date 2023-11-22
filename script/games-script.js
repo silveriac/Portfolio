@@ -5,8 +5,7 @@ window.onload = () =>{
     addArea(document.querySelectorAll("footer ul a")[0]);
     addArea(document.querySelectorAll("footer ul a")[1]);
     let gameType = params.get("gameType");
-    console.log(gameType);
-    console.log("tuvieja");
+
     if(gameType){
         let gameList = document.getElementsByClassName("game");
         console.log(gameList);

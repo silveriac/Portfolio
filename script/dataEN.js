@@ -5,6 +5,7 @@ let indexContent  = {
         {'src': "./assets/logos/css.png", 'name': "Css", 'alt': "css", 'lvl': "advanced", "percent": ".78"},
         {'src': "./assets/logos/js.png", 'name': "JavaScript", 'alt': "javascript", 'lvl': "medium", "percent": ".60"},
         {'src': "./assets/logos/node.png", 'name': "Node.js", 'alt': "node", 'lvl': "medium", "percent": ".33"},
+        {'src': "./assets/logos/react.png", 'name': "React", 'alt': "react", 'lvl': "basic", "percent": ".12"},
         {'src': "./assets/logos/python.png", 'name': "Python", 'alt': "c", 'lvl': "basic", "percent": ".10"},
         {'src': "./assets/logos/c.png", 'name': "C", 'alt': "c", 'lvl': "basic", "percent": ".10"},
         {'src': "./assets/logos/csharp.png", 'name': "C#", 'alt': "c#", 'lvl': "basic", "percent": ".07"},
