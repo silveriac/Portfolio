@@ -1,8 +1,4 @@
 const date = new Date();
-const paperIn = new Image();
-const paperOut = new Image();
-paperIn.src = '../assets/gallery/doodly/doodly-bg.gif';
-paperOut.src = '../assets/gallery/doodly/doodly-bg-out.gif';
 let currentTab = params.get("area") ?  params.get("area") : "Illustration" ;
 console.log(params.get("area"));
 console.log(params.toString());
@@ -10,6 +6,35 @@ console.log(params.toString());
 currentTab = currentTab == "Dev" || currentTab == "web" || currentTab == "GameDev" ? "Animation" : currentTab;
 let modal;
 let calledDoodly = currentTab == "Doodly" ? 1 : 0;
+
+
+/*const loadImage = (src) => {
+  return new Promise((resolve, reject) => {
+    const img = new Image();
+    img.onload = () => {
+      resolve(img);
+    };
+
+    img.onerror = (error) => {
+      reject(error);
+    };
+
+    img.src = src;
+  });
+}
+const addImg = async (tab, content, src) => {
+  const container = document.getElementById(tab);
+  try {
+    const imgSrc = await loadImage(src);
+    const img = new Image()
+    img.src = src
+  } catch (error){
+    console.error('Error loading image:', error);
+  }
+  container.appendChild(content);
+  // img.onload = () => {container.appendChild(content)}
+  // img.src = galleryContent[tab][i]["src"];
+}*/
 window.onload = (evt) => {
   if(document.querySelector('a[href="../indexEN.html"]')) addArea(document.querySelector('a[href="../indexEN.html"]'))
   else addArea(document.querySelector('a[href="../index.html"]'));
@@ -101,6 +126,8 @@ const addQueryToURL = (key, value) =>{
 
 const doodlyBG = (tab) =>{
   const doodlyBGDiv = document.getElementsByTagName("body")[0];
+  const paperIn = new Image();
+  const paperOut = new Image();
   if (tab === "Doodly") {
     paperIn.onload = function() {
       doodlyBGDiv.classList.add("doodly-bg");
@@ -117,11 +144,13 @@ const doodlyBG = (tab) =>{
       doodlyBGDiv.classList.remove("doodly-bg");
     };
     // Check if the image is already complete, if not, the load event listener will handle it
-  if (paperOut.complete) {
-    doodlyBGDiv.classList.add("doodly-bg-out");
-    doodlyBGDiv.classList.remove("doodly-bg");
+    if (paperOut.complete) {
+      doodlyBGDiv.classList.add("doodly-bg-out");
+      doodlyBGDiv.classList.remove("doodly-bg");
+    }
   }
-  }
+  paperIn.src = '../assets/gallery/doodly/doodly-bg.gif';
+  paperOut.src = '../assets/gallery/doodly/doodly-bg-out.gif';
   calledDoodly++;
 }
 

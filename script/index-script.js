@@ -47,8 +47,9 @@ window.onload = () => {
             document.getElementsByClassName('tab-bar')[0].classList.add('menu-over')
             document.querySelector('#aboutMe span img').classList.toggle('rotate-180')
         };
-    })
-    localStorage.setItem("visited", "true");
+    });
+    if(sessionStorage.getItem("visited")) document.querySelector('body').classList.add("visited")
+    else sessionStorage.setItem("visited", "true");
     console.log(localStorage.getItem("visited"));
     const enlacesInicio = document.querySelectorAll(".nav > li");
     console.log(enlacesInicio);
@@ -80,10 +81,11 @@ window.onload = () => {
 
 const fillTab = (tab) => {
     contentArray = indexContent[tab];
+    setTimeout(() =>{document.querySelector('.tab-bar').scrollIntoView()}, 150);
     switch(tab){
         default:
-        const container = document.getElementById(tab);
-        if (container.childElementCount != 0) return;
+            const container = document.getElementById(tab);
+            if (container.childElementCount != 0) return;
             contentArray.forEach((item, index) => {
                 const div = document.createElement("div");
                 div.classList.add("tech-item");
@@ -147,6 +149,7 @@ const fillTab = (tab) => {
             });
             break;
     };
+
     /*contentArray.forEach((item, index) => {
       const div = document.createElement("div");
       div.classList.add("tech-item");

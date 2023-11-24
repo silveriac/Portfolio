@@ -100,7 +100,6 @@
     0%{
         position: absolute;
         opacity: 1;
-        
     }
     100%{
         opacity: 0;
@@ -121,6 +120,14 @@
     .nav li a:hover, .nav li a:focus{
         transition-duration: .3s;
         translate: -92px 0px;
+    }
+    body.visited{
+        & .desvanecerderecha{animation-duration: 1s;}
+        & li:nth-child(1) > .desvanecerderecha{animation-delay: 0s;}
+        & li:nth-child(2) > .desvanecerderecha{animation-delay: .2s;}
+        & li:nth-child(3) > .desvanecerderecha{animation-delay: .4s;}
+        & li:nth-child(4) > .desvanecerderecha{animation-delay: .6s;}
+        & li:nth-child(5) > .desvanecerderecha{animation-delay: .8s;}
     }
     li:nth-child(1) > .desvanecerderecha{animation-delay: 1s;}
     li:nth-child(2) > .desvanecerderecha{animation-delay: 1.2s;}
