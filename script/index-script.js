@@ -48,8 +48,8 @@ window.onload = () => {
             document.querySelector('#aboutMe span img').classList.toggle('rotate-180')
         };
     });
-    if(sessionStorage.getItem("visited")) document.querySelector('body').classList.add("visited")
-    else sessionStorage.setItem("visited", "true");
+    if(localStorage.getItem("visited")) document.querySelector('body').classList.add("visited")
+    else localStorage.setItem("visited", true);
     console.log(localStorage.getItem("visited"));
     const enlacesInicio = document.querySelectorAll(".nav > li");
     console.log(enlacesInicio);
