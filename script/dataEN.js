@@ -34,7 +34,7 @@ let indexContent  = {
         • I led teams both in street-level operations and in a call center setting.<br>
         • I planed team strategies and motivational activities<br>`},
 
-        {'title': "<a target='_blank' href='https://www.fiverr.com'>Freelance illustrator, artist and animator", 'company': "<a target='_blank' href='https://www.fiverr.com'>Fiverr</a>", 'date': "2018 - actualidad", "description":
+        {'title': "<a target='_blank' href='https://www.fiverr.com/silveriac'>Freelance illustrator, artist and animator", 'company': "<a target='_blank' href='https://www.fiverr.com'>Fiverr</a>", 'date': "2018 - actualidad", "description":
         `• I worked on various illustration and animation projects.<br>
         • 5 star rating ⭐⭐⭐⭐⭐.`},
     ],

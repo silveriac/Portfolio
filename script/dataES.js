@@ -35,7 +35,7 @@ let indexContent  = {
         • Lideré equipos tanto en vía callejera como en modalidad call center.<br>
         • Planeé estrategias de equipo y actividades motivacionales<br>`},
 
-        {'title': "<a target='_blank' href='https://www.fiverr.com'>Ilustrador y artista freelance", 'company': "<a target='_blank' href='https://www.fiverr.com'>Fiverr</a>", 'date': "2018 - actualidad", "description":
+        {'title': "<a target='_blank' href='https://www.fiverr.com/silveriac'>Ilustrador y artista freelance", 'company': "<a target='_blank' href='https://www.fiverr.com'>Fiverr</a>", 'date': "2018 - actualidad", "description":
         `• Trabajé en proyectos varios de ilustración, diseño y animación.<br>
         • Puntuación de 5 estrellas ⭐⭐⭐⭐⭐.`},
     ],
