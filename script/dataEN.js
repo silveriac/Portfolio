@@ -39,8 +39,8 @@ let indexContent  = {
         • 5 star rating ⭐⭐⭐⭐⭐.`},
     ],
     'Education':[
-        {'title': "Visual Communication Design", 'company': "<a target='_blank' href='https://radiumrocket.com'>FADU</a>", 'date': "2016 - 2018 (no finalizado)", "description": ""},
-        {'title': "Become a Software Professional", 'company': "<a target='_blank' href='http://www.fadu.edu.uy'>Radium Rocket</a>", 'date': "2022", "description": ""},
+        {'title': "Visual Communication Design", 'company': "<a target='_blank' href='http://www.fadu.edu.uy'>FADU</a>", 'date': "2016 - 2018 (no finalizado)", "description": ""},
+        {'title': "Become a Software Professional", 'company': "<a target='_blank' href='https://radiumrocket.com'>Radium Rocket</a>", 'date': "2022", "description": ""},
         {'title': "GeneXus Analyst", 'company': "<a target='_blank' href='https://jovenesaprogramar.edu.uy'>Jóvenes a Programar</a>", 'date': "2018", "description": ""},
     ],
     'Proyects':[
