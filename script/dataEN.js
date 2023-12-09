@@ -34,7 +34,7 @@ let indexContent  = {
         • I led teams both in street-level operations and in a call center setting.<br>
         • I planed team strategies and motivational activities<br>`},
 
-        {'title': "<a target='_blank' href='https://www.fiverr.com/silveriac'>Freelance illustrator, artist and animator", 'company': "<a target='_blank' href='https://www.fiverr.com'>Fiverr</a>", 'date': "2018 - actualidad", "description":
+        {'title': "<a target='_blank' href='https://www.fiverr.com/silveriac'>Freelance illustrator, artist and animator", 'company': "<a target='_blank' href='https://www.fiverr.com'>Fiverr</a>", 'date': "2018 - currenty", "description":
         `• I worked on various illustration and animation projects.<br>
         • 5 star rating ⭐⭐⭐⭐⭐.`},
     ],
@@ -44,8 +44,8 @@ let indexContent  = {
         {'title': "GeneXus Analyst", 'company': "<a target='_blank' href='https://jovenesaprogramar.edu.uy'>Jóvenes a Programar</a>", 'date': "2018", "description": ""},
     ],
     'Proyects':[
-        {'title': "<a href='gallery.html?tab=Doodly'>Doodly</a>", 'company': "Art and design stream on <a target='_blank' href='https://www.twitch.tv/dood_ly'>Twitch</a>", 'date': "2020 - actualidad", "description": ""},
-        {'title': "<a href='games.html#games-page'>Salud, Dinero y Amor</a>", 'company': "Board game - Currently in development", 'date': "2022 - actualidad", "description": ""},
+        {'title': "<a href='gallery.html?tab=Doodly'>Doodly</a>", 'company': "Art and design stream on <a target='_blank' href='https://www.twitch.tv/dood_ly'>Twitch</a>", 'date': "2020 - currenty", "description": ""},
+        {'title': "<a href='games.html#games-page'>Salud, Dinero y Amor</a>", 'company': "Board game - Currently in development", 'date': "2022 - currenty", "description": ""},
         {'title': "<a target='_blank' href='https://youtube.com/clip/Ugkx7iT7OuOkUgt-aKGu-qsT8Lb8CBY5vepS?si=wG3_A3GYTcyAbD8A'>Random</a>", 'company': "Local news TV program", 'date': "2013", "description": ""},
     ],
     'Contact':[
