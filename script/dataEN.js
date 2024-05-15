@@ -112,6 +112,13 @@ const galleryContent  = {
       {'src': "../assets/gallery/gif/salto-con-arma-oso.gif", 'alt': "bear jumping with gun", 'description': "<a target='_blank' href='https://v3.globalgamejam.org/2020/games/cotton-revenge-2'>Global Game Jam 2020</a>"},
     ],
     'Design': [
+      {'src': "../assets/gallery/design/sodimac/airelibre.jpg", 'alt': "Sodimac", 'description': "<a target='_blank' href='https://www.sodimac.com.uy/sodimac-uy/'>Sodimac</a> - Aire Libre"},
+      {'src': "../assets/gallery/design/sodimac/blackweek.jpg", 'alt': "Sodimac", 'description': "<a target='_blank' href='https://www.sodimac.com.uy/sodimac-uy/'>Sodimac</a> - Black Week"},
+      {'src': "../assets/gallery/design/sodimac/cyberlunes.jpg", 'alt': "Sodimac", 'description': "<a target='_blank' href='https://www.sodimac.com.uy/sodimac-uy/'>Sodimac</a> - CyberLunes"},
+      {'src': "../assets/gallery/design/sodimac/cyberlunes2.jpg", 'alt': "Sodimac", 'description': "<a target='_blank' href='https://www.sodimac.com.uy/sodimac-uy/'>Sodimac</a> - CyberLunes"},
+      {'src': "../assets/gallery/design/sodimac/electroflash.jpg", 'alt': "Sodimac", 'description': "<a target='_blank' href='https://www.sodimac.com.uy/sodimac-uy/'>Sodimac</a> - ElectroFlash"},
+      {'src': "../assets/gallery/design/sodimac/renovacionbanos.jpg", 'alt': "Sodimac", 'description': "<a target='_blank' href='https://www.sodimac.com.uy/sodimac-uy/'>Sodimac</a> - Especial Renovación"},
+      {'src': "../assets/gallery/design/sodimac/renovacionpisos.jpg", 'alt': "Sodimac", 'description': "<a target='_blank' href='https://www.sodimac.com.uy/sodimac-uy/'>Sodimac</a> - Especial Renovación"},
       {'src': "../assets/gallery/design/sonder-imagotipo-fondo-gris.png", 'alt': "Sonder", 'description': "<a target='_blank' href='https://www.instagram.com/sonder_producciones/'>Sonder</a> - Logo and visual identity rework"},
       {'src': "../assets/gallery/design/sonder-isologo-fondo-gris.png", 'alt': "Sonder", 'description': "<a target='_blank' href='https://www.instagram.com/sonder_producciones/'>Sonder</a> - Logo and visual identity rework"},
       {'src': "../assets/gallery/design/sonder-isotipo1.png", 'alt': "Sonder", 'description': "<a target='_blank' href='https://www.instagram.com/sonder_producciones/'>Sonder</a> - color variation"},
@@ -127,8 +134,6 @@ const galleryContent  = {
       {'src': "../assets/gallery/design/sonder-card-2.jpg", 'alt': "Sonder", 'description': "<a target='_blank' href='https://www.instagram.com/sonder_producciones/'>Sonder</a> - contact cards"},
       {'src': "../assets/gallery/design/sonder-logo-anterior.jpeg", 'alt': "Sonder", 'description': "<a target='_blank' href='https://www.instagram.com/sonder_producciones/'>Sonder</a> - Previous design (made by another designer)"},
       {'src': "../assets/gallery/design/sonder-inicial.jpg", 'alt': "Sonder", 'description': "<a target='_blank' href='https://www.instagram.com/sonder_producciones/'>Sonder</a> - My notes on previous design"},
-      {'src': "../assets/gallery/design/360tours-1.jpg", 'alt': "360tours", 'description': "<a target='_blank' href='https://www.instagram.com/360tours.uy/'>360tours</a> - Contact cards using pre-established visual identity"},
-      {'src': "../assets/gallery/design/360tours-2.jpg", 'alt': "360tours", 'description': "<a target='_blank' href='https://www.instagram.com/360tours.uy/'>360tours</a> - Contact cards using pre-established visual identity"},
       {'src': "../assets/gallery/design/sippin2.jpg", 'alt': "Sippin' with Spirits", 'description': "Sippin' with Spirits - Card and mascot variation 1"},
       {'src': "../assets/gallery/design/sippin1.png", 'alt': "Sippin' with Spirits", 'description': "Sippin' with Spirits - Card and mascot variation 2"},
       {'src': "../assets/gallery/design/sippin3.jpg", 'alt': "Sippin' with Spirits", 'description': "Sippin' with Spirits - Card and mascot variation 3"},
@@ -141,6 +146,10 @@ const galleryContent  = {
       {'src': "../assets/gallery/design/varo1.jpg", 'alt': "Varo Percu", 'description': "<a target='_blank' href='https://www.instagram.com/varopercu/'>Varo Percu</a>"},
       {'src': "../assets/gallery/design/varo2.jpg", 'alt': "Varo Percu", 'description': "<a target='_blank' href='https://www.instagram.com/varopercu/'>Varo Percu</a>"},
       {'src': "../assets/gallery/design/varo3.jpg", 'alt': "Varo Percu", 'description': "<a target='_blank' href='https://www.instagram.com/varopercu/'>Varo Percu</a>"},
+      {'src': "../assets/gallery/design/bloco_ensamble_cuadrado.jpg", 'alt': "Varo Percu", 'description': "<a target='_blank' href='https://www.instagram.com/blocopercu/'>El Bloco</a> - Poster"},
+      {'src': "../assets/gallery/design/bloco_ensamble_vertical.jpg", 'alt': "Varo Percu", 'description': "<a target='_blank' href='https://www.instagram.com/blocopercu/'>El Bloco</a> - Poster"},
+      {'src': "../assets/gallery/design/360tours-1.jpg", 'alt': "360tours", 'description': "<a target='_blank' href='https://www.instagram.com/360tours.uy/'>360tours</a> - Contact cards using pre-established visual identity"},
+      {'src': "../assets/gallery/design/360tours-2.jpg", 'alt': "360tours", 'description': "<a target='_blank' href='https://www.instagram.com/360tours.uy/'>360tours</a> - Contact cards using pre-established visual identity"},
       {'src': "../assets/gallery/design/gm-fitness.jpg", 'alt': "MG Fitness", 'description': "MG fitness"},
       {'src': "../assets/gallery/design/gm-fitness2.jpg", 'alt': "MG Fitness", 'description': "MG fitness"}
     ],
@@ -151,10 +160,11 @@ const galleryContent  = {
     ]
   };
   const proyectos = {
+    'Sodimac': 'Promotional banners',
     'Sonder': 'Visual Identity rework based on previous design done by another designer',
-    '360tours': 'Contact cards based on established visual identity',
     "Sippin' with Spirits": 'Banners and mascot for a podcast about drinks and ghost stories',
-    "Varo Percu": 'Logo design for a percussionist who makes instruments out of recycled materials',
+    "Varo Percu": 'Designs for a percussionist who makes instruments out of recycled materials',
     "MG Fitness": 'Visual identity design for a personal trainer',
+    '360tours': 'Contact cards based on established visual identity',
     "Doodly": `Doodly is a weekly art and design stream, created by Eric Silva and produced by Lucía Techera, Florencia Flores and Eric Silva. We have a different challenge each week, visit our stream on <a target:"_blank" href="https://www.twitch.tv/dood_ly">Twitch</a> every tuesday at 9.30 pm (GMT-3) and join us for drawing!`
   };
