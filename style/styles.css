@@ -32,10 +32,38 @@ body {
   font: 20px 'Montserrat', 'sans-serif';
   line-height: 1.8;
   /* background-color: black; */
-  background: linear-gradient(to top, rgba(0, 0, 0), var(--main-bg-color), black)/*,  url("../assets/intro.jpg")*/; 
+  background: linear-gradient(to top, rgba(0, 0, 0), var(--main-bg-color), black)/*,  url("../assets/intro.jpg")*/;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 100%;
+}
+.mobile-alert{
+  position: fixed;
+  z-index: 10;
+  display: none;
+  background-color:  rgba(0, 0, 0, .95);
+  border-radius: 10px;
+  width: 80%;
+  padding: 15px;
+  left: 10%;
+  right: 10%;
+  top:150px;
+}
+.mobile-alert p{
+  margin-block: auto;
+  color: rgb(200, 200, 200);
+  font-size: 1.5rem;
+}
+.mobile-alert .icon{
+  filter: invert(50%);
+  width: 16px;
+  height: auto;
+  margin: 10px;
+  align-self: flex-start;
+}
+.mobile-alert .icon:hover{
+  filter: invert(100%);
+  cursor: pointer;
 }
 header{
   display: flex;
@@ -543,6 +571,9 @@ li div:not(.dot){
   }
 }
 @media screen and (max-width: 1080px) {
+  .mobile-alert{
+    display: flex;
+  }
   main {
     background-size: 75%;
     background-position: 130% 13%;

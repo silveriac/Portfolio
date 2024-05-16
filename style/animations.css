@@ -138,6 +138,10 @@
         transition-duration: 1s;
         rotate: -90deg;
     }
+    .mobile-alert{
+        opacity: 0;
+        animation: move-down 1.3s 1.5s 1 ease-in-out forwards;
+    }
     .fall1, .fall2, .fall3, .fall4, .fall5, .fall6, .fall7, .fall8, .fall9, .fall10{ /*initial tab configurations*/
         position: relative;
         bottom: 40px;

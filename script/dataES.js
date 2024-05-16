@@ -50,8 +50,9 @@ let indexContent  = {
         {'title': "<a target='_blank' href='https://youtube.com/clip/Ugkx7iT7OuOkUgt-aKGu-qsT8Lb8CBY5vepS?si=wG3_A3GYTcyAbD8A'>Random</a>", 'company': "Programa de TV en canal 6", 'date': "2013", "description": ""},
     ],
     'Contact':[
-        {'src': "./assets/logos/gmail.svg", 'alt': 'instagram', 'title': "<a target='_blank' href='mailto:erixilva42@gmail.com?'>erixilva42@gmail.com</a>"},
-        {'src': "./assets/logos/linkedin.svg", 'alt': 'instagram', 'title': "<a target='_blank' href='https://www.linkedin.com/in/eric-silva-820683155/'>Eric Silva</a>"},
+        {'src': "./assets/logos/gmail.svg", 'alt': 'gmail', 'title': "<a target='_blank' href='mailto:erixilva42@gmail.com?'>erixilva42@gmail.com</a>"},
+        {'src': "./assets/logos/linkedin.svg", 'alt': 'linkedin', 'title': "<a target='_blank' href='https://www.linkedin.com/in/eric-silva-820683155/'>Eric Silva</a>"},
+        {'src': "./assets/logos/behance.svg", 'alt': 'behance', 'title': "<a target='_blank' href='https://www.behance.net/silveriac'>Eric Silva</a>"},
         {'src': "./assets/logos/insta.svg", 'alt': 'instagram', 'title': "<a target='_blank' href='https://www.instagram.com/silveriac_/'>@silveriac_</a>"},
     ],
 };
