@@ -111,11 +111,24 @@
 }
 @media (prefers-reduced-motion: no-preference) {
     .aparecer{
-        animation: appear 2s 0.3s 1 ease-in-out forwards;
+        animation: appear 2s 0.5s 1 ease-in-out forwards;
         opacity: 0;
     }
     .desvanecerderecha{
         animation: move-right 2s 1s 1 ease-in-out forwards /*duration/delay/final opacity, forwards: it stays in the final configuration*/;
+    }
+    .titles h2{
+        animation: appear 1.5s 1s 1 ease-in-out forwards;
+        opacity: 0;
+    }
+    .black-bar{
+        transform: scaleX(0);
+        animation: grow-horizontal 1.5s 1.5s 1 ease-in-out forwards;
+        opacity: 0;
+        transform-origin: left center;
+    }
+    .black-bar:nth-child(1){
+        transform-origin: right center;
     }
     .nav li a:hover, .nav li a:focus{
         transition-duration: .3s;

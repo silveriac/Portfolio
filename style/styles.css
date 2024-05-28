@@ -6,6 +6,8 @@
   font-size: 20px;
   --main-bg-color: rgb(193, 87, 255);
   --main-bg-color-opacity: rgba(193, 87, 255, .95);
+  --main-bg-style: linear-gradient(to top, rgba(0, 0, 0), var(--main-bg-color), black);
+  /* --main-bg-style: var(--main-bg-color); */
 }
 @media screen and (max-width: 1440px) {
   :root{
@@ -32,7 +34,7 @@ body {
   font: 20px 'Montserrat', 'sans-serif';
   line-height: 1.8;
   /* background-color: black; */
-  background: linear-gradient(to top, rgba(0, 0, 0), var(--main-bg-color), black)/*,  url("../assets/intro.jpg")*/;
+  background: var(--main-bg-style)/*,  url("../assets/intro.jpg")*/;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 100%;
@@ -164,7 +166,11 @@ h1{
   font-family: 'Ubuntu', sans-serif;
 }
 h2{
-  font-size: 25px;
+  font-size: 1.35rem;
+  font-family: 'Montserrat', 'sans-serif';
+
+  /* font-weight: 600; */
+  color: black;
 }
 h3{
   font-size: 25px;
@@ -189,6 +195,23 @@ button{
 iframe{
   width: 80vw;
   height: 30vh;
+}
+.titles > div{
+  margin-top: -1.7rem;
+  width: 96%;
+  margin-inline: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.titles h2{
+  margin-bottom: .1rem;
+  font-weight: 600;
+}
+.black-bar{
+  background-color: black;
+  width: 25%;
+  height: .2rem;
 }
 .nav-icon{
   height: 32px !important;
