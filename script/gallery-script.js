@@ -6,7 +6,7 @@ console.log(params.toString());
 currentTab = currentTab == "Dev" || currentTab == "web" || currentTab == "GameDev" ? "Animation" : currentTab;
 let modal;
 let calledDoodly = currentTab == "Doodly" ? 1 : 0;
-
+let visitedTabs = [];
 
 /*const loadImage = (src) => {
   return new Promise((resolve, reject) => {
@@ -62,6 +62,10 @@ window.onload = (evt) => {
 const fillTab = (tab) => {
   contentArray = galleryContent[tab];
   if(calledDoodly > 0) doodlyBG(currentTab);
+  if(visitedTabs.includes(tab)){
+    document.querySelector(`#${tab}`).classList.add("already-played");
+    return;
+  } 
   const container = document.getElementById(tab);
   if (document.querySelector(`#${tab} .gallery-img`)) return;
   const styleSheet = document.styleSheets[4];
@@ -81,12 +85,13 @@ const fillTab = (tab) => {
     styleSheet.insertRule(`#${tab} .gallery-img:nth-child(${index + proyectCounter}):hover::after{content:"${image.description.replace(/<[^>]*>/g, '')}"}`);
     const div = document.createElement("div");
     div.classList.add("gallery-img");
-    div.setAttribute("style", `animation-delay: ${(index*3)/10}s`);
-    if (tab == "Animation") div.innerHTML += `<img class="frame1" src="${(image.src).replace('gif/','gif/frame1/').replace(/-/g, '_')}" alt="${image.alt}">` //add still frame1 to gifs
-    div.innerHTML += `<img src="${image.src}" alt="${image.alt}" loading="lazy">`;
+    div.setAttribute("style", `animation-delay: ${(index > 4? (index/10)+1.5 : (index*3)/10)}s`);
+    if (tab == "Animation") div.innerHTML += `<img class="frame1" src="../assets/gallery/${(image.src).replace('gif/','gif/frame1/').replace(/-/g, '_')}" alt="${image.alt}">` //add still frame1 to gifs
+    div.innerHTML += `<img src="../assets/gallery/${image.src}" alt="${image.alt}" loading="lazy">`;
     container.appendChild(div);
     div.addEventListener("click", () => modalSlider(1, index));
   });
+  visitedTabs.push(tab);
 }
 
 const fillDoodlyTab = () =>{
@@ -109,8 +114,8 @@ const fillDoodlyTab = () =>{
     div.setAttribute("style", `animation-delay: ${(index*3)/10}s`);
     div.innerHTML +=
     `<a target="_blank" href="${image.description}">
-      <img class="frame1" src="${(image.src).replace('gif/','gif/frame1/').replace(/-/g, '_')}" alt="${image.alt}">
-      <img src="${image.src}" alt="${image.alt}" loading="lazy">
+      <img class="frame1" src="../assets/gallery/${(image.src).replace('gif/','gif/frame1/').replace(/-/g, '_')}" alt="${image.alt}">
+      <img src="../assets/gallery/${image.src}" alt="${image.alt}" loading="lazy">
     </a>`
     container.appendChild(div);
   })
@@ -167,11 +172,15 @@ const modalSlider = (action, number) => {
   let imgArray = galleryContent[currentTab];
   let left = document.querySelector(".left");
   let right = document.querySelector(".right");
+  function fill(slide){
+    imageDiv[0].childNodes[3].setAttribute("src", "../assets/gallery/" + imgArray[slide].src);
+    imageDiv[0].childNodes[3].setAttribute("alt", imgArray[slide].alt);
+    description.innerHTML = imgArray[slide].description;
+  }
   switch(action){
     case 1: //open
       modal.classList.toggle("switch");
-      imageDiv[0].childNodes[3].setAttribute("src", imgArray[number].src);
-      description.innerHTML = imgArray[number].description;
+      fill(number);
       break;
     case 0: //close
       modal.classList.toggle("switch");
@@ -179,14 +188,12 @@ const modalSlider = (action, number) => {
       break;
     case 2: //left
       currentSlide != 0 ? currentSlide = currentSlide - 1 : currentSlide = imgArray.length - 1;
-      imageDiv[0].childNodes[3].setAttribute("src", imgArray[currentSlide].src);
-      description.innerHTML = imgArray[currentSlide].description;
+      fill(currentSlide);
       //left.classList.add("take-over");
       break;
     case 3: //right
       currentSlide != (imgArray.length - 1) ? currentSlide = currentSlide + 1 : currentSlide = 0;
-      imageDiv[0].childNodes[3].setAttribute("src", imgArray[currentSlide].src);
-      description.innerHTML = imgArray[currentSlide].description;
+      fill(currentSlide);
       //right.classList.add("take-over");
       break;
     default:
@@ -207,11 +214,13 @@ const modalSlider = (action, number) => {
   setTimeout(()=>{
     left.classList.remove("take-over");
     right.classList.remove("take-over");
-    left.innerHTML = `<img class="preview" src="${imgArray[previousSlide].src}" alt="${imgArray[previousSlide].description}">`;
-    right.innerHTML = `<img class="preview" src="${imgArray[nextSlide].src}" alt="${imgArray[nextSlide].description}">`;
+    left.innerHTML = `<img class="preview" src="../assets/gallery/${imgArray[previousSlide].src}" alt="${imgArray[previousSlide].description}">
+      <img class="nav-icon overlayed-icon" src="../assets/arrow.png" alt="back">`;
+    right.innerHTML = `<img class="preview" src="../assets/gallery/${imgArray[nextSlide].src}" alt="${imgArray[nextSlide].description}">
+      <img class="nav-icon overlayed-icon rotate-180" src="../assets/arrow.png" alt="back">`;
     if (currentTab == "Animation") {//add still frame1 to gifs
-      left.innerHTML += `<img class="frame1" src="${(imgArray[previousSlide].src).replace('gif/','gif/frame1/').replace(/-/g, '_')}" alt="${imgArray[previousSlide].description}">`;
-      right.innerHTML += `<img class="frame1" src="${(imgArray[nextSlide].src).replace('gif/','gif/frame1/').replace(/-/g, '_')}" alt="${imgArray[nextSlide].description}">`;
+      left.innerHTML += `<img class="frame1" src="../assets/gallery/${(imgArray[previousSlide].src).replace('gif/','gif/frame1/').replace(/-/g, '_')}" alt="${imgArray[previousSlide].description}">`;
+      right.innerHTML += `<img class="frame1" src="../assets/gallery/${(imgArray[nextSlide].src).replace('gif/','gif/frame1/').replace(/-/g, '_')}" alt="${imgArray[nextSlide].description}">`;
     };
   }, 200)
 
