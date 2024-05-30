@@ -1,6 +1,6 @@
 const params = new URLSearchParams(window.location.search);
 const area = params.get("area");
-const styleSheet = document.styleSheets[5];
+const styleSheet = document.styleSheets[3];
 let body;
 let BGColor =   `--main-bg-color: rgb(193, 87, 255);
   --main-bg-color-opacity: rgba(193, 87, 255, .95);`
