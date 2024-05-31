@@ -6,7 +6,7 @@
   font-size: 20px;
   --main-bg-color: rgb(193, 87, 255);
   --main-bg-color-opacity: rgba(193, 87, 255, .95);
-  --main-bg-style: linear-gradient(to top, rgba(0, 0, 0), var(--main-bg-color), black);
+  /* --main-bg-style: linear-gradient(to top, rgba(0, 0, 0), var(--main-bg-color), black); */
   /* --main-bg-style: var(--main-bg-color); */
 }
 @media screen and (max-width: 1440px) {
@@ -34,7 +34,7 @@ body {
   font: 20px 'Montserrat', 'sans-serif';
   line-height: 1.8;
   /* background-color: black; */
-  background: var(--main-bg-style)/*,  url("../assets/intro.jpg")*/;
+  background: linear-gradient(to top, rgba(0, 0, 0), var(--main-bg-color), black);;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 100%;

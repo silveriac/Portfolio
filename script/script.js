@@ -1,6 +1,6 @@
 const params = new URLSearchParams(window.location.search);
 const area = params.get("area");
-const styleSheet = document.styleSheets[3];
+const styleSheet = document.styleSheets[4];
 let body;
 let BGColor =   `--main-bg-color: rgb(193, 87, 255);
   --main-bg-color-opacity: rgba(193, 87, 255, .95);`
@@ -32,7 +32,6 @@ switch(area){
     --main-bg-color-opacity: rgba(240, 145, 65, .95);`;
     break;
 }
-styleSheet.insertRule(`:root{${BGColor}}`);
 
 const changeTabs = (evt, tabName) => {
   document.getElementsByClassName("tab-bar")[0].classList.toggle("shrink");
@@ -57,3 +56,5 @@ const sleep = ms => {
 const addArea = element => {
   if(area) element.setAttribute("href", `${element.href}?area=${area}`);
 }
+
+styleSheet.insertRule(`:root{${BGColor}}`);//this needs to be at the end, so if it breaks it won't break the rest of the script

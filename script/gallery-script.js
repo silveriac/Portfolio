@@ -68,7 +68,6 @@ const fillTab = (tab) => {
   } 
   const container = document.getElementById(tab);
   if (document.querySelector(`#${tab} .gallery-img`)) return;
-  const styleSheet = document.styleSheets[4];
   let proyecto = "";
   let proyectCounter = 1;
   contentArray.forEach((image, index) => {
@@ -82,7 +81,11 @@ const fillTab = (tab) => {
       proyectCounter++;
     }
     proyecto = image.alt;
-    styleSheet.insertRule(`#${tab} .gallery-img:nth-child(${index + proyectCounter}):hover::after{content:"${image.description.replace(/<[^>]*>/g, '')}"}`);
+    try{
+      styleSheet.insertRule(`#${tab} .gallery-img:nth-child(${index + proyectCounter}):hover::after{content:"${image.description.replace(/<[^>]*>/g, '').replace(' - Process video', '▶️')}"}`);
+    }catch(error){
+      console.log(error)
+    };
     const div = document.createElement("div");
     div.classList.add("gallery-img");
     div.setAttribute("style", `animation-delay: ${(index > 4? (index/10)+1.5 : (index*3)/10)}s`);

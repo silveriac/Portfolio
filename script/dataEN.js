@@ -57,12 +57,12 @@ let indexContent  = {
 };
 const galleryContent  = {
     'Illustration':[
-      {'src': "war-witch.jpg", 'alt': "war witch", 'description': "<a target='_blank' href='https://www.twitch.tv/dood_ly'>Doodly</a> - War Witch - <a href='https://www.youtube.com/watch?v=eOBUcQpzz8k' target='_blank'>Process video</a>"},
+      {'src': "war-witch.jpg", 'alt': "war witch", 'description': "<a target='_blank' href='https://www.twitch.tv/dood_ly'>Doodly</a> - War Witch - ▶️<a href='https://www.youtube.com/watch?v=eOBUcQpzz8k' target='_blank'>Process video</a>"},
       {'src': "chilling-geralt.png", 'alt': "geralt having a good time", 'description': "<a target='_blank' href='https://www.twitch.tv/dood_ly'>Doodly</a> - Geralt having a good time"},
       {'src': "alien-skull.jpg", 'alt': "alien skull", 'description': "<a target='_blank' href='https://www.fiverr.com/silveriac'>Comission Work</a> - Alien Skull"},
       {'src': "planet-brain.jpg", 'alt': "planet brain", 'description': "Photography taken by <a href='https://www.instagram.com/antoniobauer31/'>Antonio Bauer</a>"},
-      {'src': "poketrainer.jpg", 'alt': "pokemon trainer", 'description': "<a target='_blank' href='https://www.twitch.tv/dood_ly'>Doodly</a> - Me as a Pokemon Trainer - <a href='https://www.youtube.com/watch?v=NBWq45dFhrc'  target='_blank'>Process video</a>"},
-      {'src': "joric-jolva.jpg", 'alt': "silveriac's jojo", 'description': "<a target='_blank' href='https://www.twitch.tv/dood_ly'>Doodly</a> - Me as a JoJo's Bizarre Adventure character - <a href='https://www.youtube.com/watch?v=len_06yFK8s' target='_blank'>Process video</a>"},
+      {'src': "poketrainer.jpg", 'alt': "pokemon trainer", 'description': "<a target='_blank' href='https://www.twitch.tv/dood_ly'>Doodly</a> - Me as a Pokemon Trainer - ▶️<a href='https://www.youtube.com/watch?v=NBWq45dFhrc'  target='_blank'>Process video</a>"},
+      {'src': "joric-jolva.jpg", 'alt': "silveriac's jojo", 'description': "<a target='_blank' href='https://www.twitch.tv/dood_ly'>Doodly</a> - Me as a JoJo's Bizarre Adventure character - ▶️<a href='https://www.youtube.com/watch?v=len_06yFK8s' target='_blank'>Process video</a>"},
       {'src': "spiderverse.jpg", 'alt': "into the spider-verse fanart", 'description': "'Spider-Man: Into the Spider Verse' fan art"},
       {'src': "hypno-spooky.jpg", 'alt': "Spooky hypno", 'description': "<a target='_blank' href='https://www.twitch.tv/dood_ly'>Doodly</a> - Spooky pokemon: Hypno"},
       {'src': "all-skulls.png", 'alt': "emotion skulls", 'description': "<a target='_blank' href='https://www.fiverr.com/silveriac'>Comission Work</a>"},
@@ -74,7 +74,7 @@ const galleryContent  = {
       {'src': "eldritch-momo.png", 'alt': "eldritch momo", 'description': "<a target='_blank' href='https://www.twitch.tv/dood_ly'>Doodly</a> - An eldritch version of Momo from Avatar: The last airbender"},
       {'src': "spike.jpg", 'alt': "spike", 'description': "A digitally painted entry from Inktober 2017"},
       {'src': "gangster-skull.jpg", 'alt': "gagnster skull", 'description': "Gangster skull, a digitally painted sketch from a small notebook"},
-      {'src': "gitana.jpg", 'alt': "gitana", 'description': "<a target='_blank' href='https://www.twitch.tv/dood_ly'>Doodly</a> - Esotericism  <a target='_blank' href='https://youtu.be/Jb9v7m4EdnU'>Process video</a>"},
+      {'src': "gitana.jpg", 'alt': "gitana", 'description': "<a target='_blank' href='https://www.twitch.tv/dood_ly'>Doodly</a> - Esotericism - ▶️<a target='_blank' href='https://youtu.be/Jb9v7m4EdnU'>Process video</a>"},
       {'src': "hama.jpg", 'alt': "hama", 'description': "<a target='_blank' href='https://www.twitch.tv/dood_ly'>Doodly</a> - Hama from Avatar: The last airbender"},
       {'src': "herosona.jpg", 'alt': "me as a my hero academia character", 'description': "<a target='_blank' href='https://www.twitch.tv/dood_ly'>Doodly</a> - Me as a 'My Hero Academia' character"},
       {'src': "me-blu.jpg", 'alt': "me with blue background", 'description': "-"},
