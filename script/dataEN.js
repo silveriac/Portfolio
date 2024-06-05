@@ -21,21 +21,25 @@ let indexContent  = {
     ],
     'Experience':[
         {'title': "Graphic and web designer", 'company': "Sodimac", 'date': "2022 - 2023", "description":
-        `• I designed image pieces for <a target='_blank' href='https://www.sodimac.com.uy/sodimac-uy/'>Sodimac.com.uy</a> and <a target='_blank' href='https://www.sodimac.com.ar/sodimac-ar/'>Sodimac.com.ar</a>.<br>
-        • I mantained, optimized and updated the code for various of Sodimac's landing pages<br>
-        • I worked in personalization strategies using Dynamic Yield.<br>
-        • I developed an <a target='_blank' href="https://sodi-labs.com/eric/">internal use app</a> used for searching products by Id.<br>
-        • I implemented changes to improve the team's workflow efficiency.
-        `},
+        `• Designed image pieces for <a target='_blank' href='https://www.sodimac.com.uy/sodimac-uy/'>Sodimac.com.uy</a> and <a target='_blank' href='https://www.sodimac.com.ar/sodimac-ar/'>Sodimac.com.ar</a>.<br>
+        •  Maintained and updated code for various landing pages, optimizing readability and improving the
+        design team's workflow.<br>
+        • Implemented personalization strategies using Dynamic Yield, enhancing client targeting and
+        conversion rates<br>
+        • Developed an <a href="./html/webdev.html">internal use app</a> using Sodimac's product API, improving accessibility to essential product
+information for employees. <br>
+        • Created web modules for different campaigns, including temporary discounts and website interactivity improvements.<br><br>`},
 
         {'title': "Team Leader", 'company': "Doctors wihtout borders", 'date': "2019 - 2021", "description":
-        `• I recruited donors in public areas, always meeting the set objectives.<br>
-        • I worked on donor recovery and loyalty campaigns<br>
-        • I led teams both in street-level operations and in a call center setting.<br>
-        • I planed team strategies and motivational activities<br>`},
+        `• Planned team strategies and motivational activities<br>
+        • Recruited members who served as monthly financial donors<br>
+        • Led member recovery and loyalty campaigns, enhancing donor retention.<br>
+        • Managed teams in street-level operations and call center settings.<br>`},
 
         {'title': "<a target='_blank' href='https://www.fiverr.com/silveriac'>Freelance illustrator, artist and animator", 'company': "<a target='_blank' href='https://www.fiverr.com'>Fiverr</a>", 'date': "2018 - currenty", "description":
-        `• I worked on various illustration and animation projects.<br>
+        `• Sketch and storyboard clients ideas<br>
+        • Design characters and scenarios for books, albums covers, and videogames.<br>
+        • Illustrate and animate designs according to clients needs.<br>
         • 5 star rating ⭐⭐⭐⭐⭐.`},
     ],
     'Education':[

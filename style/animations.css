@@ -183,7 +183,6 @@
         top: 0px;
     }
     .gallery-img img:hover{
-        cursor: pointer;
         transform: scale(1.03);
         translate: 0px -5px;
         transition-duration: .2s;

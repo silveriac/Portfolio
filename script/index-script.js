@@ -111,7 +111,7 @@ const fillTab = (tab) => {
             console.log(list)
             if (list.childElementCount != 0) return;
             contentArray.forEach((item, index) => {
-                const seeMore = tab == "Experience" ? ` • <span onclick="seeMoreExp(${index})">ver más</span>` : "";
+                const seeMore = tab == "Experience" ? ` • <span onclick="seeMoreExp(${index})">${EN? "see more" : "ver más"}</span>` : "";
                 const description = tab == "Experience" ? `<p class="exp-description">${item.description}</p>` : "";
                 const li = document.createElement("li");
                 li.classList.add("exp-item");
@@ -171,5 +171,6 @@ const seeMoreExp = (number) => {
     document.getElementsByClassName('exp-description')[number].classList.toggle('grow');
     console.log(document.getElementsByClassName('exp-description')[number])
     let span = document.querySelectorAll('.exp-date > span')[number];
-    span.innerHTML = span.innerHTML == "ver más" ? "ver menos" : "ver más";
+    if(EN){span.innerHTML = span.innerHTML == "see more" ? "see less" : "see more";}
+    else{span.innerHTML = span.innerHTML == "ver más" ? "ver menos" : "ver más";}
 }
