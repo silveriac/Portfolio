@@ -27,10 +27,10 @@ let indexContent  = {
         • Implemented personalization strategies using Dynamic Yield, enhancing client targeting and
         conversion rates<br>
         • Developed an <a href="./html/webdev.html">internal use app</a> using Sodimac's product API, improving accessibility to essential product
-information for employees. <br>
+        information for employees. <br>
         • Created web modules for different campaigns, including temporary discounts and website interactivity improvements.<br><br>`},
 
-        {'title': "Team Leader", 'company': "Doctors wihtout borders", 'date': "2019 - 2021", "description":
+        {'title': "Team Leader (fundraising)", 'company': "Doctors wihtout borders", 'date': "2019 - 2021", "description":
         `• Planned team strategies and motivational activities<br>
         • Recruited members who served as monthly financial donors<br>
         • Led member recovery and loyalty campaigns, enhancing donor retention.<br>

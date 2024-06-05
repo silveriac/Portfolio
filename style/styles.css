@@ -526,15 +526,13 @@ footer span:hover::after{
   padding: 30px;
   border-radius: 15px;
   background: linear-gradient(to top, rgba(0, 0, 0, .5), rgba(53, 23, 70, 0.4));
+  display: flex;
+  justify-content: space-between;
+  max-height: 800px;
+  margin: 10px;
 }
 .exp-item:hover{
   background: linear-gradient(to top, rgba(0, 0, 0, .7), rgb(0, 0, 0, .6));
-}
-.exp-item{
-  display: flex;
-  justify-content: space-between;
-  max-height: 600px;
-  margin: 10px;
 }
 .dot{
   background-color: white;
