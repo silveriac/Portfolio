@@ -66,7 +66,7 @@ const galleryContent  = {
       {'src': "joric-jolva.jpg", 'alt': "silveriac's jojo", 'description': "<a target='_blank' href='https://www.twitch.tv/dood_ly'>Doodly</a> - Yo como personaje de JoJo's Bizarre Adventure - ▶️<a href='https://www.youtube.com/watch?v=len_06yFK8s' target='_blank'>Video Proceso</a>"},
       {'src': "spiderverse.jpg", 'alt': "into the spider-verse fanart", 'description': "'Spider-Man: Into the Spider Verse' fan art"},
       {'src': "hypno-spooky.jpg", 'alt': "Spooky hypno", 'description': "<a target='_blank' href='https://www.twitch.tv/dood_ly'>Doodly</a> - Pokemon escalofriantes: Hypno"},
-      {'src': "nordicshaman.png", 'alt': "nordic shaman", 'description': "Chamán nórdico invocando guardián espiritual"},
+      {'src': "nordicshaman.png", 'alt': "nordic shaman", 'description': "Chamán nórdico invocando guardián espiritual - ▶️<a href='https://youtu.be/lFrnUis0h5Q' target='_blank'>Video proceso</a>"},
       {'src': "all-skulls.png", 'alt': "emotion skulls", 'description': "<a target='_blank' href='https://www.fiverr.com/silveriac'>Encargo</a>"},
       {'src': "revelation.png", 'alt': "revelation skull", 'description': "<a target='_blank' href='https://www.fiverr.com/silveriac'>Encargo</a>"},
       {'src': "creepy-cat.jpg", 'alt': "monster cat", 'description': "<a target='_blank' href='https://www.fiverr.com/silveriac'>Encargo</a>"},

@@ -59,42 +59,174 @@ let indexContent  = {
         {'src': "./assets/logos/insta.svg", 'alt': 'instagram', 'title': "<a target='_blank' href='https://www.instagram.com/silveriac_/'>@silveriac_</a>"},
     ],
 };
-const galleryContent  = {
+const galleryContent  = { //alltags: fanart, character-design, concept-art, comission, doodly, illustration, horror, hidden, furry, nsfw
     'Illustration':[
-      {'src': "war-witch.jpg", 'alt': "war witch", 'description': "<a target='_blank' href='https://www.twitch.tv/dood_ly'>Doodly</a> - War Witch - ▶️<a href='https://www.youtube.com/watch?v=eOBUcQpzz8k' target='_blank'>Process video</a>"},
-      {'src': "chilling-geralt.png", 'alt': "geralt having a good time", 'description': "<a target='_blank' href='https://www.twitch.tv/dood_ly'>Doodly</a> - Geralt having a good time"},
-      {'src': "alien-skull.jpg", 'alt': "alien skull", 'description': "<a target='_blank' href='https://www.fiverr.com/silveriac'>Comission Work</a> - Alien Skull"},
-      {'src': "planet-brain.jpg", 'alt': "planet brain", 'description': "Photography taken by <a href='https://www.instagram.com/antoniobauer31/'>Antonio Bauer</a>"},
-      {'src': "poketrainer.jpg", 'alt': "pokemon trainer", 'description': "<a target='_blank' href='https://www.twitch.tv/dood_ly'>Doodly</a> - Me as a Pokemon Trainer - ▶️<a href='https://www.youtube.com/watch?v=NBWq45dFhrc'  target='_blank'>Process video</a>"},
-      {'src': "joric-jolva.jpg", 'alt': "silveriac's jojo", 'description': "<a target='_blank' href='https://www.twitch.tv/dood_ly'>Doodly</a> - Me as a JoJo's Bizarre Adventure character - ▶️<a href='https://www.youtube.com/watch?v=len_06yFK8s' target='_blank'>Process video</a>"},
-      {'src': "spiderverse.jpg", 'alt': "into the spider-verse fanart", 'description': "'Spider-Man: Into the Spider Verse' fan art"},
-      {'src': "hypno-spooky.jpg", 'alt': "Spooky hypno", 'description': "<a target='_blank' href='https://www.twitch.tv/dood_ly'>Doodly</a> - Spooky pokemon: Hypno"},
-      {'src': "nordicshaman.png", 'alt': "nordic shaman", 'description': "Nordic Shaman summoning guardian spirit"},
-      {'src': "all-skulls.png", 'alt': "emotion skulls", 'description': "<a target='_blank' href='https://www.fiverr.com/silveriac'>Comission Work</a>"},
-      {'src': "revelation.png", 'alt': "revelation skull", 'description': "<a target='_blank' href='https://www.fiverr.com/silveriac'>Comission Work</a>"},
-      {'src': "creepy-cat.jpg", 'alt': "monster cat", 'description': "<a target='_blank' href='https://www.fiverr.com/silveriac'>Comission Work</a>"},
-      {'src': "blue.jpg", 'alt': "blue", 'description': "A gift for a friend"},
-      {'src': "creepydoll.jpg", 'alt': "creepy doll", 'description': "<a target='_blank' href='https://www.fiverr.com/silveriac'>Comission Work</a>"},
-      {'src': "cursed-randall.jpg", 'alt': "cursed randall", 'description': "<a target='_blank' href='https://www.twitch.tv/dood_ly'>Doodly</a> - Creepy Randall from Monsters Inc"},
-      {'src': "eldritch-momo.png", 'alt': "eldritch momo", 'description': "<a target='_blank' href='https://www.twitch.tv/dood_ly'>Doodly</a> - An eldritch version of Momo from Avatar: The last airbender"},
-      {'src': "spike.jpg", 'alt': "spike", 'description': "A digitally painted entry from Inktober 2017"},
-      {'src': "gangster-skull.jpg", 'alt': "gagnster skull", 'description': "Gangster skull, a digitally painted sketch from a small notebook"},
-      {'src': "gitana.jpg", 'alt': "gitana", 'description': "<a target='_blank' href='https://www.twitch.tv/dood_ly'>Doodly</a> - Esotericism - ▶️<a target='_blank' href='https://youtu.be/Jb9v7m4EdnU'>Process video</a>"},
-      {'src': "hama.jpg", 'alt': "hama", 'description': "<a target='_blank' href='https://www.twitch.tv/dood_ly'>Doodly</a> - Hama from Avatar: The last airbender"},
-      {'src': "herosona.jpg", 'alt': "me as a my hero academia character", 'description': "<a target='_blank' href='https://www.twitch.tv/dood_ly'>Doodly</a> - Me as a 'My Hero Academia' character"},
-      {'src': "me-blu.jpg", 'alt': "me with blue background", 'description': "-"},
-      {'src': "me.jpg", 'alt': "silveriac self portrait", 'description': "My self portait"},
-      {'src': "me-red.jpg", 'alt': "me with red background", 'description': "-"},
-      {'src': "skullwolf.jpg", 'alt': "skull wolf", 'description': "-"},
-      {'src': "wolfskull.jpg", 'alt': "wolfskull", 'description': "-"},
-      {'src': "wolf.jpg", 'alt': "wolf", 'description': "-"},
-      {'src': "venom-rework-black.jpg", 'alt': "venom fanart", 'description': "Venom fanart, rework of my first digital drawing"},
-      {'src': "venom-rework-blue.jpg", 'alt': "venom fanart", 'description': "Venom fanart, rework of my first digital drawing"},
-      {'src': "vincent-van-hop.jpg", 'alt': "vincent van hop", 'description': "<a target='_blank' href='https://www.twitch.tv/dood_ly'>Doodly</a> - Our favourite artists as 'furries'"},
-      {'src': "snowman-imaginaerum.jpg", 'alt': "imaginaerum snowman", 'description': "<a target='_blank' href='https://www.twitch.tv/dood_ly'>Doodly</a> - the Snowman from the movie 'Imaginaerum'"},
-      {'src': "steampunk-bunnygirl.jpg", 'alt': "steampunk bunnygirl", 'description': "<a target='_blank' href='https://www.fiverr.com/silveriac'>Comission Work</a>"},
-      {'src': "steampunk-bunnygirl-revised.jpg", 'alt': "steampunk bunnygirl", 'description': "<a target='_blank' href='https://www.fiverr.com/silveriac'>Comission Work</a>"}
-      //{'src': "", 'alt': "", 'description': "<a target='_blank' href='https://www.twitch.tv/dood_ly'>Doodly</a> "}
+      {'src': "war-witch.jpg",
+        'alt': "war witch",
+        'description': "<a target='_blank' href='https://www.twitch.tv/dood_ly'>Doodly</a> - War Witch - ▶️<a href='https://www.youtube.com/watch?v=eOBUcQpzz8k' target='_blank'>Process video</a>",
+        'tags' : "character-design concept-art illustration doodly horror"
+      },
+      {'src': "chilling-geralt.png",
+        'alt': "geralt having a good time",
+        'description': "<a target='_blank' href='https://www.twitch.tv/dood_ly'>Doodly</a> - Geralt having a good time",
+        'tags' : "fanart doodly"
+      },
+      {'src': "alien-skull.jpg",
+        'alt': "alien skull",
+        'description': "<a target='_blank' href='https://www.fiverr.com/silveriac'>Comission Work</a> - Alien Skull",
+        'tags' : "comission illustration horror"
+      },
+      {'src': "planet-brain.jpg",
+        'alt': "planet brain",
+        'description': "Photography taken by <a href='https://www.instagram.com/antoniobauer31/'>Antonio Bauer</a>",
+        'tags' : "illustration"
+      },
+      {'src': "poketrainer.jpg",
+        'alt': "pokemon trainer",
+        'description': "<a target='_blank' href='https://www.twitch.tv/dood_ly'>Doodly</a> - Me as a Pokemon Trainer - ▶️<a href='https://www.youtube.com/watch?v=NBWq45dFhrc'  target='_blank'>Process video</a>",
+        'tags' : "fanart doodly character-design"
+      },
+      {'src': "joric-jolva.jpg",
+        'alt': "silveriac's jojo",
+        'description': "<a target='_blank' href='https://www.twitch.tv/dood_ly'>Doodly</a> - Me as a JoJo's Bizarre Adventure character - ▶️<a href='https://www.youtube.com/watch?v=len_06yFK8s' target='_blank'>Process video</a>",
+        'tags' : "fanart doodly character-design"
+      },
+      {'src': "spiderverse.jpg",
+        'alt': "into the spider-verse fanart",
+        'description': "'Spider-Man: Into the Spider Verse' fan art",
+        'tags' : "fanart illustration"
+      },
+      {'src': "hypno-spooky.jpg",
+        'alt': "Spooky hypno",
+        'description': "<a target='_blank' href='https://www.twitch.tv/dood_ly'>Doodly</a> - Spooky pokemon: Hypno",
+        'tags' : "fanart doodly concept-art horror"
+      },
+      {'src': "nordicshaman.png",
+        'alt': "nordic shaman",
+        'description': "Nordic Shaman summoning guardian spirit - ▶️<a href='https://youtu.be/lFrnUis0h5Q' target='_blank'>Process video</a>",
+        'tags' : "character-design concept-art comission"
+      },
+      {'src': "all-skulls.png",
+        'alt': "emotion skulls",
+        'description': "<a target='_blank' href='https://www.fiverr.com/silveriac'>Comission Work</a>",
+        'tags' : "comission horror"
+      },
+      {'src': "revelation.png",
+        'alt': "revelation skull",
+        'description': "<a target='_blank' href='https://www.fiverr.com/silveriac'>Comission Work</a>",
+        'tags' : "character-design illustration comission horror"
+      },
+      {'src': "creepy-cat.jpg",
+        'alt': "monster cat",
+        'description': "<a target='_blank' href='https://www.fiverr.com/silveriac'>Comission Work</a>",
+        'tags' : "character-design concept-art comission horror"
+      },
+      {'src': "blue.jpg",
+        'alt': "blue",
+        'description': "A gift for a friend",
+        'tags' : "character-design illustration"
+      },
+      {'src': "creepydoll.jpg",
+        'alt': "creepy doll",
+        'description': "<a target='_blank' href='https://www.fiverr.com/silveriac'>Comission Work</a>",
+        'tags' : "horror illustration comission"
+      },
+      {'src': "cursed-randall.jpg",
+        'alt': "cursed randall",
+        'description': "<a target='_blank' href='https://www.twitch.tv/dood_ly'>Doodly</a> - Creepy Randall from Monsters Inc",
+        'tags' : "doodly fanart horror"
+      },
+      {'src': "eldritch-momo.png",
+        'alt': "eldritch momo",
+        'description': "<a target='_blank' href='https://www.twitch.tv/dood_ly'>Doodly</a> - An eldritch version of Momo from Avatar: The last airbender",
+        'tags' : "doodly fanart horror"
+      },
+      {'src': "spike.jpg",
+        'alt': "spike",
+        'description': "A digitally painted entry from Inktober 2017",
+        'tags' : "character-design concept-art illustration"
+      },
+      {'src': "gangster-skull.jpg",
+        'alt': "gagnster skull",
+        'description': "Gangster skull, a digitally painted sketch from a small notebook",
+        'tags' : "character-design concept-art comission illustration"
+      },
+      {'src': "gitana.jpg",
+        'alt': "gitana",
+        'description': "<a target='_blank' href='https://www.twitch.tv/dood_ly'>Doodly</a> - Esotericism - ▶️<a target='_blank' href='https://youtu.be/Jb9v7m4EdnU'>Process video</a>",
+        'tags' : "character-design concept-art doodly horror"
+      },
+      {'src': "hama.jpg",
+        'alt': "hama",
+        'description': "<a target='_blank' href='https://www.twitch.tv/dood_ly'>Doodly</a> - Hama from Avatar: The last airbender",
+        'tags' : "doodly fanart horror"
+      },
+      {'src': "herosona.jpg",
+        'alt': "me as a my hero academia character",
+        'description': "<a target='_blank' href='https://www.twitch.tv/dood_ly'>Doodly</a> - Me as a 'My Hero Academia' character",
+        'tags' : "doodly fanart character design"
+      },
+      {'src': "me-blu.jpg",
+        'alt': "me with blue background",
+        'description': "-",
+        'tags' : "illustration hidden"
+      },
+      {'src': "me.jpg",
+        'alt': "silveriac self portrait",
+        'description': "My self portait",
+        'tags' : "character-design illustration"
+      },
+      {'src': "me-red.jpg",
+        'alt': "me with red background",
+        'description': "-",
+        'tags' : "illustration hidden"
+      },
+      {'src': "skullwolf.jpg",
+        'alt': "skull wolf",
+        'description': "-",
+        'tags' : "illustration horror"
+      },
+      {'src': "wolfskull.jpg",
+        'alt': "wolfskull",
+        'description': "-",
+        'tags' : "illustration horror"
+      },
+      {'src': "wolf.jpg",
+        'alt': "wolf",
+        'description': "-",
+        'tags' : "illustration horror"
+      },
+      {'src': "venom-rework-black.jpg",
+        'alt': "venom fanart",
+        'description': "Venom fanart, rework of my first digital drawing",
+        'tags' : "illustration horror fanart"
+      },
+      {'src': "venom-rework-blue.jpg",
+        'alt': "venom fanart",
+        'description': "Venom fanart, rework of my first digital drawing",
+        'tags' : "illustration"
+      },
+      {'src': "vincent-van-hop.jpg",
+        'alt': "vincent van hop",
+        'description': "<a target='_blank' href='https://www.twitch.tv/dood_ly'>Doodly</a> - Our favourite artists as 'furries'",
+        'tags' : "furry doodly character-design"
+      },
+      {'src': "snowman-imaginaerum.jpg",
+        'alt': "imaginaerum snowman",
+        'description': "<a target='_blank' href='https://www.twitch.tv/dood_ly'>Doodly</a> - the Snowman from the movie 'Imaginaerum'",
+        'tags' : "fanart doodly"
+      },
+      {'src': "steampunk-bunnygirl.jpg",
+        'alt': "steampunk bunnygirl",
+        'description': "<a target='_blank' href='https://www.fiverr.com/silveriac'>Comission Work</a>",
+        'tags' : "comission character design"
+      },
+      {'src': "steampunk-bunnygirl-revised.jpg",
+        'alt': "steampunk bunnygirl",
+        'description': "<a target='_blank' href='https://www.fiverr.com/silveriac'>Comission Work</a>",
+        'tags' : "comission character design"
+      }
+      //{'src': "",      'alt': "",'description': "<a target='_blank' href='https://www.twitch.tv/dood_ly'>Doodly</a> "}
     ],
     'Animation': [
       {'src': "gif/monke.gif", 'alt': "dancing monkey", 'description': "<a target='_blank' href='https://www.twitch.tv/dood_ly'>Doodly</a> - Rework of my first animation"},

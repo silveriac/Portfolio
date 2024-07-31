@@ -43,7 +43,7 @@ window.onload = (evt) => {
   modal = document.getElementsByClassName("modal")[0];
   imageDiv = document.getElementsByClassName("show-img");
   const buttons = document.getElementsByClassName("tabs");
-  buttons[0].addEventListener("click", (event) => {changeTabs(event, 'Illustration'); fillTab(currentTab); addQueryToURL("area", currentTab);});
+  buttons[0].addEventListener("click", (event) => {changeTabs(event, 'Illustration'); fillTab(currentTab); addQueryToURL("area", currentTab); /*categories();*/});
   buttons[1].addEventListener("click", (event) => {changeTabs(event, 'Animation'); fillTab(currentTab); addQueryToURL("area", currentTab);});
   buttons[2].addEventListener("click", (event) => {changeTabs(event, 'Design'); fillTab(currentTab); addQueryToURL("area", currentTab);});
   buttons[3].addEventListener("click", (event) => {changeTabs(event, 'Doodly'); fillDoodlyTab(); addQueryToURL("area", currentTab);});
@@ -65,7 +65,7 @@ const fillTab = (tab) => {
   if(visitedTabs.includes(tab)){
     document.querySelector(`#${tab}`).classList.add("already-played");
     return;
-  } 
+  }
   const container = document.getElementById(tab);
   if (document.querySelector(`#${tab} .gallery-img`)) return;
   let proyecto = "";
@@ -95,6 +95,13 @@ const fillTab = (tab) => {
     div.addEventListener("click", () => modalSlider(1, index));
   });
   visitedTabs.push(tab);
+}
+
+const categories = (categories) =>{
+  dropdown = document.createElement("div");
+  dropdown.innerHTML = "<p>hola</p>";
+  document.querySelector("main").insertBefore(dropdown, document.querySelector(`#Illustration`));
+  console.log("hola");
 }
 
 const fillDoodlyTab = () =>{
