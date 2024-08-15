@@ -70,7 +70,7 @@ const galleryContent  = {
       {'src': "all-skulls.png", 'alt': "emotion skulls", 'description': "<a target='_blank' href='https://www.fiverr.com/silveriac'>Encargo</a>"},
       {'src': "revelation.png", 'alt': "revelation skull", 'description': "<a target='_blank' href='https://www.fiverr.com/silveriac'>Encargo</a>"},
       {'src': "creepy-cat.jpg", 'alt': "monster cat", 'description': "<a target='_blank' href='https://www.fiverr.com/silveriac'>Encargo</a>"},
-      {'src': "blue.jpg", 'alt': "blue", 'description': "A gift for a friend"},
+      {'src': "blue.jpg", 'alt': "blue", 'description': "Un regalo"},
       {'src': "creepydoll.jpg", 'alt': "creepy doll", 'description': "<a target='_blank' href='https://www.fiverr.com/silveriac'>Encargo</a>"},
       {'src': "cursed-randall.jpg", 'alt': "cursed randall", 'description': "<a target='_blank' href='https://www.twitch.tv/dood_ly'>Doodly</a> - Randall aterrador de Monsters Inc"},
       {'src': "eldritch-momo.png", 'alt': "eldritch momo", 'description': "<a target='_blank' href='https://www.twitch.tv/dood_ly'>Doodly</a> - Una versión éldrica de Momo de Avatar: El último maestro aire"},

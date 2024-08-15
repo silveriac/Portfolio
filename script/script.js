@@ -2,34 +2,27 @@ const params = new URLSearchParams(window.location.search);
 const area = params.get("area");
 const styleSheet = document.styleSheets[4];
 let body;
-let BGColor =   `--main-bg-color: rgb(193, 87, 255);
-  --main-bg-color-opacity: rgba(193, 87, 255, .95);`
+let BGColor =   ``
 switch(area){
   default:
     break;
   case "Web":
-    BGColor = `--main-bg-color: rgb(110, 85, 255);
-    --main-bg-color-opacity: rgba(110, 85, 255, .95)`;
+    BGColor = `--base-bg-color: 110, 85, 255;`;
     break;
   case "Illustration":
-    BGColor = `--main-bg-color: rgb(193, 87, 255);
-    --main-bg-color-opacity: rgba(193, 87, 255, .95);`;
+    BGColor = `--base-bg-color: 193, 87, 255;`;
     break;
   case "Animation":
-    BGColor = `--main-bg-color: rgb(193, 87, 255);
-    --main-bg-color-opacity: rgba(193, 87, 255, .95);`;
+    BGColor = `--base-bg-color: 193, 87, 255;`;
     break;
   case "Design":
-    BGColor = `--main-bg-color: rgb(110, 85, 255);
-    --main-bg-color-opacity: rgba(110, 85, 255, .95)`;
+    BGColor = `--base-bg-color: 110, 85, 255;`;
     break;
   case "Dev":
-    BGColor = `--main-bg-color: rgb(32, 148, 129);
-    --main-bg-color-opacity: rgba(32, 148, 129, .95);`;
+    BGColor = `--base-bg-color: 32, 148, 129;`;
     break;
   case "GameDev":
-    BGColor = `--main-bg-color: rgb(240, 145, 65);
-    --main-bg-color-opacity: rgba(240, 145, 65, .95);`;
+    BGColor = `--base-bg-color: 180, 125, 65;`;
     break;
 }
 

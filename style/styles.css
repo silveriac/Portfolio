@@ -4,8 +4,13 @@
 
 :root{
   font-size: 20px;
-  --main-bg-color: rgb(193, 87, 255);
-  --main-bg-color-opacity: rgba(193, 87, 255, .95);
+  --color-picker: rgb(157, 74, 224);
+  --base-bg-color: 110, 85, 255;
+  --main-bg-color: rgb(var(--base-bg-color));
+  --main-bg-color-opacity-1: rgba(var(--base-bg-color), .2);
+  --main-bg-color-opacity-2: rgba(var(--base-bg-color), .4);
+  --main-bg-color-opacity-3: rgba(var(--base-bg-color), .6);
+  --main-bg-color-opacity-4: rgba(var(--base-bg-color), .95);
   /* --main-bg-style: linear-gradient(to top, rgba(0, 0, 0), var(--main-bg-color), black); */
   /* --main-bg-style: var(--main-bg-color); */
 }
@@ -29,15 +34,27 @@
     font-size: 10px;
   }
 }
-html {scroll-behavior: smooth;}
+html {
+  scroll-behavior: smooth;
+  background:  linear-gradient(to bottom, rgba(0,0,0, .4), var(--main-bg-color-opacity-1), rgba(0,0,0, .4)), url("../assets/prism.png");
+  background-attachment: fixed;
+  background-size: 30%;
+}
 body {
   font: 20px 'Montserrat', 'sans-serif';
   line-height: 1.8;
-  /* background-color: black; */
-  background: linear-gradient(to top, rgba(0, 0, 0), var(--main-bg-color), black);;
-  background-repeat: no-repeat;
+  height: auto;
+  background-color: transparent;
+  background-color: var(--main-bg-color-opacity-2);
+  transition: all .2s ease-in-out;
   background-attachment: fixed;
-  background-size: 100%;
+  /* background-color: black; */
+  /* background: linear-gradient(to top, rgba(0, 0, 0), var(--main-bg-color), black); */
+}
+
+body:has(.grow) {
+  background-color: var(--main-bg-color-opacity-1);
+  /* background: var(--main-bg-color);; */
 }
 .mobile-alert{
   position: fixed;
@@ -72,16 +89,17 @@ header{
   justify-content: space-between;
   position: relative;
   height: 48px;
-  background-color: black;
+  background: black;
 }
-header:has(+#gamesPage)::after, header:has(+#webDev)::after{ /*this ugly af selector adds blur to header and footer*/
+body:has(#gamesPage) header:after, body:has(#webDev) header:after{/*this ugly af selector adds blur to header in gamespage and webdev*/
   content: "";
   position: absolute;
   top:47px;
   width: 100%;
   height: 15px;
-  background: linear-gradient(to bottom, black, transparent 100%);
+  background: linear-gradient(to bottom, black, transparent 90%);
 }
+
 main {
   display: flex;
   flex-direction: column;
@@ -196,6 +214,10 @@ iframe{
   width: 80vw;
   height: 30vh;
 }
+
+.titles  h1, .titles h2{
+  color: white;
+}
 .titles > div{
   margin-top: -1.7rem;
   width: 96%;
@@ -203,13 +225,14 @@ iframe{
   display: flex;
   justify-content: space-between;
   align-items: center;
+
 }
 .titles h2{
   margin-bottom: .1rem;
   font-weight: 600;
 }
 .black-bar{
-  background-color: black;
+  background-color: white;
   width: 25%;
   height: .2rem;
 }
@@ -377,7 +400,8 @@ footer span:hover::after{
   margin-right: 0;
   width: 77.5%;
   margin-inline: auto;
-  background: linear-gradient(to bottom, rgba(0,0,0, .5), var(--main-bg-color-opacity) 100%);
+  background: linear-gradient(to top, var(--main-bg-color-opacity-2), black 170%);
+  /* background: linear-gradient(to bottom, rgba(0,0,0, .5), var(--main-bg-color-opacity) 100%); */
   border-radius: 40px;
   padding-inline: 40px;
 }
@@ -394,10 +418,9 @@ footer span:hover::after{
 #aboutMe .icon:hover{
   filter: invert();
   cursor: pointer;
-  scale: 1.2;
-  transition-duration: .2s;
+  scale: 1.3;
+  transition-duration: .3s;
   height: auto;
-  margin: 15px;
   align-self: flex-end;
 }
 #aboutMe > div:nth-child(1){
@@ -478,10 +501,10 @@ footer span:hover::after{
   padding: 10px;
   margin-block: 5px;
   border-radius: 15px;
-  background: linear-gradient(to top, rgba(0, 0, 0, .5), rgb(193, 87, 255, .1));
+  background: linear-gradient(to top, rgba(0, 0, 0, .5), var(--main-bg-color-opacity-1));
 }
 .tech-item:hover{
-  background: linear-gradient(to top, rgba(0, 0, 0, .5), rgb(0, 0, 0, .3));
+  background: linear-gradient(to top, rgba(0, 0, 0, .5), var(--main-bg-color-opacity-2));
   transition-duration: .3s;
 }
 .tech-lvl {
@@ -525,14 +548,14 @@ footer span:hover::after{
   width: 850px;
   padding: 30px;
   border-radius: 15px;
-  background: linear-gradient(to top, rgba(0, 0, 0, .5), rgba(53, 23, 70, 0.4));
+  background: linear-gradient(to top, rgba(0, 0, 0, .5),  var(--main-bg-color-opacity-1));
   display: flex;
   justify-content: space-between;
   max-height: 800px;
   margin: 10px;
 }
 .exp-item:hover{
-  background: linear-gradient(to top, rgba(0, 0, 0, .7), rgb(0, 0, 0, .6));
+  background: linear-gradient(to top, rgba(0, 0, 0, .7),  var(--main-bg-color-opacity-2));
 }
 .dot{
   background-color: white;

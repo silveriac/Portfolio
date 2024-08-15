@@ -97,9 +97,24 @@ const fillTab = (tab) => {
   visitedTabs.push(tab);
 }
 
-const categories = (categories) =>{
+const categories = (category) =>{
+  //alltags: fanart, character-design, concept-art, comission, doodly, illustration, horror, hidden, furry, nsfw
+  console.log("hola")
+  let categoryList = ["illustration", "fanart", "character-design", "concept-art", "commission", "doodly", "horror", "furry", "nwfs", "hidden"]
   dropdown = document.createElement("div");
-  dropdown.innerHTML = "<p>hola</p>";
+  tags = document.createElement("div");
+  tags.classList.add("tab-bar", "shrink"); //there's already tab-bar shrink
+  categoryList.forEach((element)=>{
+    currentTag = document.createElement("button");
+    currentTag.classList.add("tabs");
+    currentTag.innerHTML = `${element}`;
+    tags.appendChild(currentTag);
+  })
+  console.log(tags)
+  dropdown.innerHTML =
+    `<p id="expandList">All</p>`
+  dropdown.appendChild(tags);
+
   document.querySelector("main").insertBefore(dropdown, document.querySelector(`#Illustration`));
   console.log("hola");
 }
