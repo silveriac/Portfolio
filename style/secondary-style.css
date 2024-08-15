@@ -1,6 +1,7 @@
 main{
     align-items: flex-start;
     height: auto;
+    min-height: 1080px;
 }
 main p{
     font-size: 25px;
