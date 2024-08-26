@@ -134,18 +134,22 @@ const fillTab = (tab) => {
             const contactList = document.querySelector(`#${tab} .fill-ul`);
             if (contactList.childElementCount != 0) return;
             contentArray.forEach((item, index) => {
-                const li = document.createElement("li");
-                li.classList.add("exp-item");
-                li.setAttribute("style", `animation-delay: ${0.1 + ((index*1.5)/10)}s`);
-                li.innerHTML +=
-                    `<div class="contact-logo">
-                        <object data="${item.src}" type="image/svg+xml"></object>
-                        <!--<img src="${item.src}" alt="${item.alt}">-->
-                    </div>
-                    <div>
-                        <p class="exp-title">${item.title}</p>
-                    </div>`;
-                    setTimeout(() =>{contactList.appendChild(li);}, 110);
+                const a = document.createElement("a");
+                a.classList.add("exp-item");
+                a.setAttribute("style", `animation-delay: ${0.1 + ((index*1.5)/10)}s`);
+                a.setAttribute("href", `${item.link}`);
+                a.setAttribute("target", "_blank");
+                a.innerHTML +=
+                    `
+                        <div class="contact-logo">
+                            <object data="${item.src}" type="image/svg+xml"></object>
+                            <!--<img src="${item.src}" alt="${item.alt}">-->
+                        </div>
+                        <div>
+                            <p class="exp-title">${item.title}</p>
+                        </div>
+                    `;
+                    setTimeout(() =>{contactList.appendChild(a);}, 110);
             });
             break;
     };

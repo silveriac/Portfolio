@@ -214,11 +214,13 @@ const modalSlider = (action, number) => {
     case 2: //left
       currentSlide != 0 ? currentSlide = currentSlide - 1 : currentSlide = imgArray.length - 1;
       fill(currentSlide);
-      //left.classList.add("take-over");
+      imageDiv[0].childNodes[3].classList.add("grow-from-left");
+    //left.classList.add("take-over");
       break;
     case 3: //right
       currentSlide != (imgArray.length - 1) ? currentSlide = currentSlide + 1 : currentSlide = 0;
       fill(currentSlide);
+      imageDiv[0].childNodes[3].classList.add("grow-from-right");
       //right.classList.add("take-over");
       break;
     default:
@@ -237,8 +239,9 @@ const modalSlider = (action, number) => {
   let previousSlide = currentSlide == 0 ? imgArray.length - 1 : currentSlide -1;
   let nextSlide = currentSlide == imgArray.length - 1 ? 0 : currentSlide +1;
   setTimeout(()=>{
-    left.classList.remove("take-over");
-    right.classList.remove("take-over");
+    imageDiv[0].childNodes[3].classList.remove("grow-from-left");
+    imageDiv[0].childNodes[3].classList.remove("grow-from-right");
+
     left.innerHTML = `<img class="preview" src="../assets/gallery/${imgArray[previousSlide].src}" alt="${imgArray[previousSlide].description}">
       <img class="nav-icon overlayed-icon" src="../assets/arrow.png" alt="back">`;
     right.innerHTML = `<img class="preview" src="../assets/gallery/${imgArray[nextSlide].src}" alt="${imgArray[nextSlide].description}">

@@ -203,6 +203,7 @@ div:has(.expand)::before{
     padding: 0;
     margin: 0;
     transition-duration: .7s;
+    transition-delay: 3s;
     pointer-events: none;
 }
 .switch{
@@ -212,6 +213,12 @@ div:has(.expand)::before{
 .left, .right{
     position: relative;
     cursor: pointer;
+}
+.right img:not(.nav-icon), .left img:not(.nav-icon){
+    opacity: .8;
+}
+.right img:hover, .left img:hover{
+    opacity: 1;
 }
 .left .preview, .right .preview{
     height: 120px;
@@ -236,23 +243,7 @@ div:has(.expand)::before{
 .left:hover .frame1, .right:hover .frame1{
     display: none;
 }
-.preview:hover{
-    scale: 1.5 1.5;
-    transition-duration: .2s;
-    transition-delay: .4s;
-    filter: none;
-    border: 2px solid white;
-}
-.left:has(:hover) .preview, .right:has(:hover) .preview{
-    scale: 1.5 1.5;
-    transition-duration: .2s;
-    transition-delay: .4s;
-    filter: none;
-    border: 2px solid white;
-}
-.left:has(:hover) .overlayed-icon, .right:has(:hover) .overlayed-icon{
-    opacity: 0;
-}
+
 .tabcontent, .tab-bar, .tabs{
     z-index: 1;
 }

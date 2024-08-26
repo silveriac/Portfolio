@@ -471,17 +471,24 @@ footer span:hover::after{
 #Contact a{
   text-decoration: none;
 }
-#Contact a:hover{
+#Contact p:hover{
   text-decoration: underline;
 }
-#Contact li{
+#Contact a{
   justify-content: flex-start;
   align-items: center;
   width: 550px;
 }
-#Contact li > div:nth-child(2){
+#Contact a > div:nth-child(2){
   text-align: left;
   width: 60%;
+}
+#Contact object{
+  opacity:.85;
+  transition-duration: .2s;
+}
+#Contact object:hover{
+  opacity: 1;
 }
 .contact-logo{
   margin-left: 0;
@@ -501,11 +508,11 @@ footer span:hover::after{
   padding: 10px;
   margin-block: 5px;
   border-radius: 15px;
+  transition-duration: .5s;
   background: linear-gradient(to top, rgba(0, 0, 0, .5), var(--main-bg-color-opacity-1));
 }
 .tech-item:hover{
   background: linear-gradient(to top, rgba(0, 0, 0, .5), var(--main-bg-color-opacity-2));
-  transition-duration: .3s;
 }
 .tech-lvl {
   position: relative;
@@ -553,6 +560,7 @@ footer span:hover::after{
   justify-content: space-between;
   max-height: 800px;
   margin: 10px;
+  transition-duration: .2s;
 }
 .exp-item:hover{
   background: linear-gradient(to top, rgba(0, 0, 0, .7),  var(--main-bg-color-opacity-2));
