@@ -206,10 +206,12 @@ const modalSlider = (action, number) => {
     case 1: //open
       modal.classList.toggle("switch");
       fill(number);
+      imageDiv[0].childNodes[3].classList.add("grow-from-center");
       break;
     case 0: //close
       modal.classList.toggle("switch");
       modalState = false;
+      imageDiv[0].childNodes[3].classList.add("shrink-from-center");
       break;
     case 2: //left
       currentSlide != 0 ? currentSlide = currentSlide - 1 : currentSlide = imgArray.length - 1;
@@ -241,6 +243,8 @@ const modalSlider = (action, number) => {
   setTimeout(()=>{
     imageDiv[0].childNodes[3].classList.remove("grow-from-left");
     imageDiv[0].childNodes[3].classList.remove("grow-from-right");
+    imageDiv[0].childNodes[3].classList.remove("grow-from-center");
+    imageDiv[0].childNodes[3].classList.remove("shrink-from-center");
 
     left.innerHTML = `<img class="preview" src="../assets/gallery/${imgArray[previousSlide].src}" alt="${imgArray[previousSlide].description}">
       <img class="nav-icon overlayed-icon" src="../assets/arrow.png" alt="back">`;
