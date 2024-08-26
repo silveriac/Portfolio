@@ -215,7 +215,7 @@ div:has(.expand)::before{
     cursor: pointer;
 }
 .right img:not(.nav-icon), .left img:not(.nav-icon){
-    opacity: .8;
+    opacity: .6;
 }
 .right img:hover, .left img:hover{
     opacity: 1;
