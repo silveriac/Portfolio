@@ -214,10 +214,10 @@ div:has(.expand)::before{
     position: relative;
     cursor: pointer;
 }
-.right img:not(.nav-icon), .left img:not(.nav-icon){
+.right img:not(.nav-icon):not(.frame1), .left img:not(.nav-icon):not(.frame1){
     opacity: .6;
 }
-.right img:hover, .left img:hover{
+.right img:not(.frame1):hover, .left img:not(.frame1):hover{
     opacity: 1;
 }
 .left .preview, .right .preview{
