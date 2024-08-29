@@ -1,6 +1,7 @@
 
 let currentTab = 'Education';
 let EN;
+let clink = new Audio('../assets/clink.mp3');
 window.onload = () => {
     addArea(document.querySelectorAll("footer ul a")[0]);
     addArea(document.querySelectorAll("footer ul a")[1]);
@@ -34,7 +35,12 @@ window.onload = () => {
         buttons[5].classList.add("active");
         fillTab("Contact");
     });
-    console.log(buttons);
+    //darle sonido meálico a los links de inicio
+    /*document.getElementById("linkAboutMe").addEventListener("mouseover", ()=>{clink.play()});
+    document.getElementById("linkWebDev").addEventListener("mouseover", ()=>{clink.play()});
+    document.getElementById("linkGallery").addEventListener("mouseover", ()=>{clink.play()});
+    document.getElementById("linkGames").addEventListener("mouseover", ()=>{clink.play()});
+    document.getElementById("linkContact").addEventListener("mouseover", ()=>{clink.play()});*/
     buttons[0].addEventListener("click", (event) => {changeTabs(event, 'Education'); fillTab("Education");});
     buttons[1].addEventListener("click", (event) => {changeTabs(event, 'Technology'); fillTab("Technology");});
     buttons[2].addEventListener("click", (event) => {changeTabs(event, 'Design'); fillTab("Design");});
