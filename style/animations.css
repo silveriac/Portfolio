@@ -100,6 +100,15 @@
         opacity: 0
         }
 }
+@keyframes shrinkFromCenter{ /*animation breaks at the end so I'm using 30% as the endpoint and cutting it early*/
+    0%{
+        opacity: .3;
+    }
+    30%{
+        transform: scale(.2);
+        opacity: .3;
+    }
+}
 @keyframes growFromCenter{ /*animation breaks at the end so I'm using 30% as the endpoint and cutting it early*/
     0%{
         transform: scale(.2);
@@ -226,6 +235,16 @@
         padding: 0px;
         border: 2px solid white;
     }
+    .modal{
+        animation: disappear 1s 0s 0 forwards;
+        opacity: 1;
+        transition: all 1s;
+    }
+    .modal.switch{
+        animation: appear 1s 0s 1 forwards;
+        opacity: 0;
+        transition: all 1s;
+    }
     .left{
         translate: -120px 0px;
         animation: move-right .3s .2s 1 ease-out forwards;
@@ -267,7 +286,7 @@
         animation: growFromCenter 1s 0s 1 ease-in-out forwards;
      }
      .shrink-from-center{
-        animation: growFromCenter .6 0s ease-in-out reverse;
+        animation: shrinkFromCenter .6s 0s ease-in-out forwards;
      }
     .game{
         transition-duration: .2s;

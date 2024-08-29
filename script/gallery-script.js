@@ -209,9 +209,12 @@ const modalSlider = (action, number) => {
       imageDiv[0].childNodes[3].classList.add("grow-from-center");
       break;
     case 0: //close
-      modal.classList.toggle("switch");
-      modalState = false;
       imageDiv[0].childNodes[3].classList.add("shrink-from-center");
+      setTimeout(() =>{
+        modal.classList.toggle("switch");
+      },200)
+      modalState = false;
+      //imageDiv[0].childNodes[3].classList.add("shrink-from-center");
       break;
     case 2: //left
       currentSlide != 0 ? currentSlide = currentSlide - 1 : currentSlide = imgArray.length - 1;
@@ -229,32 +232,31 @@ const modalSlider = (action, number) => {
       console.log("Modal error");
       modal.classList.toggle("switch");
   };
-
   addQueryToURL("img", currentSlide);
+    left.style.animation = 'none';
+    right.style.animation = 'none';
+    left.offsetHeight;
+    right.offsetHeight;
+    left.style.animation = null;
+    right.style.animation = null;
+    let previousSlide = currentSlide == 0 ? imgArray.length - 1 : currentSlide -1;
+    let nextSlide = currentSlide == imgArray.length - 1 ? 0 : currentSlide +1;
+    setTimeout(()=>{
+      imageDiv[0].childNodes[3].classList.remove("grow-from-left");
+      imageDiv[0].childNodes[3].classList.remove("grow-from-right");
+      imageDiv[0].childNodes[3].classList.remove("grow-from-center");
+      imageDiv[0].childNodes[3].classList.remove("shrink-from-center");
+  
+      left.innerHTML = `<img class="preview" src="../assets/gallery/${imgArray[previousSlide].src}" alt="${imgArray[previousSlide].description}">
+        <img class="nav-icon overlayed-icon" src="../assets/arrow.png" alt="back">`;
+      right.innerHTML = `<img class="preview" src="../assets/gallery/${imgArray[nextSlide].src}" alt="${imgArray[nextSlide].description}">
+        <img class="nav-icon overlayed-icon rotate-180" src="../assets/arrow.png" alt="back">`;
+      if (currentTab == "Animation") {//add still frame1 to gifs
+        left.innerHTML += `<img class="frame1" src="../assets/gallery/${(imgArray[previousSlide].src).replace('gif/','gif/frame1/').replace(/-/g, '_')}" alt="${imgArray[previousSlide].description}">`;
+        right.innerHTML += `<img class="frame1" src="../assets/gallery/${(imgArray[nextSlide].src).replace('gif/','gif/frame1/').replace(/-/g, '_')}" alt="${imgArray[nextSlide].description}">`;
+      };
+    }, 200)
 
-  left.style.animation = 'none';
-  right.style.animation = 'none';
-  left.offsetHeight;
-  right.offsetHeight;
-  left.style.animation = null;
-  right.style.animation = null;
-  let previousSlide = currentSlide == 0 ? imgArray.length - 1 : currentSlide -1;
-  let nextSlide = currentSlide == imgArray.length - 1 ? 0 : currentSlide +1;
-  setTimeout(()=>{
-    imageDiv[0].childNodes[3].classList.remove("grow-from-left");
-    imageDiv[0].childNodes[3].classList.remove("grow-from-right");
-    imageDiv[0].childNodes[3].classList.remove("grow-from-center");
-    imageDiv[0].childNodes[3].classList.remove("shrink-from-center");
-
-    left.innerHTML = `<img class="preview" src="../assets/gallery/${imgArray[previousSlide].src}" alt="${imgArray[previousSlide].description}">
-      <img class="nav-icon overlayed-icon" src="../assets/arrow.png" alt="back">`;
-    right.innerHTML = `<img class="preview" src="../assets/gallery/${imgArray[nextSlide].src}" alt="${imgArray[nextSlide].description}">
-      <img class="nav-icon overlayed-icon rotate-180" src="../assets/arrow.png" alt="back">`;
-    if (currentTab == "Animation") {//add still frame1 to gifs
-      left.innerHTML += `<img class="frame1" src="../assets/gallery/${(imgArray[previousSlide].src).replace('gif/','gif/frame1/').replace(/-/g, '_')}" alt="${imgArray[previousSlide].description}">`;
-      right.innerHTML += `<img class="frame1" src="../assets/gallery/${(imgArray[nextSlide].src).replace('gif/','gif/frame1/').replace(/-/g, '_')}" alt="${imgArray[nextSlide].description}">`;
-    };
-  }, 200)
 
 };
 

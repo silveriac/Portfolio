@@ -220,11 +220,11 @@ div:has(.expand)::before{
 .right img:not(.frame1):hover, .left img:not(.frame1):hover{
     opacity: 1;
 }
-.left .preview, .right .preview{
+.left .preview, .right .preview, .left .frame1, .right .frame1{
     height: 120px;
     width: 120px;
     background-color: gray;
-    object-fit: cover;
+    object-fit: cover !important;
 }
 .preview{
     position: relative;
