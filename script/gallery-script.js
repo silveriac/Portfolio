@@ -59,6 +59,7 @@ window.onload = (evt) => {
   }
 };
 
+
 const fillTab = (tab) => {
   contentArray = galleryContent[tab];
   if(calledDoodly > 0) doodlyBG(currentTab);
@@ -256,8 +257,6 @@ const modalSlider = (action, number) => {
         right.innerHTML += `<img class="frame1" src="../assets/gallery/${(imgArray[nextSlide].src).replace('gif/','gif/frame1/').replace(/-/g, '_')}" alt="${imgArray[nextSlide].description}">`;
       };
     }, 200)
-
-
 };
 
 document.onkeydown = (evt) => {

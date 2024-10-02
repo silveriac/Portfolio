@@ -235,13 +235,16 @@
         padding: 0px;
         border: 2px solid white;
     }
+    .gallery-img:hover::after{
+        animation: grow-vertical .1s .7s 1 ease-out forwards;
+    }
     .modal{
-        animation: disappear 1s 0s 0 forwards;
+        animation: disappear .8s 0s 0 forwards;
         opacity: 1;
         transition: all 1s;
     }
     .modal.switch{
-        animation: appear 1s 0s 1 forwards;
+        animation: appear .8s 0s 1 forwards;
         opacity: 0;
         transition: all 1s;
     }
@@ -310,7 +313,7 @@
     .go-right{animation: slide-right 0.3s 0s 1 ease-in-out forwards;}
     a:has(.nav-icon):hover::after, footer span:hover::after{
         opacity: 0;
-        animation: grow-horizontal .1s 1s 1 ease-out forwards;
+        animation: grow-horizontal .1s .7s 1 ease-out forwards;
         transform-origin: left center;
     }
     span:has(.nav-icon):hover::after{

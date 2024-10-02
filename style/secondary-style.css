@@ -72,7 +72,6 @@ main p{
     border-radius: 5px;
     bottom: 0px;
     opacity: 0;
-    animation: grow-vertical .1s 1.5s 1 ease-out forwards;
     cursor: pointer;
     transform-origin: top;
     translate: 0px 25px;
@@ -178,9 +177,10 @@ div:has(.expand)::before{
 }*/
 .slide-inner .icon{
     filter: invert(50%);
-    width: 16px;
+    width: 20px;
     height: auto;
-    margin: 16px;
+    margin-top: 20px;
+    margin-right: 20px;
     transform: scale(1.5);
 
     transition-duration: .2s;
@@ -483,6 +483,7 @@ a[download="rock_paper_scissors"]{
 }
 #webDev .content-1{
     justify-content: space-evenly;
+    margin-inline: auto;
 }
 #webDev .gallery-img img{
     /* height: 200px; */
