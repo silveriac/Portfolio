@@ -155,7 +155,7 @@ body.doodly-bg main{
 } */
 
 #Doodly .gallery-img:hover img:nth-child(1){
-    visibility: hidden;
+    /* visibility: hidden; */
 }
 #Doodly .gallery-img:hover img:nth-child(2){
     visibility: visible;

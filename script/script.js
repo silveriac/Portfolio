@@ -22,7 +22,7 @@ switch(area){
     BGColor = `--base-bg-color: 32, 148, 129;`;
     break;
   case "GameDev":
-    BGColor = `--base-bg-color: 180, 125, 65;`;
+    BGColor = `--base-bg-color: 20, 105, 150;`;
     break;
 }
 
