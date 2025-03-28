@@ -468,6 +468,7 @@ a[download="rock_paper_scissors"]{
     content: "Made in 48 hours!";
     padding-inline: 32.2px;
 }
+
 /*web-dev page*/
 #webDev section{
     color: white;
@@ -486,7 +487,7 @@ a[download="rock_paper_scissors"]{
     margin-inline: auto;
 }
 #webDev .gallery-img img{
-    /* height: 200px; */
+    height: 500px;
 }
 #webDev .gallery-img {
     /* height: clamp(220px, 40%, 300px); */
