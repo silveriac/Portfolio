@@ -89,6 +89,7 @@ const fillTab = (tab) => {
     };
     const div = document.createElement("div");
     div.classList.add("gallery-img");
+    if(image.bigger) div.classList.add("bigger");
     div.setAttribute("style", `animation-delay: ${(index > 4? (index/10)+1.5 : (index*3)/10)}s`);
     if (tab == "Animation") div.innerHTML += `<img class="frame1" src="../assets/gallery/${(image.src).replace('gif/','gif/frame1/').replace(/-/g, '_')}" alt="${image.alt}">` //add still frame1 to gifs
     div.innerHTML += `<img src="../assets/gallery/${image.src}" alt="${image.alt}" loading="lazy">`;

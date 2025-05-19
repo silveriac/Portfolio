@@ -79,6 +79,9 @@ main p{
 #Design .gallery-img:nth-child(1){
     background-color: red !important;
 }
+.bigger img{
+    height: 500px !important;
+}
 div:has(.expand)::before{
     content: url("../assets/gallery/chilling-geralt.png");
     width: 200px;
